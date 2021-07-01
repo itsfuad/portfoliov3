@@ -1,0 +1,667 @@
+@font-face {
+  font-family: Now;
+  src: url("src/fonts/Now-Regular.otf");
+}
+
+@font-face {
+  font-family: Rail;
+  src: url("src/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: RAGE;
+  src: url("src/fonts/RAGE.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Now;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+body {
+  overflow: unset;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body #load {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 100%;
+  background: white;
+  color: black;
+  font-size: 20px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1);
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  z-index: 10;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+body #load.done {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -10;
+}
+
+body #mainlogo {
+  position: absolute;
+  color: white;
+  padding: 2rem;
+  z-index: 2;
+  font-family: RAGE;
+}
+
+.title-1 {
+  font-size: 5rem;
+}
+
+.title-2 {
+  font-size: 1.9rem;
+}
+
+.title-3 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  z-index: 2;
+}
+
+header nav {
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 2rem;
+  padding: 2rem;
+  list-style: none;
+  border-radius: 50px;
+}
+
+header nav li {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+header nav li:hover {
+  text-shadow: 0 0 15px #00c3ff;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+  scroll-snap-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  padding-top: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #151723;
+  color: #ffffff;
+  margin: 0;
+  padding: 1rem;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+#home img {
+  height: 100vw;
+}
+
+#home #name div {
+  font-family: RAGE;
+}
+
+#home .bio {
+  text-align: justify;
+}
+
+#home .btn {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50px;
+  border: 2px solid white;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+#home .btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 15px white;
+          box-shadow: 0 0 15px white;
+}
+
+.about {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.about #about-img {
+  height: 40vh;
+  width: 40vh;
+}
+
+.about #quote {
+  height: 50px;
+  width: 50px;
+}
+
+.skills {
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .container {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 4rem;
+}
+
+.skills .language .skillbox .percentage {
+  background-color: #DDDDDD;
+  border-radius: 5px;
+}
+
+.skills .language .skillbox .percentage div {
+  border-radius: 5px;
+  padding-left: 3px;
+}
+
+.skills .language .skillbox .percentage {
+  height: 5px;
+}
+
+.skills .language .skillbox #c {
+  background-color: #4f89f5;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #c[data-scroll="in"] {
+  width: 85%;
+}
+
+.skills .language .skillbox #cplus {
+  background-color: #3402a7;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #cplus[data-scroll="in"] {
+  width: 90%;
+}
+
+.skills .language .skillbox #cs {
+  background-color: #4e4eca;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #cs[data-scroll="in"] {
+  width: 70%;
+}
+
+.skills .language .skillbox #java {
+  background-color: #F56161;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #java[data-scroll="in"] {
+  width: 75%;
+}
+
+.skills .language .skillbox #py {
+  background-color: #1463da;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #py[data-scroll="in"] {
+  width: 80%;
+}
+
+.skills .language .skillbox #kt {
+  background-color: #123f92;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #kt[data-scroll="in"] {
+  width: 60%;
+}
+
+.skills .language .skillbox #go {
+  background-color: #4f9ffa;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #go[data-scroll="in"] {
+  width: 60%;
+}
+
+.skills .language .skillbox #html {
+  background-color: #ff8800;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #html[data-scroll="in"] {
+  width: 95%;
+}
+
+.skills .language .skillbox #css {
+  background-color: #8ac1ff;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #css[data-scroll="in"] {
+  width: 75%;
+}
+
+.skills .language .skillbox #js {
+  background-color: #f8fa76;
+  width: 0%;
+  color: black;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #js[data-scroll="in"] {
+  width: 60%;
+}
+
+.skills .language .skillbox #php {
+  background-color: #7699fa;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #php[data-scroll="in"] {
+  width: 50%;
+}
+
+.skills .language .skillbox #sketch {
+  background-color: black;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #sketch[data-scroll="in"] {
+  width: 80%;
+}
+
+.skills .language .skillbox #digi {
+  background-color: #ffc493;
+  width: 0%;
+  color: black;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #digi[data-scroll="in"] {
+  width: 85%;
+}
+
+.skills .language .skillbox #logo {
+  background-color: #ff3b3b;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #logo[data-scroll="in"] {
+  width: 90%;
+}
+
+.skills .language .skillbox #threed {
+  background-color: #fdff70;
+  width: 0%;
+  color: black;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #threed[data-scroll="in"] {
+  width: 65%;
+}
+
+.skills .language .skillbox #twod {
+  background-color: #7473ac;
+  width: 0%;
+  color: white;
+  padding-left: 5px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.skills .language .skillbox #twod[data-scroll="in"] {
+  width: 70%;
+}
+
+.skills .percentage div {
+  height: 5px;
+}
+
+.contact_me {
+  position: relative;
+  margin: 0;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  background-color: transparent;
+  opacity: 1;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.contact_me form input[type=text], .contact_me form input[type=email] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 14px 10px;
+  width: 88vw;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.contact_me form input[type=text]:focus, .contact_me form input[type=email]:focus {
+  background-color: transparent;
+  width: 90vw;
+  border-color: #1ca1c2;
+}
+
+.contact_me form input[type=submit] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.contact_me form input[type=submit]:hover {
+  background: black;
+  color: white;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
+}
+
+.contact_me form textarea {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 14px 10px;
+  width: 88vw;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.contact_me form textarea:focus {
+  width: 90vw;
+  border-color: #1ca1c2;
+}
+
+.socials {
+  text-align: center;
+}
+
+.socials .title-3 {
+  text-align: center;
+}
+
+.socials #sites {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+::-webkit-input-placeholder {
+  font-family: Now;
+  color: black;
+  font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+  font-family: Now;
+  color: black;
+  font-size: 1rem;
+}
+
+::-ms-input-placeholder {
+  font-family: Now;
+  color: black;
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-family: Now;
+  color: black;
+  font-size: 1rem;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+footer {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  padding: 5px;
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+
+@media (orientation: landscape) and (min-device-aspect-ratio: 1 / 1) {
+  #home {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-left: 4rem;
+    max-height: 100vh;
+    background: #151723;
+  }
+  #home img {
+    height: 50vw;
+  }
+  #home .btn {
+    left: 25%;
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about #about-img {
+    max-height: 25vw;
+  }
+  .about #quote {
+    height: 50px;
+    width: 50px;
+  }
+  .skills {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .skills .container {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+  }
+  .contact_me form input[type=text], .contact_me form input[type=email] {
+    width: 50vw;
+  }
+  .contact_me form input[type=text]:focus, .contact_me form input[type=email]:focus {
+    width: 55vw;
+  }
+  .contact_me form textarea {
+    width: 50vw;
+  }
+  .contact_me form textarea:focus {
+    width: 55vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

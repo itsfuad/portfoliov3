@@ -1,0 +1,31 @@
+@font-face{
+    font-family: 'Now-Regular';
+    src: url('src/Now-Regular.otf');
+}
+
+h1{
+    position: fixed;
+    font-family: 'Now-Regular';
+    font-size: 40px;
+    left:50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+input[type='submit']{
+    position: fixed;
+    color: royalblue;
+    padding: 10px;
+    left:50%;
+    top: 54%;
+    color: white;
+    font-size: 15px;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    transition: 600ms;
+}
+input[type='submit']:hover{
+    transform: translate(-50%, -50%) scale(1.1);
+    cursor: pointer;
+}

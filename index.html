@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en-us">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fuad</title>
+</head>
+<body onload="load()">
+    <div id="load"><img src="src/images/Ghost.gif"></div>
+    <div class="title-2" id="mainlogo">AlterGen</div>
+    <header >
+        <div class="mobile-nav-toggle-btn" hidden>&Congruent;</div>
+        <nav>
+            <li id="home-btn">Home</li>
+            <li id="about-btn">About</li>
+            <li id="skills-btn">Skills</li>
+            <li id="contact-btn">Contact</li>
+        </nav>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <img src="src/images/programmer-animate.svg" alt="" srcset="">
+            <div class="content" id="home-content">
+                <div class="name" id="name"><div class="title-2">Hi, I'm</div><div class="title-1">Fuad Hasan</div></div>
+                <div class="bio" id="bio">I'm doing software development. 
+                    Not a huge fan of web dev but I do that if necessary. 
+                    I always try to give a look on new technologies 
+                    and also try to adopt them if they are as needed.</div>
+                <div class="btn" id="explore" onclick="about()">More</div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <img id="about-img" src="src/images/about.jpg" alt="" srcset="">
+            <div class="container">
+                <img id="quote" src="src/images/quote.png" alt="" srcset="">
+                <div class="title-2">About Me</div>
+                <div class="content" id="about-content">I would like to adress myself as a 
+                    <strong>programmer.</strong> I have learnt and worked
+                     with many programming languages such as C, C++, C#, 
+                     Java, Python, Ruby, Php, JavaScript and Lua. Mostly
+                      I work with C++. I love this language too much. 
+                      Currently I am working with my own 
+                      <strong>Game Engine</strong> named <strong>Xebec Engine.
+                      </strong> I am using OpenGL for the graphics pipeline.
+                       I also make arts of type human <strong>portraits
+                       </strong>, still life drawings, graphics designing
+                        stuffs. You can follow me on Instagram to see 
+                        those artworks. I make <strong>projectsal Videos
+                        </strong> on programming concepts in a short time. 
+                        I like to share my way to learn programming in the 
+                        easiest way here.
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <div class="title-2">Skills</div>
+            <div class="container">
+            <div class="software">
+                <div class="title-3">Software Development</div>
+                I mostly work as a software dev. I have worked with many personal and open-source projects.
+                In this case, I work with algorithms and game graphics. I use C++ as my main Language. 
+                I'm also experienced with all 'C family languages. I have been programming for more than 5 years.
+                
+                <div class="language">
+                    <div class="title-3" onclick="show_soft()"><br>Language Skills as Software Dev.</div>
+                    <div class="box" id="soft_skills">
+                        <div class="skillbox">C<div class="percentage"><div id="c"></div></div></div>
+                        <div class="skillbox">C++<div class="percentage"><div id="cplus"></div></div></div>
+                        <div class="skillbox">C#<div class="percentage"><div id="cs"></div></div></div>
+                        <div class="skillbox">Java<div class="percentage"><div id="java"></div></div></div>
+                        <div class="skillbox">Python<div class="percentage"><div id="py"></div></div></div>
+                        <div class="skillbox">Kotlin<div class="percentage"><div id="kt"></div></div></div>
+                        <div class="skillbox">Go<div class="percentage"><div id="go"></div></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="web">
+                <div class="title-3"><br>Web Development</div>
+                    I won't call myself a web developer but I can make a website for you. I do front-end web development most of the cases. I could do a little bit server side coding too if needed. I work with HTML, CSS, Vanila JavaScript and React. 
+                    Mainly I can make responsive personal websites. 
+                    <div class="language" id="skills">
+                        <div class="title-3"><br>Language Skills as Web Dev.</div>
+                        <div class="box">
+                            <div class="skillbox">HTML5<div class="percentage"><div id="html"></div></div></div>
+                            <div class="skillbox">CSS3<div class="percentage"><div id="css"></div></div></div>
+                            <div class="skillbox">JavaScript<div class="percentage"><div id="js"></div></div></div>
+                            <div class="skillbox">Php<div class="percentage"><div id="php"></div></div></div>
+                        
+                        </div>
+                    </div>
+            </div>
+            <div class="visuals">
+                <div class="title-3"><br>Visual Artist</div>
+                    I make paper Sketches by pencil of Peoples, still objects, natures.
+                    I make digital arts too. I also make digital assets for games and filters. 
+                    Sometimes I make 3d models for peoples. 
+                    <div class="language" id="skills">
+                        <div class="title-3"><br>Skills</div>
+                        <div class="box">
+                            <div class="skillbox">Sketch<div class="percentage"><div id="sketch"></div></div></div>
+                            <div class="skillbox">Digital Art<div class="percentage"><div id="digi"></div></div></div>
+                            <div class="skillbox">Logo<div class="percentage"><div id="logo"></div></div></div>
+                            <div class="skillbox">3d modeling<div class="percentage"><div id="threed"></div></div></div>
+                            <div class="skillbox">2d Animation<div class="percentage"><div id="twod"></div></div></div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+        <section class="contact_me" id="contact">
+            <div class="title-2">Contact Me</div>
+            <form data-netlify="true" method="post">
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    
+    </main>
+    <footer>
+        <div class="socials">
+            <div class="title-3">Follow me</div>
+            <div id="sites">
+                <span class="github" id="github">
+                    <a href="https://github.com/itsfuad" target="blank">
+                        <img src="src/images/githublogo.svg" height="30px" width="30px" alt="Github logo">
+                    </a>
+                </span>
+    
+                <span class="fb" id="fb">
+                    <a href="https://facebook.com/therealfuad" target="blank">
+                        <img src="src/images/fblogo.svg" height="30px" width="30px" alt="Facebook logo">
+                    </a>
+                </span>
+                <span class="ig" id="ig">
+                    <a href="https://instagram.com/_therealfuad" target="blank">
+                        <img src="src/images/iglogo.svg" height="30px" width="30px" alt="Instagram logo">
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="game">Bored? Then play this game <a href="Radius Raid/index.html"><img src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div>
+        &copy; 2021, AlterGen Inc.
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="scroll.js"></script>
+<script>
+    ScrollOut({
+      targets: "section div, #c,#cplus, #cs, #java, #py, #kt, #go, #html, #css, #js, #php, #sketch, #digi, #logo, #threed, #twod"
+    })
+  </script>
+</html>
