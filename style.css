@@ -13,12 +13,22 @@
   src: url("src/fonts/RAGE.ttf");
 }
 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Now;
+}
+
+:root {
+  --angle: 0deg;
 }
 
 html {
@@ -34,6 +44,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 2;
 }
 
 body #load {
@@ -61,7 +72,7 @@ body #load.done {
 
 body #mainlogo {
   position: absolute;
-  color: white;
+  color: black;
   padding: 2rem;
   z-index: 2;
   font-family: RAGE;
@@ -83,11 +94,10 @@ body #mainlogo {
 header {
   position: fixed;
   right: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 header nav {
-  color: white;
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
@@ -95,9 +105,12 @@ header nav {
       -ms-flex-pack: right;
           justify-content: right;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   list-style: none;
   border-radius: 50px;
+  background: white;
+  color: black;
+  margin: 1rem;
 }
 
 header nav li {
@@ -106,7 +119,7 @@ header nav li {
 }
 
 header nav li:hover {
-  text-shadow: 0 0 15px #00c3ff;
+  text-shadow: 0 0 15px black;
   cursor: pointer;
 }
 
@@ -128,6 +141,7 @@ section {
   padding-top: 2rem;
   padding-left: 5%;
   padding-right: 5%;
+  background: #f0f8fd;
 }
 
 #home {
@@ -145,8 +159,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  background: #151723;
-  color: #ffffff;
+  color: black;
   margin: 0;
   padding: 1rem;
   -webkit-transition: 600ms;
@@ -154,7 +167,7 @@ section {
 }
 
 #home img {
-  height: 100vw;
+  width: 100vw;
 }
 
 #home #name div {
@@ -175,16 +188,29 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-radius: 50px;
-  border: 2px solid white;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(var(--angle), #471b92, #a5327b);
+  -webkit-animation: 5s rotate linear infinite;
+          animation: 5s rotate linear infinite;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
 
 #home .btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 15px white;
-          box-shadow: 0 0 15px white;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
 }
 
 .about {
@@ -227,6 +253,18 @@ section {
   display: grid;
   grid-auto-flow: row;
   gap: 4rem;
+  position: relative;
+}
+
+.skills .container img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.3;
+  
 }
 
 .skills .language .skillbox .percentage {
@@ -460,11 +498,22 @@ section {
   margin: 0;
   color: black;
   text-align: center;
-  border-radius: 5px;
-  background-color: transparent;
   opacity: 1;
   -webkit-transition: 600ms;
   transition: 600ms;
+  z-index: 2;
+}
+
+.contact_me img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.3;
+  z-index: 1;
+  mix-blend-mode: multiply;
 }
 
 .contact_me form input[type=text], .contact_me form input[type=email] {
@@ -617,10 +666,9 @@ footer {
             flex-direction: row-reverse;
     padding-left: 4rem;
     max-height: 100vh;
-    background: #151723;
   }
   #home img {
-    height: 50vw;
+    width: 50vw;
   }
   #home .btn {
     left: 25%;

@@ -11,13 +11,20 @@
   font-family: RAGE;
   src: url("src/fonts/RAGE.ttf");
 }
+@property --angle{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Now;
 }
-
+:root{
+  --angle: 0deg;
+}
 html{
     font-size: 14px;
     scroll-behavior: smooth;
@@ -27,7 +34,7 @@ html{
 body{
     overflow:unset;
     user-select: none;
-
+    z-index: 2;
     #load{
         position: fixed;		
         left: 50%;
@@ -50,7 +57,7 @@ body{
 
     #mainlogo{
       position: absolute;
-      color: white;
+      color: black;
       padding: 2rem;
       z-index: 2;
       font-family: RAGE;
@@ -73,21 +80,22 @@ body{
 header{
     position: fixed;
     right: 0;
-    z-index: 2;
-
+    z-index: 5;
     nav{
-      color: white;
         display: grid;
         grid-auto-flow: column;
         justify-content: right;
         gap: 2rem;
-        padding: 2rem;
+        padding: 1rem 2rem;
         list-style: none;
         border-radius: 50px;
+        background: white;
+        color: black;
+        margin: 1rem;
         li{
           transition: 600ms;
           &:hover{
-            text-shadow: 0 0 15px rgb(0, 195, 255);
+            text-shadow: 0 0 15px black;
             cursor: pointer;
           }
         }
@@ -105,7 +113,7 @@ section{
     padding-top: 2rem;
     padding-left: 5%;
     padding-right: 5%;
-
+    background:  rgb(240, 248, 253);
 }
 
 #home{
@@ -114,13 +122,12 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #151723;
-    color: #ffffff;
+    color: black;
     margin: 0;
     padding: 1rem;
     transition: 600ms;
     img{
-        height: 100vw;
+        width: 100vw;
     }
     #name div{
       font-family: RAGE;
@@ -135,16 +142,22 @@ section{
         width: max-content;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: 50px;
-        border: 2px solid white;
+        border: 2px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(var(--angle), #471b92, #a5327b);
+        animation: 5s rotate linear infinite;
         transition: 600ms;
         &:hover{
           cursor: pointer;
-          box-shadow: 0 0 15px white;
         }
     }
 }
 
+@keyframes rotate {
+  to{
+    --angle: 360deg;
+  }
+}
 .about{
   position: sticky;
   
@@ -170,6 +183,17 @@ section{
       display: grid;
       grid-auto-flow: row;
       gap: 4rem;
+      position: relative;
+      img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        
+        width: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.3;
+        isolation: isolate;
+      }
     }
     .language .skillbox .percentage {
         background-color: #DDDDDD;
@@ -353,11 +377,19 @@ section{
     margin: 0;
     color: black;
     text-align: center;
-    border-radius: 5px;
-    background-color: transparent;
     opacity: 1;
     transition: 600ms;
-    
+    z-index: 2;
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 90vw;
+      transform: translate(-50%, -50%);
+      opacity: 0.3;
+      z-index: 1;
+      mix-blend-mode: multiply;
+    }
   }
   
   .contact_me form input[type=text], .contact_me form input[type=email] {
@@ -471,9 +503,8 @@ footer {
         flex-direction: row-reverse;
         padding-left: 4rem;
         max-height: 100vh;
-        background: #151723;
         img{
-            height: 50vw;
+            width: 50vw;
         }
         .btn{
             left: 25%;
@@ -494,12 +525,14 @@ footer {
     .skills{
       padding-left: 5%;
       padding-right: 5%;
+
       .container{
         display: grid;
         grid-auto-flow: column;
         gap: 2rem;
       }
     }
+
     .contact_me form input[type=text], .contact_me form input[type=email] {
       width: 50vw;
     }
