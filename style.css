@@ -132,6 +132,7 @@ section {
   padding-top: 2rem;
   padding-left: 5%;
   padding-right: 5%;
+  overflow: hidden;
 }
 
 #home {
