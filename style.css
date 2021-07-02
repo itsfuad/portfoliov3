@@ -528,7 +528,7 @@ section {
   padding: 14px 10px;
   width: 88vw;
   outline: none;
-  color: black;
+  color: white;
   border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -571,7 +571,7 @@ section {
   padding: 14px 10px;
   width: 88vw;
   outline: none;
-  color: black;
+  color: white;
   border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
