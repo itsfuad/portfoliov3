@@ -531,7 +531,7 @@ section {
   z-index: 2;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow-y: hidden;
-  border-top-left-radius: 50vh;
+  border-top-left-radius: 50vw;
 }
 
 .contact_me form input[type=text], .contact_me form input[type=email] {
@@ -776,6 +776,9 @@ footer {
     display: grid;
     grid-auto-flow: column;
     gap: 2rem;
+  }
+  .contact_me {
+    border-top-left-radius: 50vh;
   }
   .contact_me form input[type=text], .contact_me form input[type=email] {
     width: 50vw;
