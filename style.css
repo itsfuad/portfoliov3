@@ -54,7 +54,7 @@ body #load {
   transition: 600ms;
 }
 
-body #load.done {
+body #load.done{
   visibility: hidden;
   opacity: 0;
   z-index: -10;
@@ -361,6 +361,7 @@ section {
 .skills div .language .skillbox .percentage {
   background-color: #DDDDDD;
   border-radius: 5px;
+  margin-bottom:0.5rem;
 }
 
 .skills div .language .skillbox .percentage div {
@@ -472,7 +473,7 @@ section {
 }
 
 .skills div .language .skillbox #sketch {
-  background-color: black;
+  background-color: #212121;
   width: 80%;
   color: white;
   padding-left: 5px;
