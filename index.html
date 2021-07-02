@@ -9,7 +9,8 @@
     <title>Fuad</title>
 </head>
 <body onload="load()">
-    <div id="load"><img src="src/images/Ghost.gif"></div>
+    <div id="load"><img src="src/images/circles3.gif"></div>
+            
     <div class="title-2" id="mainlogo">AlterGen</div>
     <header >
         <div class="mobile-nav-toggle-btn" hidden>&Congruent;</div>
@@ -37,11 +38,13 @@
             </div>
         </section>
         <section class="about" id="about">
+           
             <img id="about-img" src="src/images/programmer-animate.svg" alt="" srcset="">
             <div class="container">
                 <img id="quote" src="src/images/quote.png" alt="" srcset="">
                 <div class="title-2">About Me</div>
-                <div class="content" id="about-content">I would like to adress myself as a 
+                <div class="content" id="about-content">
+                    I would like to adress myself as a 
                     <strong>programmer.</strong> I have learnt and worked
                      with many programming languages such as C, C++, C#, 
                      Java, Python, Ruby, Php, JavaScript and Lua. Mostly
@@ -61,7 +64,6 @@
         <section class="skills" id="skills">
             <div class="title-2">Skills</div>
             <div class="container">
-            <img src="src/images/video.svg" alt="" srcset="">
             <div class="software">
                 <div class="title-3">Software Development</div>
                 I mostly work as a software dev. I have worked with many personal and open-source projects.
@@ -115,6 +117,9 @@
             </div>
         </section>
         <section class="contact_me" id="contact">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
             <div class="title-2">Contact Me</div>
             <form data-netlify="true" method="post">
                 <input type="text" name="name" id="name" placeholder="Your name" required>
@@ -155,7 +160,7 @@
 <script src="scroll.js"></script>
 <script>
     ScrollOut({
-      targets: "section div, #c,#cplus, #cs, #java, #py, #kt, #go, #html, #css, #js, #php, #sketch, #digi, #logo, #threed, #twod"
+      targets: "#mainlogo, #name, #bio, .about div, #skills div, #about-img, #c,#cplus, #cs, #java, #py, #kt, #go, #html, #css, #js, #php, #sketch, #digi, #logo, #threed, #twod"
     })
   </script>
 </html>
