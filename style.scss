@@ -32,7 +32,7 @@ html{
 body{
     user-select: none;
     z-index: 2;
-    background:  radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     color: white;
     #load{
         position: fixed;		
@@ -76,6 +76,17 @@ body{
  text-align: left;
 }
 
+strong{
+  color: #81b5d6;
+  transition: 600ms;
+  &:hover{
+    cursor: pointer;
+    color: white;
+    text-shadow: 0 0 10px #2dacfa;
+  }
+}
+
+
 header{
     position: fixed;
     top: 0;
@@ -93,9 +104,11 @@ header{
         color: black;
         margin: 1rem;
         li{
+          position: relative;
           transition: 600ms;
           &:hover{
-            text-shadow: 0 0 15px black;
+            transform: scale(1.2);
+            color: rgb(0, 110, 255);
             cursor: pointer;
           }
         }
@@ -227,7 +240,8 @@ section{
   justify-content: center;
   transition: 600ms;
   z-index: 4;
-  background: #9cd499;
+  background: linear-gradient(#e4f6fc,#c8ffea);
+  color: #090a0f;
   border-bottom-right-radius: 50vw;
   #about-img{
     height: 40vh;
@@ -237,7 +251,7 @@ section{
   #quote{
     height: 50px;
     width: 50px;
-    filter:invert(1);
+
   }
   div{
     position: inherit;
@@ -253,8 +267,8 @@ section{
 
 .skills{
   transition: 600ms;
-  background: #f6fdff;
-  color: black;
+  color: white;
+  
   padding: 5%;
   padding-top: 10%;
   padding-bottom: 10%;
@@ -427,6 +441,7 @@ section{
     z-index: 2;
     background:  radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow-y: hidden;
+    border-top-left-radius: 50vh;
   }
   
   .contact_me form input[type=text], .contact_me form input[type=email] {
