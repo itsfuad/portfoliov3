@@ -185,29 +185,21 @@ section {
 
 #home #name {
   position: relative;
-  left: -10vw;
-  opacity: 0;
+  left: 0vw;
+  opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-#home #name[data-scroll="in"] {
-  opacity: 1;
-  left: 0;
-}
 
 #home #bio {
   position: relative;
-  top: 20px;
-  opacity: 0;
+  top: 0px;
+  opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-#home #bio[data-scroll="in"] {
-  top: 0;
-  opacity: 1;
-}
 
 #home #name div {
   font-family: RAGE;
