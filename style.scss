@@ -21,13 +21,10 @@
 }
 
 html{
-    font-size: 14px;
+    font-size: 16px;
     scroll-behavior: smooth;
     //scroll-snap-type: y proximity;
 }
-
-
-
 
 body{
     user-select: none;
@@ -64,7 +61,7 @@ body{
 }
 
 .title-1{
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
 .title-2{
@@ -137,10 +134,9 @@ section{
     align-items: center;
     min-height: 100vh;
     margin-top: 5.5rem;
-    padding: 1rem;
     transition: 600ms;
-    border-top-left-radius: 50vw;
-    background: #e4f6fc;
+    border-top-left-radius: 25vw;
+    background: #f4faff;
     color: rgb(39, 39, 39);
     
     img{
@@ -240,12 +236,11 @@ section{
   justify-content: center;
   transition: 600ms;
   z-index: 4;
-  background: linear-gradient(#e4f6fc,#c8ffea);
+  background: linear-gradient(#f4faff,#e4f6fc);
   color: #090a0f;
-  border-bottom-right-radius: 50vw;
+  border-bottom-right-radius: 25vw;
   #about-img{
-    height: 40vh;
-    width: 40vh;
+    height: 100vw;
     z-index: 5;
   }
   #quote{
@@ -256,13 +251,14 @@ section{
   div{
     position: inherit;
     left: -10vw;
+    opacity: 0;
     transition: 600ms;
     &[data-scroll="in"]{
       left: 0;
+      opacity: 1;
     }
   }
 }
-
 
 
 .skills{
@@ -275,16 +271,20 @@ section{
   div{
     position: relative;
     left: 10vw;
+    opacity: 0;
     transition: 600ms;
     &[data-scroll="in"]{
       left: 0;
+      opacity: 1;
     }
     .container{
       display: grid;
       grid-auto-flow: row;
       gap: 4rem;
       position: relative;
+
     }
+
     .language .skillbox .percentage {
         background-color: #DDDDDD;
         border-radius: 5px;
@@ -441,7 +441,7 @@ section{
     z-index: 2;
     background:  radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow-y: hidden;
-    border-top-left-radius: 50vw;
+    border-top-left-radius: 25vw;
   }
   
   .contact_me form input[type=text], .contact_me form input[type=email] {
@@ -532,7 +532,7 @@ footer {
     font-size: 1rem;
     text-align: center;
     color: black;
-    background: #e4f6fc;
+    background: #ffffff;
     padding: 5px;
     padding-top: 3rem;
     border-top-left-radius: 40%;
@@ -579,31 +579,30 @@ footer {
   }
 }
 
-@keyframes rotate {
-  to{
-    --angle: 360deg;
+@media screen and (max-width: 900px) {
+  html{
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 800px) {
   html{
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 700px) {
   html{
-    font-size: 9.5px;
+    font-size: 10px;
   }
 }
 
 
 @media (orientation: landscape) and (min-device-aspect-ratio: 1/1) {
-    
     #home{
         flex-direction: row-reverse;
         padding-left: 4rem;
         max-height: 100vh;
-        border-top-left-radius: 50vh;
+        border-top-left-radius: 25vh;
         img{
             width: 50vw;
         }
@@ -614,7 +613,7 @@ footer {
     .about{
       display: flex;
       flex-direction: row;
-      border-bottom-right-radius: 50vh;
+      border-bottom-right-radius: 25vh;
       #about-img{
         max-height: 25vw;
       }
@@ -634,7 +633,7 @@ footer {
       }
     }
     .contact_me{
-      border-top-left-radius: 50vh;
+      border-top-left-radius: 25vh;
     }
     .contact_me form input[type=text], .contact_me form input[type=email] {
       width: 50vw;
