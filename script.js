@@ -45,11 +45,7 @@ contact.onclick = () => {
 
 
 function load_home(){
-  
-  document.getElementById("mainlogo").classList.add("loaded");
-  
-  document.getElementById("home").classList.add("loaded");
-  
+
   document.getElementsByTagName("header")[0].classList.add("loaded");
 }
 

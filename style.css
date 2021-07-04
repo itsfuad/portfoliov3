@@ -63,17 +63,13 @@ body #load.done {
 
 body #mainlogo {
   top: 0;
-  left: -25vw;
+  left: 0vw;
   position: absolute;
   color: white;
   font-size: 3rem;
   padding: 2rem;
   font-family: RAGE;
   transition: 1s;
-}
-
-body #mainlogo.loaded{
-  left: 0vw;
 }
 
 .title-1 {
@@ -183,15 +179,11 @@ section {
   margin-top: 5.5rem;
   -webkit-transition: 600ms;
   transition: 600ms;
-  border-top-left-radius: 0vw;
+  border-top-left-radius: 25vw;
   background: #f4faff;
   color: #272727;
   transition: 1s;
   transition-delay: 1s;
-}
-
-#home.loaded{
-  border-top-left-radius: 25vw;
 }
 
 
