@@ -26,9 +26,6 @@ html{
     //scroll-snap-type: y proximity;
 }
 
-
-
-
 body{
     user-select: none;
     z-index: 2;
@@ -582,9 +579,9 @@ footer {
   }
 }
 
-@keyframes rotate {
-  to{
-    --angle: 360deg;
+@media screen and (max-width: 900px) {
+  html{
+    font-size: 14px;
   }
 }
 
