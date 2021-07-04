@@ -24,6 +24,7 @@
 
 html {
   font-size: 10px;
+  min-height: -webkit-fill-available;
   scroll-behavior: smooth;
 }
 
@@ -147,6 +148,8 @@ section {
   padding-top: 2rem;
   padding-left: 5%;
   padding-right: 5%;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   overflow: hidden;
 }
 
@@ -172,6 +175,9 @@ section {
   background: #f4faff;
   color: #272727;
 }
+
+
+
 
 #home img {
   width: 100vw;
