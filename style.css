@@ -23,7 +23,7 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 
@@ -714,19 +714,7 @@ footer {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  html {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
