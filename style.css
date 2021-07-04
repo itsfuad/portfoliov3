@@ -63,11 +63,17 @@ body #load.done {
 
 body #mainlogo {
   top: 0;
+  left: -25vw;
   position: absolute;
   color: white;
   font-size: 3rem;
   padding: 2rem;
   font-family: RAGE;
+  transition: 1s;
+}
+
+body #mainlogo.loaded{
+  left: 0vw;
 }
 
 .title-1 {
@@ -98,8 +104,14 @@ strong:hover {
 header {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -50vw;
   z-index: 5;
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+header.loaded{
+  right: 0;
 }
 
 header nav {
@@ -171,12 +183,16 @@ section {
   margin-top: 5.5rem;
   -webkit-transition: 600ms;
   transition: 600ms;
-  border-top-left-radius: 25vw;
+  border-top-left-radius: 0vw;
   background: #f4faff;
   color: #272727;
+  transition: 1s;
+  transition-delay: 1s;
 }
 
-
+#home.loaded{
+  border-top-left-radius: 25vw;
+}
 
 
 #home img {
@@ -185,7 +201,7 @@ section {
 
 #home #name {
   position: relative;
-  left: 0vw;
+  left: 0;
   opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
@@ -199,7 +215,6 @@ section {
   -webkit-transition: 1s;
   transition: 1s;
 }
-
 
 #home #name div {
   font-family: RAGE;
