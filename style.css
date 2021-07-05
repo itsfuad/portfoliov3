@@ -217,12 +217,8 @@ section {
 }
 
 #home .btn {
-  position: absolute;
-  padding: 0.5rem 1rem;
+  position: relative;
   margin-top: 1rem;
-  width: 5ch;
-  height: 5ch;
-  left: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
