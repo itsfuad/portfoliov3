@@ -279,9 +279,6 @@ section {
           transform: skewY(-30deg);
 }
 
-#home[data-scroll="in"] {
-  top: 0;
-}
 
 .about {
   position: relative;

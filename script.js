@@ -1,6 +1,5 @@
 
 
-
 const nav = document.getElementsByTagName("nav")[0];
 const more = document.getElementById("explore");
 const home = document.getElementById("home-btn");
