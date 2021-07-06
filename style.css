@@ -14,6 +14,33 @@
   src: url("src/fonts/RAGE.ttf");
 }
 
+@font-face {
+  font-family: Almara;
+  src: url("src/fonts/Almara Demo.ttf");
+}
+
+@font-face {
+  font-family: Balsoon;
+  src: url("src/fonts/Balsoon.ttf");
+}
+
+@font-face {
+  font-family: hike;
+  src: url("src/fonts/Hitch-hike.otf");
+}
+
+@font-face {
+  font-family: Nadheva;
+  src: url("src/fonts/NadhevaDemoRegular.ttf");
+}
+
+
+@font-face {
+  font-family: Vonique;
+  src: url("src/fonts/Vonique 64.ttf");
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -79,6 +106,7 @@ body #mainlogo {
 
 .title-2 {
   font-size: 1.9rem;
+  font-family: Vonique;
 }
 
 .title-3 {
@@ -121,7 +149,7 @@ header nav {
   padding: 1rem 2rem;
   list-style: none;
   border-radius: 50px;
-  background: white;
+  background: #f4faff;
   color: black;
   margin: 1rem;
 }
@@ -180,7 +208,7 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   /*border-top-left-radius: 25vw;*/
- background: #F2FAFF;
+ background: #ffffff;
   color: #272727;
   transition: 1s;
    
@@ -209,7 +237,8 @@ section {
 }
 
 #home #name div {
-  font-family: RAGE;
+  font-family: Nadheva;
+  color: #181818;
 }
 
 #home .bio {
@@ -300,7 +329,7 @@ section {
   transition: 600ms;
   z-index: 4;
   
-  background: linear-gradient(#f4faff, #A7FFF7);
+  background: linear-gradient(#ffffff, #DEEFF3);
   color: #090a0f;
   border-bottom-right-radius: 25vw;
 }
