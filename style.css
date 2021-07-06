@@ -65,11 +65,12 @@ body #mainlogo {
   top: 0;
   left: 0vw;
   position: absolute;
-  color: white;
-  font-size: 3rem;
+  color: black;
+  font-size: 2rem;
   padding: 2rem;
-  font-family: RAGE;
+  /*font-family: RAGE;*/
   transition: 1s;
+  z-index: 5;
 }
 
 .title-1 {
@@ -103,7 +104,6 @@ header {
   right: -50vw;
   z-index: 5;
   transition: 1s;
-   
 }
 
 header.loaded{
@@ -176,11 +176,11 @@ section {
       -ms-flex-align: center;
           align-items: center;
   min-height: 90vh;
-  margin-top: 5.5rem;
+  
   -webkit-transition: 600ms;
   transition: 600ms;
-  border-top-left-radius: 25vw;
-  background: #f4faff;
+  /*border-top-left-radius: 25vw;*/
+ background: #F2FAFF;
   color: #272727;
   transition: 1s;
    
@@ -299,14 +299,14 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   z-index: 4;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f4faff), to(#e4f6fc));
-  background: linear-gradient(#f4faff, #e4f6fc);
+  
+  background: linear-gradient(#f4faff, #A7FFF7);
   color: #090a0f;
   border-bottom-right-radius: 25vw;
 }
 
 .about #about-img {
-  height: 100vw;
+  height: 80vw;
   z-index: 5;
 }
 
@@ -730,10 +730,9 @@ footer {
             flex-direction: row-reverse;
     padding-left: 4rem;
     max-height: 100vh;
-    border-top-left-radius: 25vh;
   }
   #home img {
-    width: 50vw;
+    max-width: 50vw;
   }
   #home .btn {
     left: 25%;
@@ -749,7 +748,7 @@ footer {
     border-bottom-right-radius: 25vh;
   }
   .about #about-img {
-    max-height: 25vw;
+    max-height: 90vh;
   }
   .about #quote {
     height: 50px;
