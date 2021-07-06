@@ -339,7 +339,7 @@ section {
 
 .skills div {
   position: relative;
-  left: 10vw;
+  left: 10px;
   opacity: 0;
   -webkit-transition: 600ms;
   transition: 600ms;
