@@ -1,18 +1,46 @@
 @import url("stars.css");
 
 @font-face {
-    font-family: Now;
-    src: url("src/fonts/Now-Regular.otf");
+  font-family: Now;
+  src: url("src/fonts/Now-Regular.otf");
 }
 
 @font-face {
-    font-family: Rail;
-    src: url("src/fonts/Raleway-Regular.ttf");
+  font-family: Rail;
+  src: url("src/fonts/Raleway-Regular.ttf");
 }
+
 @font-face {
   font-family: RAGE;
   src: url("src/fonts/RAGE.ttf");
 }
+
+@font-face {
+  font-family: Almara;
+  src: url("src/fonts/Almara Demo.ttf");
+}
+
+@font-face {
+  font-family: Balsoon;
+  src: url("src/fonts/Balsoon.ttf");
+}
+
+@font-face {
+  font-family: hike;
+  src: url("src/fonts/Hitch-hike.otf");
+}
+
+@font-face {
+  font-family: Nadheva;
+  src: url("src/fonts/NadhevaDemoRegular.ttf");
+}
+
+
+@font-face {
+  font-family: Vonique;
+  src: url("src/fonts/Vonique 64.ttf");
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -21,7 +49,7 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 12px;
     scroll-behavior: smooth;
     //scroll-snap-type: y proximity;
 }
@@ -50,22 +78,29 @@ body{
           z-index: -10;
         }
     }
+
     #mainlogo{
       top: 0;
+      left: 0;
       position: absolute;
-      color: white;
-      font-size: 3rem;
-      padding: 2rem;
-      font-family: RAGE;
+      z-index: 10;
+      padding: 2rem 0 0 2rem;
+      img{
+        height: 5rem;
+        width: 5rem;
+        filter: invert(1);
+      }
+      filter: drop-shadow(0 0 15px black);
    }
 }
 
 .title-1{
-    font-size: 5rem;
+    font-size: 8rem;
 }
 
 .title-2{
-    font-size: 1.9rem;
+    font-size: 3rem;
+    font-family: Vonique;
 }
 
 .title-3{
@@ -85,10 +120,15 @@ strong{
 
 
 header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 5;
+      position: fixed;
+      top: 0;
+      right: -50vw;
+      z-index: 5;
+      transition: 1s;
+
+    &.loaded{
+      right: 0;
+    }
     nav{
         display: grid;
         grid-auto-flow: column;
@@ -127,60 +167,90 @@ section{
     //background:  rgb(240, 248, 253);
 }
 
+
+
 #home{
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    margin-top: 5.5rem;
+    display: grid;
+    grid-template-columns:  1fr;
+    margin: 0;
+    max-height: 100vh;
     transition: 600ms;
-    border-top-left-radius: 25vw;
     background: #f4faff;
-    color: rgb(39, 39, 39);
-    
-    img{
-      width: 100vw;
+    color: rgb(0, 0, 0);
+    background: url("src/images/cover-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    img, .content{
+      grid-row: 1/2;
     }
+      img{
+        z-index: 1;
+        position: relative;
+        grid-column: 1/5;
+        height: 100vh;
+        clip-path: polygon(53% 0, 100% 0%, 100% 100%, 0 100%);
+        mix-blend-mode: multiply;
+      }
+      .content{
+        z-index: 2;
+        grid-column: 1/5;
+        align-self: center;
+        
+      }
     #name{
       position: relative;
-      left: -10vw;
-      opacity: 0;
       transition: 1s;
+      font-family: Nadheva;
+      color: rgb(26, 26, 26);
+      .title-1{
+        font-size: 7rem;
+      }
+      .title{
+        font-size: 4rem;
+      }
     }
-    #name[data-scroll="in"]{
-      opacity: 1;
-      left: 0;
-    }
-    #bio{
+    #bio {
       position: relative;
-      top: 20px;
-      opacity: 0;
+      top: 0px;
+      opacity: 1;
       transition: 1s;
     }
-    #bio[data-scroll="in"]{
-      top: 0;
-      opacity: 1;
-    }
-
     #name div{
       font-family: RAGE;
     }
     .bio{
         text-align: justify;
+        font-size: 1.5rem;
+    }
+    .resume{
+      a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+      position: relative;
+      background: black;
+      color: white;
+      border-radius: 5px;
+      max-width: max-content;
+      padding: 1rem;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%)scale(1);
+      text-shadow: none;
+      transition: 800ms;
+      &:hover{
+        cursor: pointer;
+        transform: translateX(-50%)scale(1.1);
+      }
     }
     .btn{
-        position: absolute;
-        padding: 0.5rem 1rem;
-        margin-top: 1rem;
-        width: 5ch;
-        height: 5ch;
-        left: 50%;
-        display: flex;
-          justify-content: center;
-          align-items: center;
-        transition: 600ms;
+      position: relative;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 600ms;
         &:hover{
           cursor: pointer;
         }
@@ -237,17 +307,18 @@ section{
   justify-content: center;
   transition: 600ms;
   z-index: 4;
-  background: linear-gradient(#f4faff,#e4f6fc);
+  background: linear-gradient(#f2faff,#e8f9ff);
   color: #090a0f;
   border-bottom-right-radius: 25vw;
   #about-img{
-    height: 100vw;
+    height: 70vw;
     z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px white;
   }
   #quote{
     height: 50px;
     width: 50px;
-
   }
   div{
     position: inherit;
@@ -265,13 +336,12 @@ section{
 .skills{
   transition: 600ms;
   color: white;
-  
   padding: 5%;
   padding-top: 10%;
   padding-bottom: 10%;
   div{
     position: relative;
-    left: 10vw;
+    left: 10px;
     opacity: 0;
     transition: 600ms;
     &[data-scroll="in"]{
@@ -283,7 +353,6 @@ section{
       grid-auto-flow: row;
       gap: 4rem;
       position: relative;
-
     }
 
     .language .skillbox .percentage {
@@ -502,20 +571,6 @@ section{
     width: 90vw;
     border-color: #1ca1c2;
   }
-  .socials {
-    text-align: center;
-    .title-3{
-        text-align: center ;
-    }
-  }
-  .socials #sites{
-    padding: 10px;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    gap: 1rem;
-
-  }
 
   ::placeholder {
     font-family: Now;
@@ -532,12 +587,10 @@ section{
 footer {
     font-size: 1rem;
     text-align: center;
-    color: black;
-    background: #ffffff;
+    color: white;
+    background: black;
     padding: 5px;
     padding-top: 3rem;
-    border-top-left-radius: 40%;
-    border-top-right-radius: 40%;
     scroll-snap-align: start;
 }
 
@@ -596,15 +649,19 @@ footer {
 
 @media (orientation: landscape) and (min-device-aspect-ratio: 1/1) {
     #home{
-        flex-direction: row-reverse;
-        padding-left: 4rem;
-        max-height: 100vh;
-        border-top-left-radius: 25vh;
+      grid-template-columns: repeat(5, 1fr);
+      img, .content{
+        grid-row: 1/2;
+      }
         img{
-            width: 50vw;
+          position: absolute;
+          top: -2rem;
+          grid-column: 3/5;
+          height: 100vh;
         }
-        .btn{
-            left: 25%;
+        .content{
+          grid-column: 1/3;
+          align-self: center;
         }
     }
     .about{
