@@ -91,8 +91,7 @@ body #mainlogo {
   position: absolute;
   z-index: 10;
   padding: 2rem 0 0 2rem;
-  -webkit-filter: drop-shadow(0 0 15px black);
-          filter: drop-shadow(0 0 15px black);
+  mix-blend-mode: soft-light;
 }
 
 body #mainlogo img {
@@ -393,7 +392,7 @@ section {
 }
 
 .about #about-img {
-  height: 70vw;
+  height: 60vw;
   z-index: 5;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px white;
