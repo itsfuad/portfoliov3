@@ -188,6 +188,8 @@ section {
   padding-left: 5%;
   padding-right: 5%;
   overflow: hidden;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 
 #home {

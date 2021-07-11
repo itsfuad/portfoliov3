@@ -165,6 +165,8 @@ section{
     padding-right: 5%;
     overflow: hidden;
     //background:  rgb(240, 248, 253);
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 
