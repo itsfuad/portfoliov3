@@ -239,16 +239,17 @@ section {
   position: relative;
   -webkit-transition: 1s;
   transition: 1s;
-  font-family: Nadheva;
   color: #1a1a1a;
 }
 
 #home #name .title-1 {
   font-size: 7rem;
+  font-family: Nadheva;
 }
 
 #home #name .title {
   font-size: 4rem;
+  font-family: Nadheva;
 }
 
 #home #bio {
