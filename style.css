@@ -727,6 +727,25 @@ section {
   text-align: center;
 }
 
+.socials {
+  text-align: center;
+}
+
+.socials .title-3 {
+  text-align: center;
+}
+
+.socials #sites {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 footer {
   font-size: 1rem;
   text-align: center;
