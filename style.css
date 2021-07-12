@@ -240,6 +240,9 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   font-size: 3rem;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 #home #bio {
@@ -253,6 +256,11 @@ section {
 #home .bio {
   text-align: justify;
   font-size: 1.5rem;
+}
+
+#home #cursor {
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
 }
 
 #home .resume {
@@ -745,6 +753,24 @@ footer {
   color: #090a0f;
   font-size: 3rem;
   z-index: 100;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes move-chevron {

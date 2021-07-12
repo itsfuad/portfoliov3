@@ -203,6 +203,7 @@ section{
     #name{
       transition: 600ms;
       font-size: 3rem;
+      justify-content: left;
     }
     #bio {
       position: relative;
@@ -214,6 +215,11 @@ section{
         text-align: justify;
         font-size: 1.5rem;
     }
+
+    #cursor{
+      animation: blink 1s infinite;
+    }
+
     .resume{
       a, a:hover, a:focus, a:active {
         text-decoration: none;
@@ -612,6 +618,15 @@ footer {
   color: #090a0f;
   font-size: 3rem;
   z-index: 100;
+}
+
+@keyframes blink {
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes move-chevron {
