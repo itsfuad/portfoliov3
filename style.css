@@ -203,7 +203,7 @@ section {
 #home #name {
   -webkit-transition: 600ms;
   transition: 600ms;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: left;
   color: white;
 }
@@ -824,6 +824,9 @@ footer {
         -ms-flex-direction: row;
             flex-direction: row;
 
+  }
+  #name{
+    font-size: 3rem;
   }
   .about #about-img {
     max-height: 50vh;
