@@ -37,8 +37,9 @@
     </header>
     <main>
         <section class="home" id="home">
-            <img src="src/images/0 6yCcXRO-n7Px1_GC.jpg" alt="" srcset="">
+                 <div id="particles-js"></div>
             <div class="content" id="home-content">
+         
                 <div class="name" id="name"><h1>Hi, I'm <br/>a<strong id="gigs"></strong><span id="cursor">|</span></h1></div>
                 <div class="bio" id="bio">I'm Fuad Hasan. I'm doing software development. 
                     Not a huge fan of web dev but I do that if necessary. 
@@ -81,6 +82,7 @@
             </div>
         </section>
         <section class="skills" id="skills">
+
             <div class="title-2">Skills</div>
             <div class="container">
                 <div class="software">
@@ -148,11 +150,8 @@
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message here" required></textarea>
                 <input type="submit" value="Send">
             </form>
-        </section>
-    
-    </main>
-    <div class="game"><br>Bored? Then play this game <a href="Radius Raid/index.html"><img src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div><br>
-
+            
+            
     <div class="socials">
         <div id="title">Follow me</div>
         <div id="sites">
@@ -172,14 +171,20 @@
                     <img src="src/images/iglogo.svg" height="30px" width="30px" alt="Instagram logo">
                 </a>
             </span>
+            </div>
+                <div class="game"><br>Bored? Then play this game <a href="Radius Raid/index.html"><img src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div><br>
         </div>
+        
+        </section>
+    
+    </main>
     <footer>
         &copy; 2021, AlterGen Inc. - Fuad Hasan.
     </footer>
         <script src="script.js"></script>
         <script src="scroll.js"></script>
-        
-    
+        <script src="dist/particle.min.js"></script>
+         <script src="dist/app.js"></script>
         <script>
           ScrollOut({
             targets: " .about div, .about #about-img, #skills div, #about-img"
