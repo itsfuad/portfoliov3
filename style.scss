@@ -602,14 +602,19 @@ section{
     gap: 1rem;
   }
 
+.game{
+  width: min-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 footer {
     font-size: 1rem;
     text-align: center;
     color: white;
     background: black;
     padding: 5px;
-    padding-top: 3rem;
-    scroll-snap-align: start;
 }
 
 
