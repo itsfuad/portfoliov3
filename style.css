@@ -237,20 +237,9 @@ section {
 }
 
 #home #name {
-  position: relative;
-  -webkit-transition: 1s;
-  transition: 1s;
-  color: #1a1a1a;
-}
-
-#home #name .title-1 {
-  font-size: 7rem;
-  font-family: Nadheva;
-}
-
-#home #name .title {
-  font-size: 4rem;
-  font-family: Nadheva;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  font-size: 3rem;
 }
 
 #home #bio {
@@ -259,10 +248,6 @@ section {
   opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
-}
-
-#home #name div {
-  font-family: RAGE;
 }
 
 #home .bio {
@@ -300,7 +285,6 @@ section {
 }
 
 #home .btn {
-  top: 10%;
   position: relative;
   margin-top: 1rem;
   display: -webkit-box;
@@ -398,17 +382,6 @@ section {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px white;
           box-shadow: 0 0 0 10px white;
-  position: relative;
-  top: 50px;
-  opacity: 0;
-  overflow: hidden;
-  transition: 600ms;
-  transform-origin: bottom;
-}
-
-.about #about-img[data-scroll="in"]{
-  top:0;
-  opacity: 1;
 }
 
 .about #quote {
@@ -767,6 +740,13 @@ footer {
   scroll-snap-align: start;
 }
 
+#content {
+  position: absolute;
+  color: #090a0f;
+  font-size: 3rem;
+  z-index: 100;
+}
+
 @-webkit-keyframes move-chevron {
   25% {
     opacity: 1;
@@ -858,7 +838,7 @@ footer {
     border-bottom-right-radius: 25vh;
   }
   .about #about-img {
-    max-height: 25vw;
+    max-height: 50vh;
   }
   .about #quote {
     height: 50px;

@@ -1,8 +1,7 @@
 
-
 function load_home(){
-
   document.getElementsByTagName("header")[0].classList.add("loaded");
+  
 }
 
 function load(){

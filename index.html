@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="text/js" href="typed.js">
     <script src="loader.js"></script>
     <title>Fuad</title>
 </head>
@@ -38,8 +39,8 @@
         <section class="home" id="home">
             <img src="src/images/0 6yCcXRO-n7Px1_GC.jpg" alt="" srcset="">
             <div class="content" id="home-content">
-                <div class="name" id="name"><div class="title">Hi, I'm</div><div class="title-1">Fuad Hasan</div></div>
-                <div class="bio" id="bio">I'm doing software development. 
+                <div class="name" id="name"><h1>Hi, I'm <br/>a<strong id="gigs"></strong></h1></div>
+                <div class="bio" id="bio">I'm Fuad Hasan. I'm doing software development. 
                     Not a huge fan of web dev but I do that if necessary. 
                     I always try to give a look on new technologies 
                     and also try to adopt them if they are as needed.
@@ -56,7 +57,6 @@
             </div>
         </section>
         <section class="about" id="about">
-           
             <img id="about-img" src="src/images/profile-pic.png" alt="" srcset="">
             <div class="container">
                 <img id="quote" src="src/images/quote.png" alt="" srcset="">
@@ -179,10 +179,13 @@
     </footer>
         <script src="script.js"></script>
         <script src="scroll.js"></script>
+        
+    
         <script>
           ScrollOut({
             targets: " .about div, .about #about-img, #skills div, #about-img"
-          })
-        </script>
+          });
+          </script>
+        <script src="typewriter.js"></script>
 </body>
 </html>

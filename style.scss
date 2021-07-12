@@ -201,26 +201,14 @@ section{
         
       }
     #name{
-      position: relative;
-      transition: 1s;
-      color: rgb(26, 26, 26);
-      .title-1{
-        font-size: 7rem;
-        font-family: Nadheva;
-      }
-      .title{
-        font-size: 4rem;
-        font-family: Nadheva;
-      }
+      transition: 600ms;
+      font-size: 3rem;
     }
     #bio {
       position: relative;
       top: 0px;
       opacity: 1;
       transition: 1s;
-    }
-    #name div{
-      font-family: RAGE;
     }
     .bio{
         text-align: justify;
@@ -619,7 +607,12 @@ footer {
 }
 
 
-
+#content{
+  position: absolute;
+  color: #090a0f;
+  font-size: 3rem;
+  z-index: 100;
+}
 
 @-webkit-keyframes move-chevron {
   25% {
@@ -693,7 +686,7 @@ footer {
       flex-direction: row;
       border-bottom-right-radius: 25vh;
       #about-img{
-        max-height: 25vw;
+        max-height: 50vh;
       }
       #quote{
         height: 50px;
