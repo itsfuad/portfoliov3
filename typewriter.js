@@ -1,6 +1,6 @@
 const gig = document.getElementById("gigs");
 
-const gigs = [ " web designer.", " visual artist."," software developer."];
+const gigs = [ " software developer.", " web designer.", " visual artist."];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
