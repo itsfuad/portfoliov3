@@ -85,21 +85,7 @@ body #load.done {
   z-index: -10;
 }
 
-body #mainlogo {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 2rem 0 0 2rem;
-  mix-blend-mode: soft-light;
-}
 
-body #mainlogo img {
-  height: 5rem;
-  width: 5rem;
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
 
 .title-1 {
   font-size: 8rem;
@@ -217,7 +203,7 @@ section {
 #home #name {
   -webkit-transition: 600ms;
   transition: 600ms;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: left;
   color: white;
 }

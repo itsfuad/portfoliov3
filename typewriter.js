@@ -10,7 +10,7 @@ async function remove(){
     //alert("r");
     while (gig.innerHTML.length != 0){
         gig.innerHTML = gig.innerHTML.substring(0, gig.innerHTML.length - 1);
-        await sleep (80);
+        await sleep (40);
     }
 }
 async function gigwriter(){
@@ -18,7 +18,7 @@ async function gigwriter(){
     for (let i = 0; i <= gigs.length-1; i++){
         for( let j = 0; j <= gigs[i].length-1; j++){
             gig.innerHTML += gigs[i][j];
-            await sleep(100);
+            await sleep(80);
             if ( j == gigs[i].length-1 ){
                // alert("dome");
                 await sleep(2000);
