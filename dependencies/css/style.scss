@@ -172,16 +172,14 @@ section{
 
 #home{
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin: 0;
   max-height: 100vh;
   transition: 600ms;
-  background: #f4faff;
   color: black;
   background: #1E2025;
-  background-repeat: no-repeat;
-  background-size: cover;
     #particles-js {
       position: fixed;
       width: 100%;
@@ -519,7 +517,6 @@ section{
     outline: none;
     color: white;
     border-radius: 24px;
-    -webkit-transition: 0.25s;
     transition: 0.25s;
   }
   .contact_me form input[type=text]:focus, .contact_me form input[type=email]:focus {
@@ -537,14 +534,12 @@ section{
     outline: none;
     color: white;
     border-radius: 24px;
-    -webkit-transition: 0.25s;
     transition: 0.25s;
     cursor: pointer;
   }
   .contact_me form input[type=submit]:hover {
     background: white;
     color: black;
-    -webkit-box-shadow: 0 0 20px white;
             box-shadow: 0 0 20px white;
   }
   .contact_me form textarea {
@@ -579,9 +574,9 @@ section{
     text-align: center;
   }
 
-
   .socials {
     text-align: center;
+    margin-top: 100px;
   }
   
   .socials .title-3 {
@@ -610,8 +605,19 @@ footer {
     font-size: 1rem;
     text-align: center;
     color: white;
-    background: black;
+    background: rgb(0, 0, 0);
     padding: 5px;
+    z-index: 100;
+    .copyright{
+      a{
+        text-decoration: none;
+        color:rgb(255, 255, 255);
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      
+    }
 }
 
 

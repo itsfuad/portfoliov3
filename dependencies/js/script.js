@@ -41,6 +41,6 @@ contact.addEventListener("click", () => {
 });
 
 blogs.addEventListener("click", () => {
-   window.location.href = "https://itsfuad.netlify.app/blogs";
+   window.location.href = url + "/blogs";
 });
 

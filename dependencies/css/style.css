@@ -188,6 +188,8 @@ section {
   overflow: hidden;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   font-size: 1.2rem;
   padding-top: 4rem;
@@ -198,6 +200,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -208,11 +211,8 @@ section {
   max-height: 100vh;
   -webkit-transition: 600ms;
   transition: 600ms;
-  background: #f4faff;
   color: black;
   background: #1E2025;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #home #particles-js {
@@ -650,7 +650,7 @@ section {
   background: white;
   color: black;
   -webkit-box-shadow: 0 0 20px white;
-  box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
 }
 
 .contact_me form textarea {
@@ -715,6 +715,7 @@ section {
 
 .socials {
   text-align: center;
+  margin-top: 100px;
 }
 
 .socials .title-3 {
@@ -748,6 +749,16 @@ footer {
   color: white;
   background: black;
   padding: 5px;
+  z-index: 100;
+}
+
+footer .copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .copyright a:hover {
+  cursor: pointer;
 }
 
 @-webkit-keyframes blink {
