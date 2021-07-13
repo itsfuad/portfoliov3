@@ -4,7 +4,7 @@ const home = document.getElementById("home-btn");
 const about = document.getElementById("about-btn");
 const skills = document.getElementById("skills-btn");
 const contact = document.getElementById("contact-btn");
-
+const blogs = document.getElementById("blogs-btn");
 
 
 let url = window.location.href;
@@ -40,4 +40,7 @@ contact.addEventListener("click", () => {
     // window.location.href = url + "#contact";
 });
 
+blogs.addEventListener("click", () => {
+   window.location.href = url + "/blogs";
+});
 
