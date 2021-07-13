@@ -3,19 +3,26 @@
     src: url('./../src/fonts/Now-Regular.otf');
 }
 
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 body{
     position: absolute;
     font-family: 'Now-Regular';
-    margin-left: 20px;
-    margin-right: 20px;
     text-align: justify;
     background: rgb(22, 21, 22);
     color: rgb(255, 255, 255);
     overflow-x: hidden;
+    padding: 10px;
 }
 
 
@@ -29,17 +36,16 @@ body{
 
 h1{
     text-align: left;
+    padding: 10px;
 }
 
 
 form{
-  position: relative;
+  position: absolute;
   z-index: 2;
-  display: flex;
-  justify-content: right;
   padding-right: 30px;
   padding-bottom: 50px;
-  width: 100%;
+  right:0;
 }
 
 ::placeholder {
@@ -100,6 +106,7 @@ code{
 
 .blog{
   z-index: 2;
+  padding: 10px;
 }
 
 .blogs{
