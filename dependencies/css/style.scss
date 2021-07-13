@@ -164,6 +164,7 @@ section{
   overflow: hidden;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
+  height: max-content;
   font-size: 1.2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -303,6 +304,7 @@ section{
     z-index: 5;
     border-radius: 50%;
     box-shadow: 0 0 0 10px white;
+    margin-bottom: 20px;
   }
   #quote {
     position: absolute;
