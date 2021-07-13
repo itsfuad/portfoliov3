@@ -188,6 +188,7 @@ section {
   overflow: hidden;
   min-height: -webkit-fill-available;
   height: -webkit-fill-available;
+  height: max-content;
   font-size: 1.2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -372,6 +373,7 @@ section {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px white;
           box-shadow: 0 0 0 10px white;
+  margin-bottom: 20px;
 }
 
 .about #quote {

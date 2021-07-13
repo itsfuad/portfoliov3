@@ -4,7 +4,7 @@
 }
 
 body{
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     font-family: 'Now-Regular';
@@ -12,11 +12,19 @@ body{
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: justify;
+    background: #282828;
+    color: white;
 }
 
-h1{
-    font-size: 40px;
+pre{
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: 50vh;
+  overflow: scroll;
 }
+
 input[type='submit']{
     color: royalblue;
     padding: 10px;
