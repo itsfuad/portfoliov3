@@ -12,11 +12,10 @@
 }
 
 html{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 body{
-    position: absolute;
     font-family: 'Now-Regular';
     text-align: justify;
     background: rgb(22, 21, 22);
@@ -135,6 +134,7 @@ code{
   height: auto;
   width: 90vw;
   border: 2px solid black;
+  background: #131316;
 }
 
 
