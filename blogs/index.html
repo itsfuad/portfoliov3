@@ -8,8 +8,41 @@
     <title>Blogs</title>
 </head>
 <body>
-    <h1>We are Sorry!</h1>
-    <h2>Blogs are not ready yet!</h2>
+    <h1 id="secret-message">Secret Message</h1>
+<hr>
+<p>Think about a thing. You want to sent a message to your friend trying no one will understand it.
+The theory is your message will be encrypted by the opposite corresponding letters in the English alphabet. Like, if you enter A, your massage will be Z. So let&#39;s make it..</p>
+<pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lowercase</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
+<span class="hljs-keyword">int</span> len=str.length();
+<span class="hljs-keyword">int</span> i;
+<span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
+    <span class="hljs-keyword">if</span>(str[i]&lt;=<span class="hljs-string">'Z'</span>&amp;&amp;str[i]&gt;=<span class="hljs-string">'A'</span>){
+        str[i]=str[i]+<span class="hljs-number">32</span>;
+    }
+}
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">encrypt</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
+    <span class="hljs-keyword">int</span> len=str.length();
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
+        <span class="hljs-keyword">if</span>(str[i]==<span class="hljs-string">' '</span>)<span class="hljs-keyword">continue</span>;
+        str[i]=<span class="hljs-number">219</span>-str[i];
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">string</span> msg;
+    getline(<span class="hljs-built_in">cin</span>,msg);
+    lowercase(msg);
+    encrypt(msg);
+    <span class="hljs-built_in">cout</span>&lt;&lt;msg&lt;&lt;<span class="hljs-built_in">endl</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre><p>So, use this to spend some time 😉</p>
+
     <form action="./../">
         <input type="submit" value="Back to Home">
     </form>
