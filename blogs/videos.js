@@ -1,3 +1,13 @@
+
+function load_home(){
+  document.getElementsByTagName("header")[0].classList.add("loaded");
+}
+
+function load(){
+    document.getElementById("load").classList.toggle("done");
+    load_home();
+}
+
 var channelID = "UCsBjURrPoezykLs9EqgamOA";
     var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {

@@ -27,6 +27,28 @@ body{
     overflow-x: hidden;
 }
 
+body #load {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 100%;
+  background: white;
+  color: black;
+  font-size: 20px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1);
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  z-index: 100;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+body #load.done {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -10;
+}
 
 #particles-js {
   position: fixed;
