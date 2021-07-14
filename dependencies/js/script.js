@@ -11,13 +11,13 @@ let url = window.location.href;
 url = url.slice(url.lastIndexOf("/")+1);
 more.addEventListener("click", () => {
     document.getElementsByClassName("about")[0].scrollIntoView(true);
-    // window.location.href = url + "#about";
+    //window.location.href = url + "#about";
 });
 
 home.addEventListener("click", () => {
     
     window.scrollTo(0, 0);
-    // window.location.href = url + "#home";
+    //window.location.href = url + "#home";
     
 });
 
@@ -25,22 +25,22 @@ url = url.slice(url.lastIndexOf("/")+1);
 about.addEventListener("click", () => {
     
     document.getElementsByClassName("about")[0].scrollIntoView(true);
-    // window.location.href = url + "#about";
+    //window.location.href = url + "#about";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
 skills.addEventListener("click", () => {
     document.getElementsByClassName("skills")[0].scrollIntoView(true);
-    // window.location.href = url + "#skills";
+    //window.location.href = url + "#skills";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
 contact.addEventListener("click", () => {
     document.getElementsByClassName("contact_me")[0].scrollIntoView(true);
-    // window.location.href = url + "#contact";
+    //window.location.href = url + "#contact";
 });
 
 blogs.addEventListener("click", () => {
-   window.location.href = url + "/blogs";
+   window.location.href = url + "/pins";
 });
 

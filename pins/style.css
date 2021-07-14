@@ -22,7 +22,7 @@ html{
 body{
     font-family: 'Now-Regular';
     text-align: justify;
-    background: rgb(7, 7, 7);
+    background: rgb(46, 46, 55);
     color: rgb(255, 255, 255);
     overflow-x: hidden;
 }
@@ -66,7 +66,10 @@ header{
   align-items: center;
   width: 100vw;
   height: 100%;
-  background: linear-gradient(90deg, #0c0c0c, #343d59);
+  background: black;
+  text-decoration: none;
+  font-weight: 100;
+  color: rgb(213, 235, 255);
 }
 
 header .header{
@@ -77,53 +80,15 @@ header .header{
 
 h1{
     text-align: left;
+
+    border-radius: 5px;
+    width: 100%;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.282);
+    margin: 0;
+
+    background: linear-gradient(90deg, #4400ff7c, #02afff79);
     color: rgb(255, 255, 255);
 }
-
-
-::placeholder {
-  font-family: Now;
-  color: white;
-  font-size: 1rem;
-}
-
-input[type=search]{
-  position: relative;
-  background: none;
-  border: none;
-  border-bottom: 2px solid white;
-  padding: 2px 10px;
-  outline: none;
-  color: white;
-  transition: 600ms;
-}
-input[type=search]:focus {
-  background-color: transparent;
-  transform: scaleX(1.1);
-  border-color: #9cd6e4;
-}
-
-input[type=submit] {
-  position: relative;
-  background: none;
-  outline: none;
-  color: white;
-  transition: 0.25s;
-  background: url("./search.svg") no-repeat scroll 0 0 transparent;
-  margin-left: 10px;
-  background-size: contain;
-  color: #000000;
-  filter: invert(1);
-  cursor: pointer;
-  border: none;
-  font-weight: bold;
-  height: 30px;
-  width: 30px;
-}
-
-
 
 
 hr{
@@ -133,31 +98,56 @@ hr{
 
 p{
   padding: 10px;
+  text-align: justify;
+  width: 100%;
+}
+
+pre{
+  padding: 10px;
 }
 
 code{
   position: relative;
-  text-align: left;
-  height: 30vh;
-  overflow: scroll;
+  border-radius: 10px;
+  height: min-content;
+  width: 80vw;
+  overflow-x: scroll;
 }
 
+.container .blog{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#5631bb44, #02afff51);
+}
 
 
 .blogs .container{
   display: grid;
   grid-template-rows: repeat(1, auto);
+  width: 90vw;
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 section{
   overflow: hidden;
   z-index: 3;
-  
   padding: 10px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .videos .container{
+  margin: 10px;
   display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(1, auto);
@@ -168,6 +158,10 @@ section{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.videos{
+  padding: 0;
 }
 
 .videos iframe {
@@ -220,9 +214,5 @@ footer .copyright a:hover {
     .videos iframe {
       height: 40vh;
       width: 80vh;
-    }
-    code{
-      height: min-content;
-      overflow: hidden;
     }
 }
