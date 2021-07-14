@@ -6,144 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="videos.js"></script>
+
     <title>Blogs</title>
 </head>
 <body>
     <div id="particles-js"></div>
-<h1>Blogs</h1>
+<header>
+    <h1 class="header">Blogs</h1>
+</header>
 
 
-
-
-<form action="/search" method="post">
-    <input type="search" name="search" id="" placeholder="Search">
-    <input type="submit" value="">
-</form>
-
-
-
-
-
-
-
-<div class="blogs">
-
-            <div class="blog">
-              <h1>Videos</h1>
-    <div class="videos">
-        <iframe id="youtube_video" frameborder="0" allowfullscreen>Loading</iframe>
+<main>
+<section class="videos">
+    <h1>Videos</h1>
+    <div class="container">
+        <iframe id="youtube_video" frameborder="0" allowfullscreen></iframe>
         <iframe id="youtube_video2" frameborder="0" allowfullscreen></iframe>
         <iframe id="youtube_video3" frameborder="0" allowfullscreen></iframe>
+        <iframe id="youtube_video4" frameborder="0" allowfullscreen></iframe>
     </div>
-            </div>
-  
-
-            <div class="blog">
-                  <h1>Posts</h1>
-                <hr>
-                
-            <h1 id="secret-message">Secret Message</h1>
-            <hr>
-            <p>Think about a thing. You want to sent a message to your friend trying no one will understand it.
-            The theory is your message will be encrypted by the opposite corresponding letters in the English alphabet. Like, if you enter A, your massage will be Z. So let&#39;s make it..</p>
-            <pre><code class="language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-            <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-
-            <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lowercase</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
-            <span class="hljs-keyword">int</span> len=str.length();
-            <span class="hljs-keyword">int</span> i;
-            <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
-            <span class="hljs-keyword">if</span>(str[i]&lt;=<span class="hljs-string">'Z'</span>&amp;&amp;str[i]&gt;=<span class="hljs-string">'A'</span>){
-                str[i]=str[i]+<span class="hljs-number">32</span>;
-            }
-            }
-            }
-            <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">encrypt</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
-            <span class="hljs-keyword">int</span> len=str.length();
-            <span class="hljs-keyword">int</span> i;
-            <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
-                <span class="hljs-keyword">if</span>(str[i]==<span class="hljs-string">' '</span>)<span class="hljs-keyword">continue</span>;
-                str[i]=<span class="hljs-number">219</span>-str[i];
-            }
-            }
-            <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-            </span>{
-            <span class="hljs-built_in">string</span> msg;
-            getline(<span class="hljs-built_in">cin</span>,msg);
-            lowercase(msg);
-            encrypt(msg);
-            <span class="hljs-built_in">cout</span>&lt;&lt;msg&lt;&lt;<span class="hljs-built_in">endl</span>;
-            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-            }
-            </code></pre><p>So, use this to spend some time 😉</p>
-
-            </div>
-
-
-            <div  class="blog">
-                <hr>
-                <h1 id="data-encryption-encrypt">Data Encryption | Encrypt</h1>
-                <hr>
-                <p>You can encrypt text data using ascii value replacement. When you change a charecter&#39;s ascii value, the charecter changes.Here&#39;s an example code:</p>
-                <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-                <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;conio.h&gt;</span></span>
-                <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
-                
-                <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-                </span>{
-                
-                    <span class="hljs-built_in">string</span> data;
-                    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Enter data to encrypt: "</span>;
-                    getline(<span class="hljs-built_in">cin</span>,data);
-                    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;=data.length()<span class="hljs-number">-1</span>;i++){
-                        data[i]=data[i]<span class="hljs-number">-37</span>;
-                    }
-                    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Encrypted data is: "</span>&lt;&lt;data&lt;&lt;<span class="hljs-built_in">endl</span>;
-                 getch();
-                 <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-                }
-                </code></pre><p>For decrypting, you just need to do the opposite thing. Happy coding...!</p>
-                </div>
+</section>
 
 
 
 
+<h1>Posts</h1>
+<section class="blogs">
+
+            <div class="container">
                 <div class="blog">
-                    <h1 id="factorial-calculator-using-function-recursion">Factorial Calculator Using Function Recursion</h1>
-                <hr>
-                <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-                <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
-                <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pause system(<span class="hljs-meta-string">"pause"</span>)</span>
-                <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+                    
+                    
+                <h1 id="secret-message">Secret Message</h1>
                 
-                <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a)</span></span>{
-                <span class="hljs-keyword">int</span> b=a;
-                    <span class="hljs-keyword">if</span>(b==<span class="hljs-number">1</span>){
-                        <span class="hljs-keyword">return</span> b;
-                    }
-                    <span class="hljs-keyword">else</span>{
-                        a*=func(--b);
-                    }
-                    <span class="hljs-keyword">return</span> a;
+                <p>Think about a thing. You want to sent a message to your friend trying no one will understand it.
+                The theory is your message will be encrypted by the opposite corresponding letters in the English alphabet. Like, if you enter A, your massage will be Z. So let&#39;s make it..</p>
+                <pre><code class="language-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+                <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+    
+                <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lowercase</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
+                <span class="hljs-keyword">int</span> len=str.length();
+                <span class="hljs-keyword">int</span> i;
+                <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
+                <span class="hljs-keyword">if</span>(str[i]&lt;=<span class="hljs-string">'Z'</span>&amp;&amp;str[i]&gt;=<span class="hljs-string">'A'</span>){
+                    str[i]=str[i]+<span class="hljs-number">32</span>;
+                }
+                }
+                }
+                <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">encrypt</span><span class="hljs-params">(<span class="hljs-built_in">string</span>&amp; str)</span></span>{
+                <span class="hljs-keyword">int</span> len=str.length();
+                <span class="hljs-keyword">int</span> i;
+                <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;=len<span class="hljs-number">-1</span>;i++){
+                    <span class="hljs-keyword">if</span>(str[i]==<span class="hljs-string">' '</span>)<span class="hljs-keyword">continue</span>;
+                    str[i]=<span class="hljs-number">219</span>-str[i];
+                }
                 }
                 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
                 </span>{
-                  <span class="hljs-keyword">int</span> x,y;
-                  <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Enter a number: "</span>;
-                  <span class="hljs-built_in">cin</span>&gt;&gt;x;
-                  <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Factorial is: "</span>&lt;&lt;func(x)&lt;&lt;<span class="hljs-built_in">endl</span>;
-                  pause;
+                <span class="hljs-built_in">string</span> msg;
+                getline(<span class="hljs-built_in">cin</span>,msg);
+                lowercase(msg);
+                encrypt(msg);
+                <span class="hljs-built_in">cout</span>&lt;&lt;msg&lt;&lt;<span class="hljs-built_in">endl</span>;
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
                 }
-                </code></pre><p>For decrypting, you just need to do the opposite thing. Happy coding...!</p>
-                
+                </code></pre><p>So, use this to spend some time 😉</p>
+    
                 </div>
+    
+    
+                <div  class="blog">
+                    
+                    <h1 id="data-encryption-encrypt">Data Encryption | Encrypt</h1>
+                    
+                    <p>You can encrypt text data using ascii value replacement. When you change a charecter&#39;s ascii value, the charecter changes.Here&#39;s an example code:</p>
+                    <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;conio.h&gt;</span></span>
+                    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+                    
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+                    </span>{
+                    
+                        <span class="hljs-built_in">string</span> data;
+                        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Enter data to encrypt: "</span>;
+                        getline(<span class="hljs-built_in">cin</span>,data);
+                        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;=data.length()<span class="hljs-number">-1</span>;i++){
+                            data[i]=data[i]<span class="hljs-number">-37</span>;
+                        }
+                        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Encrypted data is: "</span>&lt;&lt;data&lt;&lt;<span class="hljs-built_in">endl</span>;
+                     getch();
+                     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                    }
+                    </code></pre><p>For decrypting, you just need to do the opposite thing. Happy coding...!</p>
+                    </div>
+    
+    
+    
+    
+                    <div class="blog">
+                        <h1 id="factorial-calculator-using-function-recursion">Factorial Calculator Using Function Recursion</h1>
+                    <pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pause system(<span class="hljs-meta-string">"pause"</span>)</span>
+                    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+                    
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a)</span></span>{
+                    <span class="hljs-keyword">int</span> b=a;
+                        <span class="hljs-keyword">if</span>(b==<span class="hljs-number">1</span>){
+                            <span class="hljs-keyword">return</span> b;
+                        }
+                        <span class="hljs-keyword">else</span>{
+                            a*=func(--b);
+                        }
+                        <span class="hljs-keyword">return</span> a;
+                    }
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+                    </span>{
+                      <span class="hljs-keyword">int</span> x,y;
+                      <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Enter a number: "</span>;
+                      <span class="hljs-built_in">cin</span>&gt;&gt;x;
+                      <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"Factorial is: "</span>&lt;&lt;func(x)&lt;&lt;<span class="hljs-built_in">endl</span>;
+                      pause;
+                    }
+                    </code></pre><p>For decrypting, you just need to do the opposite thing. Happy coding...!</p>
+                    
+                    </div>
 
+                    <!--End-->
 
+            </div>
 
-</div>
+</section>
+</main>
 <script src="./../dist/particle.min.js"></script>
 <script src="./../dist/app.js"></script>
+<script src="videos.js"></script>
+<script src="search.js"></script>
 <link rel="stylesheet"
 href="//unpkg.com/@highlightjs/cdn-assets@11.1.0/styles/atom-one-dark.min.css">
 <script src="//unpkg.com/@highlightjs/cdn-assets@11.1.0/highlight.min.js"></script>
