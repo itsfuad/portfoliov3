@@ -22,7 +22,7 @@
     }
 
     function set(){
-        firebase.database().ref("All Pin/" +pin_id).set({
+        return firebase.database().ref("All Pin/" +pin_id).set({
             id: pin_id,
             contents: contents
         });
@@ -30,7 +30,8 @@
 
     function Upload() {
         ready();
-        set();
+        alert(set());
+        alert("Uploded!");
     }
 
     function get(){
