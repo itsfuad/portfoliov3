@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CMS Console</title>
+        
+        <!--Markdown-->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+
+        <!--Firebase Libraries-->
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+      
+      
+        <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+        
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                gap: 10px;
+                font-family: 'Roboto Mono', monospace;
+                background: rgb(26, 26, 34);
+                color: white;
+            }    
+        </style>    
+
+</head>
+<body>
+
+    <h1>MarkedFerry1&#9760;</h1>
+
+    <input type="text" name="id" id="pin_id" placeholder="ID">
+    <textarea name="contents" id="contents" cols="30" rows="10"></textarea>
+    <input type="button" value="Convert to HTML" id="Convert to HTML" onclick="gethtml()">
+    
+    <input type="button" value="Upload" id="get" onclick="Upload()">
+    
+    <script src="mark.js"></script>
+    <script src="firebase.js"></script>
+
+</body>
+</html>
