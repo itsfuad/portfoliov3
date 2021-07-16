@@ -1,0 +1,45 @@
+// Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAGjKtgPcMhNH9f3ljdknP-fi6LfrQy5VM",
+        authDomain: "pin-posts.firebaseapp.com",
+        projectId: "pin-posts",
+        storageBucket: "pin-posts.appspot.com",
+        messagingSenderId: "1083663238758",
+        appId: "1:1083663238758:web:e04b9a8d9f7608b280cfa7",
+        measurementId: "G-WL85B9YMGE"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //---------data------------
+    var pin_id, contents, data;
+
+    function ready(){
+        pin_id = document.getElementById("pin_id").value;
+        contents = document.getElementById("contents").value;
+    }
+
+    function set(){
+        return firebase.database().ref("All Pin/" +pin_id).set({
+            id: pin_id,
+            contents: contents
+        });
+    }
+
+    function Upload() {
+        ready();
+        alert(set());
+        alert("Uploded!");
+    }
+
+    function get(){
+        firebase.database().ref("All Pin/" +pin_id).on('value', function (snapshot){
+            ready();
+            console.log(snapshot.val().id);
+            console.log(snapshot.val().contents);
+            pin_id = snapshot.val().id;
+            alert(snapshot.val().contents);
+        });
+    }
