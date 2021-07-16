@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    font-family: consolas, 'Courier New', Courier, monospace;
+    background: rgb(26, 26, 34);
+    color: white;
+}    
+input, textarea{
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+input[type=button]:hover{
+    background: skyblue;
+    box-shadow: 0 0 15px skyblue;
+    color: black;
+    cursor: pointer;
+}

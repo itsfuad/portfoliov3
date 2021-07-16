@@ -22,24 +22,22 @@
     }
 
     function set(){
-        return firebase.database().ref("All Pin/" +pin_id).set({
+        firebase.database().ref("All Pin/Contents/Post-"+pin_id).update({
             id: pin_id,
             contents: contents
         });
     }
 
-    function Upload() {
+    document.getElementById("upload").addEventListener("click", ()=> {
         ready();
-        alert(set());
-        alert("Uploded!");
-    }
-
-    function get(){
-        firebase.database().ref("All Pin/" +pin_id).on('value', function (snapshot){
-            ready();
-            console.log(snapshot.val().id);
-            console.log(snapshot.val().contents);
-            pin_id = snapshot.val().id;
-            alert(snapshot.val().contents);
-        });
-    }
+        if (pin_id == "" || pin_id == " "){
+            alert("Provide an id!");
+            return;
+        }
+        if (contents == "" || contents == " "){
+            alert("Nothing to upload!");
+            return;
+        }
+        set();
+        console.log("Up");
+    });

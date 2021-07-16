@@ -43,6 +43,7 @@ body #load.done {
   visibility: hidden;
   opacity: 0;
   z-index: -10;
+  scrollbar-width: thin;
 }
 
 #particles-js {
@@ -132,6 +133,7 @@ code {
           align-items: center;
   text-align: left;
   padding: 10px;
+  min-height: 100%;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(#5631bb44), to(#02afff51));
   background: linear-gradient(#5631bb44, #02afff51);
@@ -142,7 +144,6 @@ code {
   display: grid;
   -ms-grid-rows: (auto)[1];
       grid-template-rows: repeat(1, auto);
-  width: 100%;
   gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -172,6 +173,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .videos .container {
