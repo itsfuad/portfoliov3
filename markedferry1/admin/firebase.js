@@ -42,4 +42,11 @@
         console.log("Up");
         document.getElementById("pin_id").value = "";
         document.getElementById("contents").value = "";
+        document.getElementById("convert-btn").value = "Convert to HTML!"
+        document.getElementById("convert-btn").style = `
+            background:background: rgba(255, 255, 255, 0.07);
+            color: white;
+            box-shadow: none;
+            cursor: allowed;
+        `;
     });
