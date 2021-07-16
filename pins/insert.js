@@ -15,7 +15,7 @@ firebase.analytics();
 var data;
 
 
-firebase.database().ref("All Pin/Contents").on('child_changed', (snapshot, prevChildKey) => {
+firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
     loaded = true;
     if (loaded) {
         document.getElementById("contents").innerHTML = "";
