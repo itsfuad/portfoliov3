@@ -1,3 +1,4 @@
+var loaded = false;
 var firebaseConfig = {
     apiKey: "AIzaSyAGjKtgPcMhNH9f3ljdknP-fi6LfrQy5VM",
     authDomain: "pin-posts.firebaseapp.com",
@@ -15,6 +16,10 @@ var data;
 
 
 firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
+    loaded = true;
+    if (loaded) {
+        document.getElementById("contents").innerHTML = "";
+    }
     const newPost = snapshot.val();
     console.log('Id: ' + newPost.id);
     console.log('Content: ' + newPost.contents);
