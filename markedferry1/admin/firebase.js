@@ -40,4 +40,6 @@
         }
         set();
         console.log("Up");
+        document.getElementById("pin_id").value = "";
+        document.getElementById("contents").value = "";
     });
