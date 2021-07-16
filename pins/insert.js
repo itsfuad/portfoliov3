@@ -15,9 +15,9 @@ firebase.analytics();
 var data;
 
 
-firebase.database().ref("All Pin/Contents").on('child_changed', (snapshot, prevChildKey) => {
-    loaded = true;
-    if (loaded) {
+firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
+    if (!loaded) {
+        loaded = true;
         document.getElementById("contents").innerHTML = "";
     }
     const newPost = snapshot.val();
