@@ -327,171 +327,252 @@ section{
 }
 
 
-.skills{
-  transition: 600ms;
-  color: white;
-  padding: 5%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  height: max-content;
-  div{
+.services{
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+#soft{
+  background: url("./../../src/images/soft.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+#web{
+  background: url("./../../src/images/web.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+#visuals{
+  background: url("./../../src/images/visuals.jpg");
+  background-blend-mode: difference;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+.card{
     position: relative;
-    left: 10px;
-    opacity: 0;
-    transition: 600ms;
-    &[data-scroll="in"]{
-      left: 0;
-      opacity: 1;
+    background: rgba(255, 255, 255, 0.159);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    .content{
+        text-align: justify;
+        color: black;
+        transition: 1s;
+        padding: 20px;
     }
-    .container{
-      display: grid;
-      grid-auto-flow: row;
-      gap: 4rem;
-      position: relative;
+    #services{
+        .title{
+          font-size: 1.2rem;
+        }
+        position: absolute;
+        opacity: 0;
+        transition: 1s;
+        min-width: 100%;
+        padding: 10px;
     }
-
-    .language .skillbox .percentage {
-        background-color: #DDDDDD;
-        border-radius: 5px;
+    .title-3{
+        position: relative;
+        color:rgb(0, 0, 0);
+        font-size: 1.5rem;
+        top: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+    &:hover{
+        cursor: pointer;
+        .content{
+            opacity: 0;
+        }
+        .title-3{
+            opacity: 0;
+        }
+        #services{
+            opacity: 1;
+        }
+    }
+    .bookmark::before{
+        position: absolute;
+        content: "";
+        bottom: -15px;
+        width: 0rem;
+        height: 2rem;
+        border-left: 1.5rem solid rgb(17, 17, 17);
+        border-right: 1.5rem solid rgb(17, 17, 17);
+        border-bottom: 1rem solid transparent;
+        background: rgba(255, 255, 255, 0);
       }
-      .language .skillbox .percentage div {
-        border-radius: 5px;
-        padding-left: 3px;
-      }
-      .language .skillbox .percentage{
-        height: 5px;
-      }
-      .language .skillbox #c {
-        background-color: #4f89f5;
-        width: 85%;
+      .bookmark{
+        position: absolute;
+        box-shadow: 0 0 15px rgb(190, 232, 255);
+        word-break: break-all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        width: 3rem;
+        top: -2%;
+        height: 4.4rem;
+        right: 10%;
+        background: rgb(17, 17, 17);
         color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
+        transition: 1s;
+    }
+}
+.language div{
+  color: #090a0f;
+}
+      .language .skillbox .percentage {
+          background-color: #DDDDDD;
+          border-radius: 5px;
+        }
+        .language .skillbox .percentage div {
+          border-radius: 5px;
+          padding-left: 3px;
+        }
+        .language .skillbox .percentage{
+          height: 5px;
+        }
+        .language .skillbox #c {
+          background-color: #4f89f5;
+          width: 85%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+        
+        .language .skillbox #cplus {
+          background-color: #3402a7;
+          width: 90%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+        
+        .language .skillbox #cs {
+          background-color: #4e4eca;
+          width: 70%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #java {
+          background-color: #F56161;
+          width: 75%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #py {
+          background-color: #1463da;
+          width: 80%;
+          color: white;
+          padding-left: 5px;transition: 600ms;
+        }
+       
+        .language .skillbox #kt {
+          background-color: #123f92;
+          width: 60%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #go {
+          background-color: #4f9ffa;
+          width: 60%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #html {
+          background-color: #ff8800;
+          width: 90%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #css {
+          background-color: #8ac1ff;
+          width: 75%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #js {
+          background-color: #f8fa76;
+          width: 60%;
+          color: black;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #php {
+          background-color: #7699fa;
+          width: 50%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #sketch {
+          background-color: black;
+          width: 80%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
       
-      .language .skillbox #cplus {
-        background-color: #3402a7;
-        width: 90%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-      
-      .language .skillbox #cs {
-        background-color: #4e4eca;
-        width: 70%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #java {
-        background-color: #F56161;
-        width: 75%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #py {
-        background-color: #1463da;
-        width: 80%;
-        color: white;
-        padding-left: 5px;transition: 600ms;
-      }
-     
-      .language .skillbox #kt {
-        background-color: #123f92;
-        width: 60%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #go {
-        background-color: #4f9ffa;
-        width: 60%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #html {
-        background-color: #ff8800;
-        width: 90%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #css {
-        background-color: #8ac1ff;
-        width: 75%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #js {
-        background-color: #f8fa76;
-        width: 60%;
-        color: black;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #php {
-        background-color: #7699fa;
-        width: 50%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #sketch {
-        background-color: black;
-        width: 80%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-    
-      .language .skillbox #digi {
-        background-color: #ffc493;
-        width: 85%;
-        color: black;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #logo {
-        background-color: #ff3b3b;
-        width: 90%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-     
-      .language .skillbox #threed {
-        background-color: #fdff70;
-        width: 65%;
-        color: black;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-      
-      .language .skillbox #twod {
-        background-color: #7473ac;
-        width: 70%;
-        color: white;
-        padding-left: 5px;
-        transition: 600ms;
-      }
-      
-      .percentage div {
-        height: 5px;
-      }
-  }
+        .language .skillbox #digi {
+          background-color: #ffc493;
+          width: 85%;
+          color: black;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #logo {
+          background-color: #ff3b3b;
+          width: 90%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+       
+        .language .skillbox #threed {
+          background-color: #fdff70;
+          width: 65%;
+          color: black;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+        
+        .language .skillbox #twod {
+          background-color: #7473ac;
+          width: 70%;
+          color: white;
+          padding-left: 5px;
+          transition: 600ms;
+        }
+        
+        .percentage div {
+          height: 5px;
+        }
 }
 
 .contact_me {
@@ -695,14 +776,15 @@ footer {
         width: 50px;
       }
     }
-    .skills{
+    .services{
       padding-left: 5%;
       padding-right: 5%;
       .container{
-        display: grid;
-        grid-auto-flow: column;
-        gap: 2rem;
-      }
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 20px;
+    }
     }
     .contact_me form input[type=text], .contact_me form input[type=email] {
       width: 50vw;
