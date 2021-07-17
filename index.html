@@ -8,16 +8,21 @@
     <!--social media preview tag-->
 
     <!-- ... other tags like title, link, charset, viewport -->
-    <meta property="og:title" content="Fuad Hasan - Developer | Visual Artist" />
+    <meta property="og:title" content="Example - Title of my Site" />
     <meta
       property="og:description"
-      content="Hi, I'm a 20 years old software developer, web designer and visual artist. You'll get the best services here.
-      I have experience working with many personal and open source projects. I also had made Visuals for most of the startup companies. Don't shy to contact me with your beautiful messages if I can help you with something. Have a nice day."
+      content="Example - Description of my Site"
     />
     <meta
       property="og:image"
-      content="https://itsfuad.netlify.app/src/images/profile-pic.png"
+      content="https://example.com/example-featured-image.jpg"
     />
+    <meta name="twitter:site" content="@username-example" />
+    <meta
+      name="twitter:card"
+      content="summary || summary_large_image || player || app"
+    />
+    <meta name="twitter:creator" content="@username-example" />
     
     
     <!--Meta tags-->
@@ -45,7 +50,7 @@
         <nav>
             <li id="home-btn">Home</li>
             <li id="about-btn">About</li>
-            <li id="skills-btn">Skills</li>
+            <li id="service-btn">Services</li>
             <li id="blogs-btn">Pins</li>
             <li id="contact-btn">Contact</li>
         </nav>
@@ -58,9 +63,10 @@
             <div id="particles-js"></div>
             <div class="content" id="home-content">
                 <div class="name" id="name"><h1>Hi, I'm <br/>a<strong id="gigs"></strong><span id="cursor">|</span></h1></div>
-                <p class="bio" id="bio">
-                  Hi, I'm a 20 years old software developer, web designer and visual artist. You'll get the best services here.
-                  I have experience working with many personal and open source projects. I also had made Visuals for most of the startup companies. Don't shy to contact me with your beautiful messages if I can help you with something. Have a nice day.
+                <p class="bio" id="bio">I'm Fuad Hasan. I'm doing software development. 
+                    Not a huge fan of web dev but I do that if necessary. 
+                    I always try to give a look on new technologies 
+                    and also try to adopt them if they are as needed.
                     <div class="buttons">
                         <div class="resume"><a href="files/resume/Fuad's Resume.pdf">Resume</a></div>
                     </div>
@@ -98,21 +104,23 @@
                 </div>
             </div>
         </section>
-        <!--Skills-->
-        <section class="skills" id="skills">
-
-            <div class="title-2">Skills</div>
+        <!--services-->
+        <section class="services" id="services">
+            <div class="title-2">Services</div>
             <div class="container">
-                <div class="software">
-                
+        
+                <div class="card" id="soft">
+                        
                         <div class="title-3">Software Development</div>
-                        I mostly work as a software dev. I have worked with many personal and open-source projects.
-                        In this case, I work with algorithms and game graphics. I use C++ as my main Language. 
-                        I'm also experienced with all 'C family languages. I have been programming for more than 5 years.
-                    
-                        <div class="language">
-                            <div class="title-3" onclick="show_soft()"><br>Language Skills as Software Dev.</div>
-                            <div class="box" id="soft_skills">
+                        <div class="bookmark"></div>
+                        <div class="content">
+                            I mostly work as a software dev. I have worked with many personal and open-source projects.
+                            In this case, I work with algorithms and game graphics. I use C++ as my main Language. 
+                            I'm also experienced with all 'C family languages. I have been programming for more than 5 years.
+                        </div>
+                        <div class="language" id="services">
+                            <div class="title"><br>Language services as Software Dev.</div>
+                            <div class="box" id="soft_services">
                                 <div class="skillbox">C<div class="percentage"><div id="c"></div></div></div>
                                 <div class="skillbox">C++<div class="percentage"><div id="cplus"></div></div></div>
                                 <div class="skillbox">C#<div class="percentage"><div id="cs"></div></div></div>
@@ -122,40 +130,52 @@
                                 <div class="skillbox">Go<div class="percentage"><div id="go"></div></div></div>
                             </div>
                         </div>
+                        
                 </div>
-                <div class="web">
+                <div class="card" id="web">
                 
                     <div class="title-3"><br>Web Development</div>
+                    <div class="bookmark"></div>
+                    <div class="content">
                         I won't call myself a web developer but I can make a website for you. I do front-end web development most of the cases. I could do a little bit server side coding too if needed. I work with HTML, CSS, Vanila JavaScript and React. 
                         Mainly I can make responsive personal websites. 
-                        <div class="language" id="skills">
-                            <div class="title-3"><br>Language Skills as Web Dev.</div>
-                            <div class="box">
-                                <div class="skillbox">HTML5<div class="percentage"><div id="html"></div></div></div>
-                                <div class="skillbox">CSS3<div class="percentage"><div id="css"></div></div></div>
-                                <div class="skillbox">JavaScript<div class="percentage"><div id="js"></div></div></div>
-                                <div class="skillbox">Php<div class="percentage"><div id="php"></div></div></div>
-                            </div>
+                    </div>
+                    <div class="language" id="services">
+                        <div class="title"><br>Language services as Web Dev.</div>
+                        <div class="box">
+                            <div class="skillbox">HTML5<div class="percentage"><div id="html"></div></div></div>
+                            <div class="skillbox">CSS3<div class="percentage"><div id="css"></div></div></div>
+                            <div class="skillbox">JavaScript<div class="percentage"><div id="js"></div></div></div>
+                            <div class="skillbox">Php<div class="percentage"><div id="php"></div></div></div>
                         </div>
+                    </div>
+    
+    
                 </div>
-                <div class="visuals">
+                <div class="card" id="visuals">
                 
                     <div class="title-3"><br>Visual Artist</div>
+                    <div class="bookmark"></div>
+                    <div class="content">
                         I make paper Sketches by pencil of Peoples, still objects, natures.
                         I make digital arts too. I also make digital assets for games and filters. 
                         Sometimes I make 3d models for peoples. 
-                        <div class="language" id="skills">
-                            <div class="title-3"><br>Skills</div>
-                            <div class="box">
-                                <div class="skillbox">Sketch<div class="percentage"><div id="sketch"></div></div></div>
-                                <div class="skillbox">Digital Art<div class="percentage"><div id="digi"></div></div></div>
-                                <div class="skillbox">Logo<div class="percentage"><div id="logo"></div></div></div>
-                                <div class="skillbox">3d modeling<div class="percentage"><div id="threed"></div></div></div>
-                                <div class="skillbox">2d Animation<div class="percentage"><div id="twod"></div></div></div>
-                            </div>
+                    </div>
+    
+                    <div class="language" id="services">
+                        <div class="title"><br>services</div>
+                        <div class="box">
+                            <div class="skillbox">Sketch<div class="percentage"><div id="sketch"></div></div></div>
+                            <div class="skillbox">Digital Art<div class="percentage"><div id="digi"></div></div></div>
+                            <div class="skillbox">Logo<div class="percentage"><div id="logo"></div></div></div>
+                            <div class="skillbox">3d modeling<div class="percentage"><div id="threed"></div></div></div>
+                            <div class="skillbox">2d Animation<div class="percentage"><div id="twod"></div></div></div>
                         </div>
+                    </div>
                 </div>
-            </div>
+    
+    
+        </div>
         </section>
         <section class="contact_me" id="contact">
             <div id='stars'></div>
@@ -206,7 +226,7 @@
         <script src="dist/app.js"></script>
         <script>
           ScrollOut({
-            targets: " .about div, .about #about-img, #skills div, #about-img"
+            targets: " .about div, .about #about-img, #services div, #about-img"
           });
           </script>
         <script src="dependencies/js/typewriter.js"></script>
