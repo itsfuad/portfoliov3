@@ -402,54 +402,169 @@ section {
   opacity: 1;
 }
 
-.skills {
-  -webkit-transition: 600ms;
-  transition: 600ms;
-  color: white;
-  padding: 5%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+.services .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding: 20px;
 }
 
-.skills div {
+.services #soft {
+  background: url("./../../src/images/soft.jpg");
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.services #web {
+  background: url("./../../src/images/web.jpg");
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services #visuals {
+  background: url("./../../src/images/visuals.jpg");
+  background-blend-mode: difference;
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services .card {
   position: relative;
-  left: 10px;
-  opacity: 0;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  background: rgba(255, 255, 255, 0.159);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  min-height: 50vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.skills div[data-scroll="in"] {
-  left: 0;
+.services .card .content {
+  text-align: justify;
+  color: black;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 20px;
+}
+
+.services .card #services {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  min-width: 100%;
+  padding: 10px;
+}
+
+.services .card #services .title {
+  font-size: 1.2rem;
+}
+
+.services .card .title-3 {
+  position: relative;
+  color: black;
+  font-size: 1.5rem;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .card:hover {
+  cursor: pointer;
+}
+
+.services .card:hover .content {
+  opacity: 0;
+}
+
+.services .card:hover .title-3 {
+  opacity: 0;
+}
+
+.services .card:hover #services {
   opacity: 1;
 }
 
-.skills div .container {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: row;
-  gap: 4rem;
-  position: relative;
+.services .card .bookmark::before {
+  position: absolute;
+  content: "";
+  bottom: -15px;
+  width: 0rem;
+  height: 2rem;
+  border-left: 1.5rem solid #111111;
+  border-right: 1.5rem solid #111111;
+  border-bottom: 1rem solid transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
-.skills div .language .skillbox .percentage {
+.services .card .bookmark {
+  position: absolute;
+  -webkit-box-shadow: 0 0 15px #bee8ff;
+          box-shadow: 0 0 15px #bee8ff;
+  word-break: break-all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  width: 3rem;
+  top: -2%;
+  height: 4.4rem;
+  right: 10%;
+  background: #111111;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .language div {
+  color: #090a0f;
+}
+
+.services .language .skillbox .percentage {
   background-color: #DDDDDD;
   border-radius: 5px;
 }
 
-.skills div .language .skillbox .percentage div {
+.services .language .skillbox .percentage div {
   border-radius: 5px;
   padding-left: 3px;
 }
 
-.skills div .language .skillbox .percentage {
+.services .language .skillbox .percentage {
   height: 5px;
 }
 
-.skills div .language .skillbox #c {
+.services .language .skillbox #c {
   background-color: #4f89f5;
   width: 85%;
   color: white;
@@ -458,7 +573,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #cplus {
+.services .language .skillbox #cplus {
   background-color: #3402a7;
   width: 90%;
   color: white;
@@ -467,7 +582,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #cs {
+.services .language .skillbox #cs {
   background-color: #4e4eca;
   width: 70%;
   color: white;
@@ -476,7 +591,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #java {
+.services .language .skillbox #java {
   background-color: #F56161;
   width: 75%;
   color: white;
@@ -485,7 +600,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #py {
+.services .language .skillbox #py {
   background-color: #1463da;
   width: 80%;
   color: white;
@@ -494,7 +609,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #kt {
+.services .language .skillbox #kt {
   background-color: #123f92;
   width: 60%;
   color: white;
@@ -503,7 +618,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #go {
+.services .language .skillbox #go {
   background-color: #4f9ffa;
   width: 60%;
   color: white;
@@ -512,7 +627,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #html {
+.services .language .skillbox #html {
   background-color: #ff8800;
   width: 90%;
   color: white;
@@ -521,7 +636,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #css {
+.services .language .skillbox #css {
   background-color: #8ac1ff;
   width: 75%;
   color: white;
@@ -530,7 +645,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #js {
+.services .language .skillbox #js {
   background-color: #f8fa76;
   width: 60%;
   color: black;
@@ -539,7 +654,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #php {
+.services .language .skillbox #php {
   background-color: #7699fa;
   width: 50%;
   color: white;
@@ -548,7 +663,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #sketch {
+.services .language .skillbox #sketch {
   background-color: black;
   width: 80%;
   color: white;
@@ -557,7 +672,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #digi {
+.services .language .skillbox #digi {
   background-color: #ffc493;
   width: 85%;
   color: black;
@@ -566,7 +681,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #logo {
+.services .language .skillbox #logo {
   background-color: #ff3b3b;
   width: 90%;
   color: white;
@@ -575,7 +690,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #threed {
+.services .language .skillbox #threed {
   background-color: #fdff70;
   width: 65%;
   color: black;
@@ -584,7 +699,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .language .skillbox #twod {
+.services .language .skillbox #twod {
   background-color: #7473ac;
   width: 70%;
   color: white;
@@ -593,7 +708,7 @@ section {
   transition: 600ms;
 }
 
-.skills div .percentage div {
+.services .percentage div {
   height: 5px;
 }
 
@@ -853,15 +968,20 @@ footer .copyright a:hover {
     height: 50px;
     width: 50px;
   }
-  .skills {
+  .services {
     padding-left: 5%;
     padding-right: 5%;
   }
-  .skills .container {
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 2rem;
+  .services .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+    padding: 20px;
   }
   .contact_me form input[type=text], .contact_me form input[type=email] {
     width: 50vw;
