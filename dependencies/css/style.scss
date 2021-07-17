@@ -176,7 +176,7 @@ section{
   justify-content: center;
   align-items: center;
   margin: 0;
-  max-height: 100vh;
+  min-height: 100vh;
   transition: 600ms;
   color: black;
   background: #1E2025;
@@ -290,6 +290,7 @@ section{
   position: relative;
   display: flex;
   gap: 3rem;
+  min-height: 100;
   flex-direction: column;
   align-items: center;
   justify-content: center;
