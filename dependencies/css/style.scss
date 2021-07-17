@@ -359,11 +359,14 @@ section{
     position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     border-radius: 10px;
     min-height: 50vh;
     justify-content: center;
     align-items: center;
+    transition: 300ms;
+    &:hover{
+      transform: scale(1.05);
+    }
     .content{
         text-align: justify;
         color: black;
@@ -412,6 +415,7 @@ section{
         background: rgba(255, 255, 255, 0);
       }
       .bookmark{
+        z-index: 2;
         position: absolute;
         box-shadow: 0 0 15px rgb(190, 232, 255);
         word-break: break-all;
@@ -428,11 +432,23 @@ section{
         transition: 1s;
     }
 }
-.language div{
+.language{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
   color: black;
+  position: relative;
+  background: rgba(135, 193, 225, 0.309);
+  border-radius: 10px;
+  width: 100%;
+  height:100%;
+  div{
+    width: 100%;
+  }
 }
       .language .skillbox .percentage {
-          background-color: #DDDDDD;
+          background-color: #bababa;
           border-radius: 5px;
         }
         .language .skillbox .percentage div {
