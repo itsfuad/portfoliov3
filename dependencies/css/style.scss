@@ -350,15 +350,13 @@ section{
 }
 #visuals{
   background: url("./../../src/images/visuals.jpg");
-  background-blend-mode: difference;
+  background-blend-mode:color-dodge;
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
 }
 .card{
     position: relative;
-    background: rgba(255, 255, 255, 0.159);
-    color: white;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -431,7 +429,7 @@ section{
     }
 }
 .language div{
-  color: #090a0f;
+  color: black;
 }
       .language .skillbox .percentage {
           background-color: #DDDDDD;
