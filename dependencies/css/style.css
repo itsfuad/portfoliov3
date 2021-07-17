@@ -410,7 +410,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   padding: 20px;
 }
 
@@ -980,7 +980,7 @@ footer .copyright a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     padding: 20px;
   }
   .contact_me form input[type=text], .contact_me form input[type=email] {
