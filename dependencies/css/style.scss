@@ -705,10 +705,10 @@ footer {
 
 @keyframes blink {
   50%{
-    color: white;
+    opacity: 1;
   }
   100%{
-    color: black;
+    opacity: 0;
   }
 }
 

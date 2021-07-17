@@ -879,19 +879,19 @@ footer .copyright a:hover {
 
 @-webkit-keyframes blink {
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 
 @keyframes blink {
   50% {
-    color: white;
+    opacity: 1;
   }
   100% {
-    color: black;
+    opacity: 0;
   }
 }
 
