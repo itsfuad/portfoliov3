@@ -402,7 +402,7 @@ section {
   opacity: 1;
 }
 
-.skills .container {
+.services .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,7 +414,7 @@ section {
   padding: 20px;
 }
 
-.skills #soft {
+.services #soft {
   background: url("./../../src/images/soft.jpg");
   background-size: cover;
   /* <------ */
@@ -423,7 +423,7 @@ section {
   background-blend-mode: multiply;
 }
 
-.skills #web {
+.services #web {
   background: url("./../../src/images/web.jpg");
   background-size: cover;
   /* <------ */
@@ -431,7 +431,7 @@ section {
   background-position: center center;
 }
 
-.skills #visuals {
+.services #visuals {
   background: url("./../../src/images/visuals.jpg");
   background-blend-mode: difference;
   background-size: cover;
@@ -440,7 +440,7 @@ section {
   background-position: center center;
 }
 
-.skills .card {
+.services .card {
   position: relative;
   background: rgba(255, 255, 255, 0.159);
   color: white;
@@ -462,7 +462,7 @@ section {
           align-items: center;
 }
 
-.skills .card .content {
+.services .card .content {
   text-align: justify;
   color: black;
   -webkit-transition: 1s;
@@ -470,7 +470,7 @@ section {
   padding: 20px;
 }
 
-.skills .card #skills {
+.services .card #services {
   position: absolute;
   opacity: 0;
   -webkit-transition: 1s;
@@ -479,13 +479,13 @@ section {
   padding: 10px;
 }
 
-.skills .card #skills .title {
+.services .card #services .title {
   font-size: 1.2rem;
 }
 
-.skills .card .title-3 {
+.services .card .title-3 {
   position: relative;
-  color: #161616;
+  color: black;
   font-size: 1.5rem;
   top: 0;
   opacity: 1;
@@ -493,35 +493,35 @@ section {
   transition: 1s;
 }
 
-.skills .card:hover {
+.services .card:hover {
   cursor: pointer;
 }
 
-.skills .card:hover .content {
+.services .card:hover .content {
   opacity: 0;
 }
 
-.skills .card:hover .title-3 {
+.services .card:hover .title-3 {
   opacity: 0;
 }
 
-.skills .card:hover #skills {
+.services .card:hover #services {
   opacity: 1;
 }
 
-.skills .card .bookmark::before {
+.services .card .bookmark::before {
   position: absolute;
   content: "";
-  bottom: -10px;
+  bottom: -15px;
   width: 0rem;
   height: 2rem;
-  border-left: 1.5rem solid white;
-  border-right: 1.5rem solid white;
+  border-left: 1.5rem solid #111111;
+  border-right: 1.5rem solid #111111;
   border-bottom: 1rem solid transparent;
   background: rgba(255, 255, 255, 0);
 }
 
-.skills .card .bookmark {
+.services .card .bookmark {
   position: absolute;
   -webkit-box-shadow: 0 0 15px #bee8ff;
           box-shadow: 0 0 15px #bee8ff;
@@ -540,31 +540,31 @@ section {
   top: -2%;
   height: 4.4rem;
   right: 10%;
-  background: white;
+  background: #111111;
   color: white;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.skills .language div {
+.services .language div {
   color: #090a0f;
 }
 
-.skills .language .skillbox .percentage {
+.services .language .skillbox .percentage {
   background-color: #DDDDDD;
   border-radius: 5px;
 }
 
-.skills .language .skillbox .percentage div {
+.services .language .skillbox .percentage div {
   border-radius: 5px;
   padding-left: 3px;
 }
 
-.skills .language .skillbox .percentage {
+.services .language .skillbox .percentage {
   height: 5px;
 }
 
-.skills .language .skillbox #c {
+.services .language .skillbox #c {
   background-color: #4f89f5;
   width: 85%;
   color: white;
@@ -573,7 +573,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #cplus {
+.services .language .skillbox #cplus {
   background-color: #3402a7;
   width: 90%;
   color: white;
@@ -582,7 +582,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #cs {
+.services .language .skillbox #cs {
   background-color: #4e4eca;
   width: 70%;
   color: white;
@@ -591,7 +591,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #java {
+.services .language .skillbox #java {
   background-color: #F56161;
   width: 75%;
   color: white;
@@ -600,7 +600,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #py {
+.services .language .skillbox #py {
   background-color: #1463da;
   width: 80%;
   color: white;
@@ -609,7 +609,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #kt {
+.services .language .skillbox #kt {
   background-color: #123f92;
   width: 60%;
   color: white;
@@ -618,7 +618,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #go {
+.services .language .skillbox #go {
   background-color: #4f9ffa;
   width: 60%;
   color: white;
@@ -627,7 +627,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #html {
+.services .language .skillbox #html {
   background-color: #ff8800;
   width: 90%;
   color: white;
@@ -636,7 +636,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #css {
+.services .language .skillbox #css {
   background-color: #8ac1ff;
   width: 75%;
   color: white;
@@ -645,7 +645,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #js {
+.services .language .skillbox #js {
   background-color: #f8fa76;
   width: 60%;
   color: black;
@@ -654,7 +654,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #php {
+.services .language .skillbox #php {
   background-color: #7699fa;
   width: 50%;
   color: white;
@@ -663,7 +663,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #sketch {
+.services .language .skillbox #sketch {
   background-color: black;
   width: 80%;
   color: white;
@@ -672,7 +672,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #digi {
+.services .language .skillbox #digi {
   background-color: #ffc493;
   width: 85%;
   color: black;
@@ -681,7 +681,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #logo {
+.services .language .skillbox #logo {
   background-color: #ff3b3b;
   width: 90%;
   color: white;
@@ -690,7 +690,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #threed {
+.services .language .skillbox #threed {
   background-color: #fdff70;
   width: 65%;
   color: black;
@@ -699,7 +699,7 @@ section {
   transition: 600ms;
 }
 
-.skills .language .skillbox #twod {
+.services .language .skillbox #twod {
   background-color: #7473ac;
   width: 70%;
   color: white;
@@ -708,7 +708,7 @@ section {
   transition: 600ms;
 }
 
-.skills .percentage div {
+.services .percentage div {
   height: 5px;
 }
 
@@ -968,11 +968,11 @@ footer .copyright a:hover {
     height: 50px;
     width: 50px;
   }
-  .skills {
+  .services {
     padding-left: 5%;
     padding-right: 5%;
   }
-  .skills .container {
+  .services .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

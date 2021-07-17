@@ -2,7 +2,7 @@ const nav = document.getElementsByTagName("nav")[0];
 const more = document.getElementById("explore");
 const home = document.getElementById("home-btn");
 const about = document.getElementById("about-btn");
-const skills = document.getElementById("skills-btn");
+const services = document.getElementById("service-btn");
 const contact = document.getElementById("contact-btn");
 const blogs = document.getElementById("blogs-btn");
 
@@ -29,9 +29,9 @@ about.addEventListener("click", () => {
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
-skills.addEventListener("click", () => {
-    document.getElementsByClassName("skills")[0].scrollIntoView(true);
-    //window.location.href = url + "#skills";
+services.addEventListener("click", () => {
+    document.getElementsByClassName("services")[0].scrollIntoView(true);
+    //window.location.href = url + "#services";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);

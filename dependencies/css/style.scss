@@ -327,7 +327,7 @@ section{
 }
 
 
-.skills{
+.services{
 .container{
     display: flex;
     flex-direction: column;
@@ -371,7 +371,7 @@ section{
         transition: 1s;
         padding: 20px;
     }
-    #skills{
+    #services{
         .title{
           font-size: 1.2rem;
         }
@@ -383,7 +383,7 @@ section{
     }
     .title-3{
         position: relative;
-        color:rgb(22, 22, 22);
+        color:rgb(0, 0, 0);
         font-size: 1.5rem;
         top: 0;
         opacity: 1;
@@ -397,18 +397,18 @@ section{
         .title-3{
             opacity: 0;
         }
-        #skills{
+        #services{
             opacity: 1;
         }
     }
     .bookmark::before{
         position: absolute;
         content: "";
-        bottom: -10px;
+        bottom: -15px;
         width: 0rem;
         height: 2rem;
-        border-left: 1.5rem solid white;
-        border-right: 1.5rem solid white;
+        border-left: 1.5rem solid rgb(17, 17, 17);
+        border-right: 1.5rem solid rgb(17, 17, 17);
         border-bottom: 1rem solid transparent;
         background: rgba(255, 255, 255, 0);
       }
@@ -424,7 +424,7 @@ section{
         top: -2%;
         height: 4.4rem;
         right: 10%;
-        background: white;
+        background: rgb(17, 17, 17);
         color: white;
         transition: 1s;
     }
@@ -776,7 +776,7 @@ footer {
         width: 50px;
       }
     }
-    .skills{
+    .services{
       padding-left: 5%;
       padding-right: 5%;
       .container{
