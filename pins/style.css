@@ -54,6 +54,11 @@ body #load.done {
   z-index: -1;
 }
 
+#gear {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;

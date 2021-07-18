@@ -41,6 +41,8 @@ body #load {
   transition: 600ms;
 }
 
+
+
 body #load.done {
   visibility: hidden;
   opacity: 0;
@@ -55,6 +57,9 @@ body #load.done {
   z-index: -1;
 }
 
+#gear{
+  filter: invert(1);
+}
 
 header{
   display: flex;
