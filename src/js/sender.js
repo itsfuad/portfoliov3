@@ -28,6 +28,7 @@ function sender(){
     }); 
 }
 function send(){
+    document.getElementById("popupwrap").classList.add("active");
     document.getElementById("popup").classList.add("active");
     sender();
     document.getElementById("myname").value = "";
@@ -36,5 +37,6 @@ function send(){
     return false;
 }
 function popupclose(){
+    document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }

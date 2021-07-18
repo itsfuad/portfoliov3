@@ -21,16 +21,33 @@ html {
   scroll-behavior: smooth;
 }
 
+#popupwrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000af;
+  z-index: 90;
+  visibility: hidden;
+}
+
+#popupwrap.active {
+  visibility: visible;
+}
+
 #popup {
   position: fixed;
-  background: rgba(255, 255, 255, 0.953);
+  background: white;
   top: 50%;
   left: 50%;
+  min-width: 50vw;
+  min-height: 40vw;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,27 +61,29 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
   -webkit-transition: 400ms;
   transition: 400ms;
   z-index: 100;
+  -webkit-box-shadow: 0 0 45px #7196be;
+          box-shadow: 0 0 45px #7196be;
 }
 
 #popup h1 {
   position: relative;
-  font-size: 30px;
+  font-size: 4rem;
   color: black;
-  padding: auto;
 }
 
 #popup #close {
   position: relative;
-  padding: 5px;
+  padding: 10px;
   color: white;
-  font-size: 15px;
+  font-size: 2rem;
   margin: 10px;
-  background-color: #dd5151;
+  background-color: black;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-transition: 600ms;
   transition: 600ms;
   -webkit-transform: scale(1);
@@ -1007,6 +1026,10 @@ footer .copyright a:hover {
 }
 
 @media (orientation: landscape) and (min-device-aspect-ratio: 1 / 1) {
+  #popup {
+    min-width: 50vh;
+    min-height: 40vh;
+  }
   #home .content {
     padding: 0 15vw 0 15vw;
   }

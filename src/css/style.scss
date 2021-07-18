@@ -21,42 +21,61 @@ html{
     //scroll-snap-type: y proximity;
 }
 
+
+#popupwrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000af;
+  z-index: 90;
+  visibility: hidden;
+  &.active{
+    visibility: visible;
+  }
+}
+
+
 #popup{
   position: fixed;
-  background: rgba(255, 255, 255, 0.953);
+  background: rgb(255, 255, 255);
   top: 50%;
   left: 50%;
+  min-width: 50vw;
+  min-height: 40vw;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   transition: 400ms;
   z-index: 100;
+  box-shadow: 0 0 45px rgb(113, 150, 190);
   h1{
     position: relative;
-    font-size: 30px;
+    font-size: 4rem;
     color: black;
-    padding: auto;
   }
   #close{
       position: relative;
-      padding: 5px;
+      padding: 10px;
       color: rgb(255, 255, 255);
-      font-size: 15px;
+      font-size: 2rem;
       margin: 10px;
-      background-color: rgb(221, 81, 81);
+      background-color: rgb(0, 0, 0);
       border: none;
-      border-radius: 5px;
+      border-radius: 10px;
       transition: 600ms;
       transform: scale(1);
-  }
-  #close:hover{
-      transform:  scale(1.1);
-      cursor: pointer;
+      &:hover{
+          transform:  scale(1.1);
+          cursor: pointer;
+      }
   }
   &.active{
     transform: translate(-50%, -50%) scale(1);
@@ -788,9 +807,13 @@ footer {
 
 
 @media (orientation: landscape) and (min-device-aspect-ratio: 1/1) {
-      #home .content{
-        padding: 0 15vw 0 15vw;
-      }
+    #popup{
+      min-width: 50vh;
+    min-height: 40vh;
+    }
+    #home .content{
+      padding: 0 15vw 0 15vw;
+    }
     .about{
       display: flex;
       flex-direction: row;
