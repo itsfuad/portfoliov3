@@ -1,43 +1,9 @@
 @import url("stars.css");
 @font-face {
   font-family: Now;
-  src: url("./../../src/fonts/Now-Regular.otf");
+  src: url("./../fonts/Now-Regular.otf");
 }
 
-@font-face {
-  font-family: Rail;
-  src: url("./../../src/fontsRaleway-Regular.ttf");
-}
-
-@font-face {
-  font-family: RAGE;
-  src: url("./../../src/fontsRAGE.ttf");
-}
-
-@font-face {
-  font-family: Almara;
-  src: url("./../../src/fonts/Almara Demo.ttf");
-}
-
-@font-face {
-  font-family: Balsoon;
-  src: url("./../../src/fonts/Balsoon.ttf");
-}
-
-@font-face {
-  font-family: hike;
-  src: url("./../../src/fonts/Hitch-hike.otf");
-}
-
-@font-face {
-  font-family: Nadheva;
-  src: url("./../../src/fonts/NadhevaDemoRegular.ttf");
-}
-
-@font-face {
-  font-family: Vonique;
-  src: url("./../../src/fonts/Vonique 64.ttf");
-}
 
 *{
     padding: 0;
@@ -98,7 +64,7 @@ body{
 
 .title-2{
     font-size: 3rem;
-    font-family: Vonique;
+    font-family: Now;
 }
 
 .title-3{
