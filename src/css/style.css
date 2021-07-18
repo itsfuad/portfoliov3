@@ -4,6 +4,10 @@
   src: url("./../fonts/Now-Regular.otf");
 }
 
+:root {
+  --bookmark: white;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -485,8 +489,8 @@ section {
   bottom: -15px;
   width: 0rem;
   height: 2rem;
-  border-left: 1.5rem solid #111111;
-  border-right: 1.5rem solid #111111;
+  border-left: 1.5rem solid var(--bookmark);
+  border-right: 1.5rem solid var(--bookmark);
   border-bottom: 1rem solid transparent;
   background: rgba(255, 255, 255, 0);
 }
@@ -511,7 +515,7 @@ section {
   top: -2%;
   height: 4.4rem;
   right: 10%;
-  background: #111111;
+  background: var(--bookmark);
   color: white;
   -webkit-transition: 1s;
   transition: 1s;
