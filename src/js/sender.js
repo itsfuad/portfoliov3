@@ -4,7 +4,7 @@ function sender(){
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
     
-    message = "Hey Baby! There is a new message for you.\n\nName: "+name+"\nEmail: "+email+"\nMessage: "+message+"\n";
+    message = "Hey Baby! There is a new message for you.\n\nName: "+name+"\nEmail: "+email+"\nMessage: "+message;
 
     var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
     var chat_id = 1467252650;
