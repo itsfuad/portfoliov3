@@ -1,7 +1,8 @@
 function sender(){
-    let name = document.forms["contact"]["name"].value;
-    let email = document.forms["contact"]["email"].value;
-    let message = document.forms["contact"]["message"].value;
+    
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
     
     message = "Hey Baby! There is a new message for you.\nName: "+name+"\nEmail: "+email+"\nMessage: "+message;
 
@@ -25,5 +26,14 @@ function sender(){
     $.ajax(settings).done(function (response) {
         console.log(response);
     }); 
-    alert("Thank You!");
+}
+function send(){
+    document.getElementById("popup").classList.add("active");
+    sender();
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+function popupclose(){
+    document.getElementById("popup").classList.remove("active");
 }
