@@ -17,7 +17,7 @@
     var pin_id = 0, contents, data;
 
     firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
-        pin_id = parseInt(prevChildKey) + 2;
+        pin_id = parseInt(prevChildKey + 1);
         console.log(pin_id);
     });
 
@@ -26,7 +26,7 @@
     }
 
     function set(){
-        firebase.database().ref("All Pin/Contents/"+pin_id).update({
+        firebase.database().ref("All Pin/Contents/"+parseInt(pin_id + 1)).update({
             pin: contents
         });
     }
