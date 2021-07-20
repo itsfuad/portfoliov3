@@ -17,7 +17,8 @@
     var pin_id = 0, contents, data;
 
     firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
-        pin_id = parseInt(snapshot.val().id) + 1;
+        pin_id = parseInt(prevChildKey) + 1;
+        console.log(pin_id);
     });
 
     function ready(){
@@ -25,17 +26,18 @@
     }
 
     function set(){
-        firebase.database().ref("All Pin/Contents/Post-"+pin_id).update({
+        firebase.database().ref("All Pin/Contents/"+pin_id).update({
             pin: contents
         });
     }
 
-    document.getElementById("upload").addEventListener("click", ()=> {
+    function clicked(){
         ready();
         if (contents == "" || contents == " "){
             alert("Nothing to upload!");
             return;
         }
+        console.log(pin_id);
         set();
         console.log("Up");
         document.getElementById("contents").value = "";
@@ -46,4 +48,4 @@
             box-shadow: none;
             cursor: allowed;
         `;
-    });
+    }
