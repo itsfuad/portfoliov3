@@ -14,33 +14,30 @@
     firebase.analytics();
 
     //---------data------------
-    var pin_id, contents, data;
+    var pin_id = 0, contents, data;
+
+    firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
+        pin_id = parseInt(snapshot.val().id) + 1;
+    });
 
     function ready(){
-        pin_id = document.getElementById("pin_id").value;
         contents = document.getElementById("contents").value;
     }
 
     function set(){
         firebase.database().ref("All Pin/Contents/Post-"+pin_id).update({
-            id: pin_id,
-            contents: contents
+            pin: contents
         });
     }
 
     document.getElementById("upload").addEventListener("click", ()=> {
         ready();
-        if (pin_id == "" || pin_id == " "){
-            alert("Provide an id!");
-            return;
-        }
         if (contents == "" || contents == " "){
             alert("Nothing to upload!");
             return;
         }
         set();
         console.log("Up");
-        document.getElementById("pin_id").value = "";
         document.getElementById("contents").value = "";
         document.getElementById("convert-btn").value = "Convert to HTML!"
         document.getElementById("convert-btn").style = `

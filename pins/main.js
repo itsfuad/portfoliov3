@@ -19,19 +19,17 @@ firebase.analytics();
 
 var data;
 
-
 firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChildKey) => {
     if (!loaded) {
         loaded = true;
         document.getElementById("contents").innerHTML = "";
     }
     const newPost = snapshot.val();
-    console.log('Id: ' + newPost.id);
-    //console.log('Content: ' + newPost.contents);
+
     console.log('Previous Post ID: ' + prevChildKey);
-    data = newPost.contents;
+    data = newPost.pin;
     data = "<div class='blog'>" + data + "</div>";
-    document.getElementById("contents").innerHTML += data;
+    document.getElementById("contents").innerHTML = data + document.getElementById("contents").innerHTML;
     hljs.highlightAll();
 });
 
