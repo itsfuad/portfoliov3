@@ -302,8 +302,8 @@ section {
 
 #home .resume {
   position: relative;
-  background: black;
-  color: white;
+  background: whitesmoke;
+  color: black;
   border-radius: 5px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
