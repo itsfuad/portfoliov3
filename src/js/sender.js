@@ -30,9 +30,23 @@ const sender = (message) => {
     $.ajax(settings).done(); 
 }
 
-const agent = () => {
-    data = window.navigator.userAgent;
-    sender("Hey baby! Your website was visited by: " + data);
+function json(url) {
+    return fetch(url).then(res => res.json());
+  }
+
+var ip, city, country_code;
+let apiKey = '86c95de4ff7cc49dfcd0cbc49b9f78535c653bbb992310edd9243d48';
+  
+const agent = async () => {
+    await json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
+      ip = data.ip;
+      city = data.city;
+      country_code = data.country_code;
+      // so many more properties
+    });
+    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
+    console.log(data);
+    sender(data);
 }
 
 const send = () => {
