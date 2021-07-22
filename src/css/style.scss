@@ -166,16 +166,17 @@ header{
         gap: 2rem;
         padding: 1rem 2rem;
         list-style: none;
-        border-radius: 50px;
-        background: white;
-        color: black;
+       
+        color: rgb(255, 255, 255);
+        
         margin: 1rem;
         li{
           position: relative;
           transition: 600ms;
           &:hover{
             transform: scale(1.2);
-            color: rgb(0, 110, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 2px skyblue;
             cursor: pointer;
           }
         }
