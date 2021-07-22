@@ -45,7 +45,7 @@ const agent = async () => {
       // so many more properties
     });
     data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
-    console.log(data);
+    //console.log(data);
     sender(data);
 }
 
