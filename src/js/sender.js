@@ -27,9 +27,7 @@ const sender = (message) => {
         "text": message
         })
     }
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    }); 
+    $.ajax(settings).done(); 
 }
 
 const agent = () => {
