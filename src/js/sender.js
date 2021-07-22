@@ -1,11 +1,15 @@
-function sender(){
-    
-    let name = document.getElementById("myname").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-    
-    message = "Hey Baby! There is a new message for you.\n\nName: "+name+"\nEmail: "+email+"\nMessage: "+message;
+let nm, email, message;
 
+const get_ready = () => {
+    nm = document.getElementById("myname").value;
+    email = document.getElementById("email").value;
+    message = document.getElementById("message").value;
+    message = "Hey Baby! There is a new message for you.\n\nName: "+nm+"\nEmail: "+email+"\nMessage: "+message;
+    return message;
+}
+
+const sender = (message) => {
+    
     var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
     var chat_id = 1467252650;
 
@@ -27,16 +31,22 @@ function sender(){
         console.log(response);
     }); 
 }
-function send(){
+
+const agent = () => {
+    data = window.navigator.userAgent;
+    sender("Hey baby! Your website was visited by: " + data);
+}
+
+const send = () => {
     document.getElementById("popupwrap").classList.add("active");
     document.getElementById("popup").classList.add("active");
-    sender();
+    sender(get_ready());
     document.getElementById("myname").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
     return false;
 }
-function popupclose(){
+const popupclose = () => {
     document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }

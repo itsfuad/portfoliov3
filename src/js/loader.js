@@ -1,10 +1,10 @@
 
-function load_home(){
+const load_home = () => {
   document.getElementsByTagName("header")[0].classList.add("loaded");
-  
+  agent();
 }
 
-function load(){
+const load = () => {
     document.getElementById("load").classList.toggle("done");
     load_home();
 }

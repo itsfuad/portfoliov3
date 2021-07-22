@@ -6,14 +6,14 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function remove(){
+const remove = async () => {
     //alert("r");
     while (gig.innerHTML.length != 0){
         gig.innerHTML = gig.innerHTML.substring(0, gig.innerHTML.length - 1);
         await sleep (40);
     }
 }
-async function gigwriter(){
+const gigwriter = async () => {
     //alert(gig);
     for (let i = 0; i <= gigs.length-1; i++){
         for( let j = 0; j <= gigs[i].length-1; j++){
@@ -28,7 +28,7 @@ async function gigwriter(){
     }
 }
 
-async function caller(){
+const caller = async () =>{
     while (true){
         //alert("stated!");
         await gigwriter();
