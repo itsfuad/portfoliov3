@@ -201,7 +201,9 @@ header nav {
   gap: 2rem;
   padding: 1rem 2rem;
   list-style: none;
-  color: white;
+  background: white;
+  border-radius: 50px;
+  color: black;
   margin: 1rem;
 }
 
@@ -214,7 +216,7 @@ header nav li {
 header nav li:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  color: white;
+  color: #0082FF;
   text-shadow: 0 0 2px skyblue;
   cursor: pointer;
 }
