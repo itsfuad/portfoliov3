@@ -211,10 +211,6 @@ header nav {
   margin: 1rem;
 }
 
-header nav #home-btn {
-  color: var(--blue);
-}
-
 header nav li {
   position: relative;
   -webkit-transition: 600ms;
