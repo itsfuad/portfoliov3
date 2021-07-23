@@ -6,6 +6,10 @@
 
 :root{
   --bookmark: white;
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --blue: rgb(2, 163, 226);
+  --primary: rgb(25, 27, 34);
 }
 
 *{
@@ -39,7 +43,7 @@ html{
 
 #popup{
   position: absolute;
-  background: rgb(255, 255, 255);
+  background: var(--white);
   top: 50%;
   left: 50%;
   min-width: 50vw;
@@ -56,19 +60,19 @@ html{
   gap: 2rem;
   transition: 400ms;
   z-index: 100;
-  box-shadow: 0 0 45px rgb(113, 150, 190);
+  box-shadow: 0 0 45px var(--blue);
   h1{
     position: relative;
     font-size: 4rem;
-    color: black;
+    color: var(--black);
   }
   #close{
       position: relative;
       padding: 10px;
-      color: rgb(255, 255, 255);
+      color: var(--white);
       font-size: 1rem;
       margin: 10px;
-      background-color: rgb(0, 0, 0);
+      background-color: var(--black);
       border: none;
       border-radius: 10px;
       transition: 600ms;
@@ -88,14 +92,14 @@ body{
     user-select: none;
     z-index: 2;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    color: white;
+    color: var(--white);
     #load{
         position: fixed;		
         left: 50%;
         top: 50%;				
         padding: 100%;
-        background: white;
-        color:black;
+        background: var(--white);
+        color:var(--black);
         font-size:20px;
         opacity:1;
         visibility: visible;
@@ -139,12 +143,12 @@ body{
 }
 
 strong{
-  color: #81b5d6;
+  color: var(--blue);
   transition: 600ms;
   &:hover{
     cursor: pointer;
-    color: white;
-    text-shadow: 0 0 10px #2dacfa;
+    color: var(--white);
+    text-shadow: 0 0 10px var(--blue);
   }
 }
 
@@ -167,16 +171,18 @@ header{
         padding: 1rem 2rem;
         list-style: none;
        
-        color: rgb(255, 255, 255);
-        
+        color: var(--black);
+        background: var(--white);
+        border-radius: 50px;
+
         margin: 1rem;
         li{
           position: relative;
           transition: 600ms;
           &:hover{
-            transform: scale(1.2);
-            color: rgb(255, 255, 255);
-            text-shadow: 0 0 2px skyblue;
+            transform: scale(1.1);
+            color: var(--blue);
+            text-shadow: 0 0 2px var(--blue);
             cursor: pointer;
           }
         }
@@ -211,8 +217,8 @@ section{
   margin: 0;
   min-height: 100vh;
   transition: 600ms;
-  color: black;
-  background: #1E2025;
+  color: var(--black);
+  background: var(--primary);
     #particles-js {
       position: fixed;
       width: 100%;
@@ -222,14 +228,14 @@ section{
       transition: 600ms;
       font-size: 2.3rem;
       text-align: left;
-      color: white;
+      color: var(--white);
     }
     #bio {
       position: relative;
       top: 0px;
       opacity: 1;
       transition: 1s;
-      color: white;
+      color: var(--white);
     }    
     .bio{
         text-align: justify;
@@ -246,8 +252,8 @@ section{
         color: inherit;
       }
       position: relative;
-      background: black;
-      color: white;
+      background: var(--white);
+      color: var(--black);
       border-radius: 5px;
       max-width: -webkit-max-content;
       max-width: -moz-max-content;
@@ -265,18 +271,21 @@ section{
     }
     .btn{
       position: relative;
+      left: 50%;
+      transform: translateX(-50%);
       margin-top: 3rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 50px;
+      width: 30px;
       transition: 600ms;
         &:hover{
           cursor: pointer;
         }
         .chevron {
           position: absolute;
+          top: 0;
           width: 2.1rem;
           height: 0.48rem;
           opacity: 0;
@@ -330,12 +339,12 @@ section{
   transition: 600ms;
   z-index: 4;
   background:#0F0F0F;
-  color: white;
+  color: var(--white);
   #about-img{
     height: 60vw;
     z-index: 5;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px white;
+    box-shadow: 0 0 0 10px var(--white);
     margin-bottom: 20px;
   }
   #quote {
@@ -402,7 +411,7 @@ section{
     }
     .content{
         text-align: justify;
-        color: black;
+        color: var(--black);
         transition: 1s;
         padding: 20px;
     }
@@ -418,7 +427,7 @@ section{
     }
     .title-3{
         position: relative;
-        color:rgb(0, 0, 0);
+        color:var(--black);
         font-size: 1.5rem;
         top: 0;
         opacity: 1;
@@ -461,7 +470,7 @@ section{
         height: 4.4rem;
         right: 10%;
         background: var(--bookmark);
-        color: white;
+        color: var(--white);
         transition: 1s;
     }
 }
@@ -470,7 +479,7 @@ section{
   flex-direction: column;
   justify-content:center;
   align-items: center;
-  color: black;
+  color: var(--black);
   position: relative;
   background: rgba(135, 193, 225, 0.309);
   border-radius: 10px;
@@ -494,7 +503,7 @@ section{
         .language .skillbox #c {
           background-color: #4f89f5;
           width: 85%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -502,7 +511,7 @@ section{
         .language .skillbox #cplus {
           background-color: #3402a7;
           width: 90%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -510,7 +519,7 @@ section{
         .language .skillbox #cs {
           background-color: #4e4eca;
           width: 70%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -518,7 +527,7 @@ section{
         .language .skillbox #java {
           background-color: #F56161;
           width: 75%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -526,14 +535,14 @@ section{
         .language .skillbox #py {
           background-color: #1463da;
           width: 80%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;transition: 600ms;
         }
        
         .language .skillbox #kt {
           background-color: #123f92;
           width: 60%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -541,7 +550,7 @@ section{
         .language .skillbox #go {
           background-color: #4f9ffa;
           width: 60%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -549,7 +558,7 @@ section{
         .language .skillbox #html {
           background-color: #ff8800;
           width: 90%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -557,7 +566,7 @@ section{
         .language .skillbox #css {
           background-color: #8ac1ff;
           width: 75%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -565,7 +574,7 @@ section{
         .language .skillbox #js {
           background-color: #f8fa76;
           width: 60%;
-          color: black;
+          color: var(--black);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -573,15 +582,15 @@ section{
         .language .skillbox #php {
           background-color: #7699fa;
           width: 50%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
        
         .language .skillbox #sketch {
-          background-color: black;
+          background-color: var(--black);
           width: 80%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -589,7 +598,7 @@ section{
         .language .skillbox #digi {
           background-color: #ffc493;
           width: 85%;
-          color: black;
+          color: var(--black);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -597,7 +606,7 @@ section{
         .language .skillbox #logo {
           background-color: #ff3b3b;
           width: 90%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -605,7 +614,7 @@ section{
         .language .skillbox #threed {
           background-color: #fdff70;
           width: 65%;
-          color: black;
+          color: var(--black);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -613,7 +622,7 @@ section{
         .language .skillbox #twod {
           background-color: #7473ac;
           width: 70%;
-          color: white;
+          color: var(--white);
           padding-left: 5px;
           transition: 600ms;
         }
@@ -626,7 +635,7 @@ section{
 .contact_me {
     position: relative;
     margin: 0;
-    color: white;
+    color: var(--white);
     text-align: center;
     opacity: 1;
     transition: 600ms;
@@ -639,11 +648,11 @@ section{
     background: none;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     padding: 14px 10px;
     width: 88vw;
     outline: none;
-    color: white;
+    color: var(--white);
     border-radius: 24px;
     transition: 0.25s;
   }
@@ -657,29 +666,29 @@ section{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: var(--white);
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
   }
   .contact_me input[type=submit]:hover {
-    background: white;
-    color: black;
-            box-shadow: 0 0 20px white;
+    background: var(--white);
+    color: var(--black);
+            box-shadow: 0 0 20px var(--white);
   }
   .contact_me textarea {
     background: none;
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--white);
     padding: 14px 10px;
     width: 88vw;
     outline: none;
-    color: white;
+    color: var(--white);
     border-radius: 24px;
     -webkit-transition: 0.25s;
     transition: 0.25s;
@@ -691,7 +700,7 @@ section{
 
   ::placeholder {
     font-family: Now;
-    color: white;
+    color: var(--white);
     font-size: 1rem;
   }
   .game {
@@ -732,14 +741,14 @@ section{
 footer {
     font-size: 1rem;
     text-align: center;
-    color: white;
-    background: rgb(0, 0, 0);
+    color: var(--white);
+    background: var(--black);
     padding: 5px;
     z-index: 100;
     .copyright{
       a{
         text-decoration: none;
-        color:rgb(255, 255, 255);
+        color:var(--white);
         &:hover{
           cursor: pointer;
         }

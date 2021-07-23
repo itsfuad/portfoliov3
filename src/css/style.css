@@ -6,6 +6,10 @@
 
 :root {
   --bookmark: white;
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --blue: rgb(2, 163, 226);
+  --primary: rgb(25, 27, 34);
 }
 
 * {
@@ -38,7 +42,7 @@ html {
 
 #popup {
   position: absolute;
-  background: white;
+  background: var(--white);
   top: 50%;
   left: 50%;
   min-width: 50vw;
@@ -66,23 +70,23 @@ html {
   -webkit-transition: 400ms;
   transition: 400ms;
   z-index: 100;
-  -webkit-box-shadow: 0 0 45px #7196be;
-          box-shadow: 0 0 45px #7196be;
+  -webkit-box-shadow: 0 0 45px var(--blue);
+          box-shadow: 0 0 45px var(--blue);
 }
 
 #popup h1 {
   position: relative;
   font-size: 4rem;
-  color: black;
+  color: var(--black);
 }
 
 #popup #close {
   position: relative;
   padding: 10px;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   margin: 10px;
-  background-color: black;
+  background-color: var(--black);
   border: none;
   border-radius: 10px;
   -webkit-transition: 600ms;
@@ -110,7 +114,7 @@ body {
           user-select: none;
   z-index: 2;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  color: white;
+  color: var(--white);
 }
 
 body #load {
@@ -118,8 +122,8 @@ body #load {
   left: 50%;
   top: 50%;
   padding: 100%;
-  background: white;
-  color: black;
+  background: var(--white);
+  color: var(--black);
   font-size: 20px;
   opacity: 1;
   visibility: visible;
@@ -167,15 +171,15 @@ body #mainlogo img {
 }
 
 strong {
-  color: #81b5d6;
+  color: var(--blue);
   -webkit-transition: 600ms;
   transition: 600ms;
 }
 
 strong:hover {
   cursor: pointer;
-  color: white;
-  text-shadow: 0 0 10px #2dacfa;
+  color: var(--white);
+  text-shadow: 0 0 10px var(--blue);
 }
 
 header {
@@ -201,9 +205,9 @@ header nav {
   gap: 2rem;
   padding: 1rem 2rem;
   list-style: none;
-  background: white;
+  color: var(--black);
+  background: var(--white);
   border-radius: 50px;
-  color: black;
   margin: 1rem;
 }
 
@@ -214,10 +218,10 @@ header nav li {
 }
 
 header nav li:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: #0082FF;
-  text-shadow: 0 0 2px skyblue;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: var(--blue);
+  text-shadow: 0 0 2px var(--blue);
   cursor: pointer;
 }
 
@@ -263,8 +267,8 @@ section {
   min-height: 100vh;
   -webkit-transition: 600ms;
   transition: 600ms;
-  color: black;
-  background: #1E2025;
+  color: var(--black);
+  background: var(--primary);
 }
 
 #home #particles-js {
@@ -278,7 +282,7 @@ section {
   transition: 600ms;
   font-size: 2.3rem;
   text-align: left;
-  color: white;
+  color: var(--white);
 }
 
 #home #bio {
@@ -287,7 +291,7 @@ section {
   opacity: 1;
   -webkit-transition: 1s;
   transition: 1s;
-  color: white;
+  color: var(--white);
 }
 
 #home .bio {
@@ -302,8 +306,8 @@ section {
 
 #home .resume {
   position: relative;
-  background: whitesmoke;
-  color: black;
+  background: var(--white);
+  color: var(--black);
   border-radius: 5px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -331,6 +335,9 @@ section {
 
 #home .btn {
   position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,6 +348,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50px;
+  width: 30px;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -351,6 +360,7 @@ section {
 
 #home .btn .chevron {
   position: absolute;
+  top: 0;
   width: 2.1rem;
   height: 0.48rem;
   opacity: 0;
@@ -417,15 +427,15 @@ section {
   transition: 600ms;
   z-index: 4;
   background: #0F0F0F;
-  color: white;
+  color: var(--white);
 }
 
 .about #about-img {
   height: 60vw;
   z-index: 5;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 10px white;
-          box-shadow: 0 0 0 10px white;
+  -webkit-box-shadow: 0 0 0 10px var(--white);
+          box-shadow: 0 0 0 10px var(--white);
   margin-bottom: 20px;
 }
 
@@ -521,7 +531,7 @@ section {
 
 .services .card .content {
   text-align: justify;
-  color: black;
+  color: var(--black);
   -webkit-transition: 1s;
   transition: 1s;
   padding: 20px;
@@ -542,7 +552,7 @@ section {
 
 .services .card .title-3 {
   position: relative;
-  color: black;
+  color: var(--black);
   font-size: 1.5rem;
   top: 0;
   opacity: 1;
@@ -599,7 +609,7 @@ section {
   height: 4.4rem;
   right: 10%;
   background: var(--bookmark);
-  color: white;
+  color: var(--white);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -618,7 +628,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: black;
+  color: var(--black);
   position: relative;
   background: rgba(135, 193, 225, 0.309);
   border-radius: 10px;
@@ -647,7 +657,7 @@ section {
 .services .language .skillbox #c {
   background-color: #4f89f5;
   width: 85%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -656,7 +666,7 @@ section {
 .services .language .skillbox #cplus {
   background-color: #3402a7;
   width: 90%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -665,7 +675,7 @@ section {
 .services .language .skillbox #cs {
   background-color: #4e4eca;
   width: 70%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -674,7 +684,7 @@ section {
 .services .language .skillbox #java {
   background-color: #F56161;
   width: 75%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -683,7 +693,7 @@ section {
 .services .language .skillbox #py {
   background-color: #1463da;
   width: 80%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -692,7 +702,7 @@ section {
 .services .language .skillbox #kt {
   background-color: #123f92;
   width: 60%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -701,7 +711,7 @@ section {
 .services .language .skillbox #go {
   background-color: #4f9ffa;
   width: 60%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -710,7 +720,7 @@ section {
 .services .language .skillbox #html {
   background-color: #ff8800;
   width: 90%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -719,7 +729,7 @@ section {
 .services .language .skillbox #css {
   background-color: #8ac1ff;
   width: 75%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -728,7 +738,7 @@ section {
 .services .language .skillbox #js {
   background-color: #f8fa76;
   width: 60%;
-  color: black;
+  color: var(--black);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -737,16 +747,16 @@ section {
 .services .language .skillbox #php {
   background-color: #7699fa;
   width: 50%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
 
 .services .language .skillbox #sketch {
-  background-color: black;
+  background-color: var(--black);
   width: 80%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -755,7 +765,7 @@ section {
 .services .language .skillbox #digi {
   background-color: #ffc493;
   width: 85%;
-  color: black;
+  color: var(--black);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -764,7 +774,7 @@ section {
 .services .language .skillbox #logo {
   background-color: #ff3b3b;
   width: 90%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -773,7 +783,7 @@ section {
 .services .language .skillbox #threed {
   background-color: #fdff70;
   width: 65%;
-  color: black;
+  color: var(--black);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -782,7 +792,7 @@ section {
 .services .language .skillbox #twod {
   background-color: #7473ac;
   width: 70%;
-  color: white;
+  color: var(--white);
   padding-left: 5px;
   -webkit-transition: 600ms;
   transition: 600ms;
@@ -795,7 +805,7 @@ section {
 .contact_me {
   position: relative;
   margin: 0;
-  color: white;
+  color: var(--white);
   text-align: center;
   opacity: 1;
   -webkit-transition: 600ms;
@@ -809,11 +819,11 @@ section {
   background: none;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   padding: 14px 10px;
   width: 88vw;
   outline: none;
-  color: white;
+  color: var(--white);
   border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -830,10 +840,10 @@ section {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   padding: 14px 40px;
   outline: none;
-  color: white;
+  color: var(--white);
   border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -841,10 +851,10 @@ section {
 }
 
 .contact_me input[type=submit]:hover {
-  background: white;
-  color: black;
-  -webkit-box-shadow: 0 0 20px white;
-          box-shadow: 0 0 20px white;
+  background: var(--white);
+  color: var(--black);
+  -webkit-box-shadow: 0 0 20px var(--white);
+          box-shadow: 0 0 20px var(--white);
 }
 
 .contact_me textarea {
@@ -852,11 +862,11 @@ section {
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   padding: 14px 10px;
   width: 88vw;
   outline: none;
-  color: white;
+  color: var(--white);
   border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -869,25 +879,25 @@ section {
 
 ::-webkit-input-placeholder {
   font-family: Now;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
 }
 
 :-ms-input-placeholder {
   font-family: Now;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
 }
 
 ::-ms-input-placeholder {
   font-family: Now;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
 }
 
 ::placeholder {
   font-family: Now;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
 }
 
@@ -940,15 +950,15 @@ section {
 footer {
   font-size: 1rem;
   text-align: center;
-  color: white;
-  background: black;
+  color: var(--white);
+  background: var(--black);
   padding: 5px;
   z-index: 100;
 }
 
 footer .copyright a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 footer .copyright a:hover {
