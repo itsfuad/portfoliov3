@@ -46,7 +46,7 @@ const agent = async () => {
     });
     data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
     console.log(data);
-    //sender(data);
+    sender(data);
 }
 
 const send = () => {

@@ -211,6 +211,10 @@ header nav {
   margin: 1rem;
 }
 
+header nav #home-btn {
+  color: var(--blue);
+}
+
 header nav li {
   position: relative;
   -webkit-transition: 600ms;
@@ -220,7 +224,7 @@ header nav li {
 header nav li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: var(--blue);
+  color: var(--blue) !important;
   text-shadow: 0 0 2px var(--blue);
   cursor: pointer;
 }
@@ -400,10 +404,6 @@ section {
   width: 50%;
   -webkit-transform: skewY(-30deg);
           transform: skewY(-30deg);
-}
-
-#home[data-scroll="in"] {
-  top: 0;
 }
 
 .about {
