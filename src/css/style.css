@@ -271,6 +271,11 @@ section {
   background: var(--primary);
 }
 
+#home .content {
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
 #home #particles-js {
   position: fixed;
   width: 100%;
@@ -527,6 +532,31 @@ section {
   /* Create four equal columns that sits next to each other */
   /* Responsive layout - makes a two column-layout instead of four columns */
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+
+.works .container .subcontainer-2 img {
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.works .container .subcontainer-2 img[data-scroll="in"] {
+  opacity: 1;
+  top: 0;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.works .container .subcontainer-2 img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .works .container .subcontainer-2 .row {
