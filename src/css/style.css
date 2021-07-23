@@ -431,12 +431,21 @@ section {
 }
 
 .about #about-img {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
   height: 60vw;
   z-index: 5;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 10px var(--white);
           box-shadow: 0 0 0 10px var(--white);
   margin-bottom: 20px;
+}
+
+.about .container {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .about #quote {
@@ -463,6 +472,121 @@ section {
 .about div[data-scroll="in"] {
   left: 0;
   opacity: 1;
+}
+
+.works {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #0f0f0f;
+  color: var(white);
+}
+
+.works .container {
+  height: 100%;
+  text-align: justify;
+}
+
+.works .container .subcontainer-1 ul {
+  position: relative;
+  list-style: none;
+}
+
+.works .container .subcontainer-1 ul::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  background: var(--white);
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  height: calc(100% - 10px);
+}
+
+.works .container .subcontainer-1 ul li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.works .container .subcontainer-1 ul li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.works .container .subcontainer-2 {
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+
+.works .container .subcontainer-2 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.works .container .subcontainer-2 .column {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.works .container .subcontainer-2 .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .works .container .subcontainer-2 .column {
+    -webkit-box-flex: 75%;
+        -ms-flex: 75%;
+            flex: 75%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .works .container .subcontainer-2 .column {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .works .container .subcontainer-2 .column {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+  }
 }
 
 .services .container {

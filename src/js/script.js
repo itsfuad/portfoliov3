@@ -5,6 +5,8 @@ const about = document.getElementById("about-btn");
 const services = document.getElementById("service-btn");
 const contact = document.getElementById("contact-btn");
 const blogs = document.getElementById("blogs-btn");
+const instaprofile = document.getElementById('instaprofile');
+
 
 let url = window.location.href;
 url = url.slice(url.lastIndexOf("/")+1);
@@ -44,9 +46,9 @@ blogs.addEventListener("click", () => {
 });
 
 document.addEventListener("scroll", ()=>{
-    console.log("Scrolled");
+    //console.log("Scrolled");
     if (document.querySelector("#home").attributes[2].value == "in"){
-        console.log("Home in");
+        //console.log("Home in");
         home.style = `
         transition: 600ms;
         color: var(--blue);
@@ -93,7 +95,7 @@ document.addEventListener("scroll", ()=>{
         transition: 600ms;
         color: var(--black);
         `;
-        console.log("Out");
+        //console.log("Out");
     }
     if (document.querySelector("#services").attributes[2].value == "in"){
         services.style = `
@@ -144,4 +146,6 @@ document.addEventListener("scroll", ()=>{
         `;
     }
 });
+
+
 
