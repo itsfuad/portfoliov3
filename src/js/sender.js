@@ -49,7 +49,30 @@ const agent = async () => {
     sender(data);
 }
 
+function sound(src) {
+    try{       
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function(){
+          this.sound.play();
+        }
+        this.stop = function(){
+          this.sound.pause();
+        }
+    }catch(err){
+        console.log(err);
+    }
+}
+
+
+var mySound =  new sound("src/msg.wav");
+
 const send = () => {
+    mySound.play();
     document.getElementById("popupwrap").classList.add("active");
     document.getElementById("popup").classList.add("active");
     sender(get_ready());
