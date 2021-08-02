@@ -530,10 +530,6 @@ section{
     justify-content: center;
     align-items: center;
     transition: 300ms;
-    transform: scale(0.5);
-    &[data-scroll="in"]{
-      transform: scale(1);
-    }
     &:hover{
       transform: scale(1.05);
     }

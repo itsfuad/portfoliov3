@@ -427,7 +427,7 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   z-index: 4;
-  background: #0F0F0F;
+  background: #1A2129;
   color: var(--white);
 }
 
@@ -627,6 +627,9 @@ section {
   }
 }
 
+.services{
+  background: #141D24;
+}
 .services .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,14 +687,8 @@ section {
           align-items: center;
   -webkit-transition: 300ms;
   transition: 300ms;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
 }
 
-.services .card[data-scroll="in"] {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
 
 .services .card:hover {
   -webkit-transform: scale(1.05);
