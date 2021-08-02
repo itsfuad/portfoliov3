@@ -34,10 +34,8 @@
 
     <!--Scripts-->
     <link rel="icon" href="favicon.ico">
-    <script difer src="src/js/loader.js"></script>
-
-
-
+    <script difer src="src/js/loader.min.js"></script>
+    
 </head>
 <body onload="load()">
 
@@ -125,24 +123,24 @@
                     <h1>Visuals</h1>
                     <div class="row">
                         <div class="column">
-                            <img src="src/images/visuals/1.jpg" alt="">
-                            <img src="src/images/visuals/2.jpg" alt="">
-                            <img src="src/images/visuals/3.jpg" alt="">
+                            <img class="lazy" data-src="src/images/visuals/1.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/2.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/3.jpg"  alt="">
                         </div>
                         <div class="column">
-                            <img src="src/images/visuals/4.jpg" alt="">
-                            <img src="src/images/visuals/5.jpg" alt="">
-                            <img src="src/images/visuals/6.jpg" alt="">
+                            <img class="lazy" data-src="src/images/visuals/4.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/5.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/6.jpg"  alt="">
                         </div>
                         <div class="column">
-                            <img src="src/images/visuals/7.jpg" alt="">
-                            <img src="src/images/visuals/8.jpg" alt="">
-                            <img src="src/images/visuals/9.jpg" alt="">
+                            <img class="lazy" data-src="src/images/visuals/7.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/8.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/9.jpg"  alt="">
                         </div>
                         <div class="column">
-                            <img src="src/images/visuals/10.jpg" alt="">
-                            <img src="src/images/visuals/11.jpg" alt="">
-                            <img src="src/images/visuals/12.jpg" alt="">
+                            <img class="lazy" data-src="src/images/visuals/10.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/11.jpg"  alt="">
+                            <img class="lazy" data-src="src/images/visuals/12.jpg"  alt="">
                         </div>
                     </div>
                 </div>
@@ -244,21 +242,21 @@
                 <div id="sites">
                     <span class="github" id="github">
                         <a href="https://github.com/itsfuad" target="blank">
-                            <img src="src/images/githublogo.svg" height="30px" width="30px" alt="Github logo">
+                            <img class="lazy" data-src="src/images/githublogo.svg" height="30px" width="30px" alt="Github logo">
                         </a>
                     </span>
                     <span class="fb" id="fb">
                         <a href="https://facebook.com/therealfuad" target="blank">
-                            <img src="src/images/fblogo.svg" height="30px" width="30px" alt="Facebook logo">
+                            <img class="lazy" data-src="src/images/fblogo.svg" height="30px" width="30px" alt="Facebook logo">
                         </a>
                     </span>
                     <span class="ig" id="ig">
                         <a href="https://instagram.com/_therealfuad" target="blank">
-                            <img src="src/images/iglogo.svg" height="30px" width="30px" alt="Instagram logo">
+                            <img class="lazy" data-src="src/images/iglogo.svg" height="30px" width="30px" alt="Instagram logo">
                         </a>
                     </span>
                     </div>
-                        <div class="game"><br>Bored? Then play this game <a href="RadiusRaid/index.html"><img src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div><br>
+                        <div class="game"><br>Bored? Then play this game <a href="RadiusRaid/index.html"><img class="lazy" data-src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div><br>
                 </div>
         
         </section>
@@ -268,18 +266,20 @@
     <footer>
         <div class="copyright">&copy; 2021 - <a href="https://www.facebook.com/therealfuad">Fuad Hasan.</a></div>
     </footer>
+
     <!--Scripts-->
-    <script difer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script difer src="src/js/script.js"></script>
-    <script difer src="src/js/scroll.js"></script>
-    <script difer src="dist/particle.min.js"></script>
-    <script difer src="dist/app.js"></script>
-    <script difer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="src/js/script.min.js"></script>
+    <script src="src/js/scroll.min.js"></script>
+    <script src="dist/particle.min.js"></script>
+    <script src="dist/app.min.js"></script>
+    <script>
     ScrollOut({
         targets: "#home, .about div, #about-img, .subcontainer-2 img"
     });
     </script>
-    <script difer src="src/js/typewriter.js"></script>
-    <script difer src="src/js/sender.js"></script>
+    <script src="src/js/typewriter.min.js"></script>
+    <script src="src/js/sender.min.js"></script>
+    
 </body>
 </html>

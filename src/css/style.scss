@@ -153,6 +153,7 @@ strong{
 }
 
 
+
 header{
       position: fixed;
       top: 0;
@@ -188,6 +189,7 @@ header{
         }
     }
 }
+
 
 section{
   position: relative;
@@ -849,6 +851,11 @@ section{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+img .lazy{
+  min-height: 100px;
+  min-height: 100px;
 }
 
 footer {

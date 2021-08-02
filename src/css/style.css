@@ -1097,6 +1097,11 @@ section {
           transform: translateX(-50%);
 }
 
+img .lazy {
+  min-height: 100px;
+  min-height: 100px;
+}
+
 footer {
   font-size: 1rem;
   text-align: center;
