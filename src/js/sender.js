@@ -45,8 +45,17 @@ const agent = async () => {
       // so many more properties
     });
     data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
-    console.log(data);
-    sender(data);
+    //console.log(data);
+    if (localStorage.getItem("agent_f") != window.navigator.userAgent){
+        localStorage.setItem("agent_f", window.navigator.userAgent);
+        //console.log("new visitor");
+        sender(data);
+    }
+    /*
+    else{
+        console.log("already visited!");
+    }
+    */
 }
 
 function sound(src) {

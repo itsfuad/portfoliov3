@@ -9,7 +9,7 @@
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
   --blue: rgb(2, 163, 226);
-  --primary: rgb(25, 27, 34);
+  --primary: #1E2025;
 }
 
 *{
@@ -343,12 +343,20 @@ section{
   background:#0F0F0F;
   color: var(--white);
   #about-img{
+    position: relative;
+    left: -100px;
+    opacity: 0;
     order: 0;
     height: 60vw;
     z-index: 5;
     border-radius: 50%;
     box-shadow: 0 0 0 10px var(--white);
     margin-bottom: 20px;
+    transition: 600ms;
+    &[data-scroll="in"]{
+      left: 0;
+      opacity: 1;
+    }
   }
   .container{
     order: 1;
@@ -365,9 +373,10 @@ section{
   }
   div{
     position: inherit;
-    left: -10vw;
+    left: 100px;
     opacity: 0;
     transition: 600ms;
+    transition-delay: 200ms;
     &[data-scroll="in"]{
       left: 0;
       opacity: 1;
@@ -521,6 +530,10 @@ section{
     justify-content: center;
     align-items: center;
     transition: 300ms;
+    transform: scale(0.5);
+    &[data-scroll="in"]{
+      transform: scale(1);
+    }
     &:hover{
       transform: scale(1.05);
     }

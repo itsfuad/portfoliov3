@@ -1,7 +1,7 @@
 
 const load_home = () => {
   document.getElementsByTagName("header")[0].classList.add("loaded");
-  //agent();
+  agent();
 }
 
 const load = () => {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages = document.querySelectorAll("img.lazy");    
   var lazyloadThrottleTimeout;
   function lazyload () {
-    console.log("💩");
+    //console.log("💩");
     if(lazyloadThrottleTimeout) {
       clearTimeout(lazyloadThrottleTimeout);
     }    
