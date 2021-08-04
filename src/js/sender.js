@@ -97,7 +97,7 @@ const popupclose = () => {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-    //await sleep(2000);
+    await sleep(2000);
     const images = document.querySelectorAll(".lazy");
     images.forEach((image) => {
       image.setAttribute("src", image.getAttribute("data-src"));
