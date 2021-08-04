@@ -427,7 +427,7 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   z-index: 4;
-  background: #1A2129;
+  background: #222c35;
   color: var(--white);
 }
 
@@ -487,6 +487,15 @@ section {
   opacity: 1;
 }
 
+.works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  height: 2px;
+  background: #6d869c;
+}
+
 .works {
   height: 100%;
   width: 100%;
@@ -497,16 +506,18 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #0f0f0f;
+  background: #222c35;
   color: var(white);
 }
 
 .works .container {
+  color: #cccccc;
   height: 100%;
   text-align: justify;
 }
 
 .works .container .subcontainer-1 ul {
+  color: #6d869c;
   position: relative;
   list-style: none;
 }
@@ -515,7 +526,7 @@ section {
   content: "";
   display: inline-block;
   width: 2px;
-  background: var(--white);
+  background: #6d869c;
   position: absolute;
   left: 3px;
   top: 5px;
@@ -540,10 +551,29 @@ section {
   border-radius: 10px;
 }
 
+.works .container .subcontainer-1 ul li:hover {
+  cursor: pointer;
+}
+
 .works .container .subcontainer-2 {
+  position: relative;
   /* Create four equal columns that sits next to each other */
   /* Responsive layout - makes a two column-layout instead of four columns */
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+
+.works .container .subcontainer-2 .dropmenu {
+  position: relative;
+  top: 0;
+  left: 10px;
+  text-decoration: underline;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.works .container .subcontainer-2 .dropmenu:hover {
+  cursor: pointer;
+  color: #9797f3;
 }
 
 .works .container .subcontainer-2 img {
@@ -572,9 +602,7 @@ section {
 }
 
 .works .container .subcontainer-2 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 4px;
@@ -627,9 +655,10 @@ section {
   }
 }
 
-.services{
-  background: #141D24;
+.services {
+  background: #222c3f;
 }
+
 .services .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,12 +672,11 @@ section {
 }
 
 .services #soft {
-  background: url("./../../src/images/soft.jpg");
+  background: url("./../../src/images/software.jpg");
   background-size: cover;
   /* <------ */
   background-repeat: no-repeat;
   background-position: center center;
-  background-blend-mode: multiply;
 }
 
 .services #web {
@@ -688,7 +716,6 @@ section {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-
 
 .services .card:hover {
   -webkit-transform: scale(1.05);

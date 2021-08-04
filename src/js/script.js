@@ -44,3 +44,18 @@ contact.addEventListener("click", () => {
 blogs.addEventListener("click", () => {
    window.location.href = url + "/pins";
 });
+
+document.querySelector(".dropmenu").addEventListener("click", () => {
+    console.log("😄");
+    var elem = document.querySelector(".dropmenu");
+    if( elem.innerHTML == "Show Images" ){
+        elem.innerHTML = "Hide Images";
+        document.querySelector(".row").style.display = "flex";
+        console.log("🥰");
+    }
+    else{
+        elem.innerHTML = "Show Images";
+        document.querySelector(".row").style.display = "none"
+        console.log("😐");
+    }
+});

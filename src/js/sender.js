@@ -94,3 +94,13 @@ const popupclose = () => {
     document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    //await sleep(2000);
+    const images = document.querySelectorAll(".lazy");
+    images.forEach((image) => {
+      image.setAttribute("src", image.getAttribute("data-src"));
+      image.removeAttribute("data-src");
+    });
+  });
