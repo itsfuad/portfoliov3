@@ -46,16 +46,23 @@ blogs.addEventListener("click", () => {
 });
 
 document.querySelector(".dropmenu").addEventListener("click", () => {
-    console.log("😄");
+    //console.log("😄");
     var elem = document.querySelector(".dropmenu");
     if( elem.innerHTML == "Show Images" ){
         elem.innerHTML = "Hide Images";
         document.querySelector(".row").style.display = "flex";
-        console.log("🥰");
+        //console.log("🥰");
     }
     else{
         elem.innerHTML = "Show Images";
         document.querySelector(".row").style.display = "none"
-        console.log("😐");
+        //console.log("😐");
     }
+});
+
+window.addEventListener("load", ()=>{
+    ScrollOut({
+        targets: "#home, .about div, #about-img, .card, .subcontainer-2 img"
+    });
+    window.removeEventListener("load");
 });
