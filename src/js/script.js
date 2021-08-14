@@ -61,6 +61,9 @@ document.querySelector(".dropmenu").addEventListener("click", () => {
 });
 
 window.addEventListener("DOMContentLoaded", ()=>{
+    document.getElementById("load").classList.toggle("done");
+    document.getElementsByTagName("header")[0].classList.add("loaded");
+    agent();
     ScrollOut({
         targets: "#home, .about div, #about-img, .card, .subcontainer-2 img"
     });
