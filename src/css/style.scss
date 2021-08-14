@@ -528,20 +528,20 @@ section{
     padding: 20px;
 }
 #soft{
-  background: url("./../../src/images/software.jpg");
+  background: url("./../../src/images/software.webp");
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
   
 }
 #web{
-  background: url("./../../src/images/web.jpg");
+  background: url("./../../src/images/web.webp");
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
 }
 #visuals{
-  background: url("./../../src/images/visuals.jpg");
+  background: url("./../../src/images/visuals.webp");
   background-blend-mode:color-dodge;
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
@@ -894,6 +894,7 @@ img .lazy{
 }
 
 footer {
+    position: relative;
     font-size: 1rem;
     text-align: center;
     color: var(--white);

@@ -671,7 +671,7 @@ section {
 }
 
 .services #soft {
-  background: url("./../../src/images/software.jpg");
+  background: url("./../../src/images/software.webp");
   background-size: cover;
   /* <------ */
   background-repeat: no-repeat;
@@ -679,7 +679,7 @@ section {
 }
 
 .services #web {
-  background: url("./../../src/images/web.jpg");
+  background: url("./../../src/images/web.webp");
   background-size: cover;
   /* <------ */
   background-repeat: no-repeat;
@@ -687,7 +687,7 @@ section {
 }
 
 .services #visuals {
-  background: url("./../../src/images/visuals.jpg");
+  background: url("./../../src/images/visuals.webp");
   background-blend-mode: color-dodge;
   background-size: cover;
   /* <------ */
@@ -1145,6 +1145,7 @@ img .lazy {
 }
 
 footer {
+  position: relative;
   font-size: 1rem;
   text-align: center;
   color: var(--white);

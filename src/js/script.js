@@ -60,9 +60,8 @@ document.querySelector(".dropmenu").addEventListener("click", () => {
     }
 });
 
-window.addEventListener("load", ()=>{
+window.addEventListener("DOMContentLoaded", ()=>{
     ScrollOut({
         targets: "#home, .about div, #about-img, .card, .subcontainer-2 img"
     });
-    window.removeEventListener("load");
 });
