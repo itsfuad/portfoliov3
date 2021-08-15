@@ -149,17 +149,8 @@ function json(url) {
     return fetch(url).then(res => res.json());
   }
 
-var ip, city, country_code;
-let apiKey = '86c95de4ff7cc49dfcd0cbc49b9f78535c653bbb992310edd9243d48';
-
 const agent = async () => {
-    await json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
-      ip = data.ip;
-      city = data.city;
-      country_code = data.country_code;
-      // so many more properties
-    });
-    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
+    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent;
     //console.log(data);
     if (localStorage.getItem("agent_f") != window.navigator.userAgent){
         localStorage.setItem("agent_f", window.navigator.userAgent);
@@ -210,26 +201,21 @@ const popupclose = () => {
     document.getElementById("popup").classList.remove("active");
 }
 
-function sleep(ms) {
+const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-document.addEventListener("DOMContentLoaded", async () => {
-    //sleep(60);
-    const images = document.querySelectorAll(".lazy");
-    images.forEach((image) => {
-        image.setAttribute("src", image.getAttribute("data-src"));
-        image.removeAttribute("data-src");
-    });
-  });
-
 
   window.addEventListener("DOMContentLoaded", ()=>{
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
     agent();
+    const images = document.querySelectorAll(".lazy");
+    images.forEach((image) => {
+    image.setAttribute("src", image.getAttribute("data-src"));
+    image.removeAttribute("data-src");
+    });
     ScrollOut({
-        targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li, .subcontainer-2 img"
+        targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
     });
     jssor_1_slider_init();
 });
