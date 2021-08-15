@@ -157,11 +157,13 @@ body #mainlogo img {
 
 .title-1 {
   font-size: 8rem;
+  z-index: 1;
 }
 
 .title-2 {
   font-size: 3rem;
   font-family: Now;
+  z-index: 1;
 }
 
 .title-3 {
@@ -267,7 +269,16 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   color: var(--black);
-  background: var(--primary);
+  background: url("../images/2.webp");
+  background-position: center;
+}
+
+#home::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: rgba(28, 44, 60, 0.83);
 }
 
 #home .content {
@@ -489,10 +500,13 @@ section {
 .works::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 90vw;
   height: 2px;
   background: #6d869c;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .works {
@@ -507,6 +521,8 @@ section {
           justify-content: center;
   background: #222c35;
   color: var(white);
+  margin: 0;
+  padding: 0;
 }
 
 .works .container {
@@ -515,13 +531,33 @@ section {
   text-align: justify;
 }
 
-.works .container .subcontainer-1 ul {
+.works .container #github-projects {
+  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works .container #github-projects ul {
   color: #6d869c;
   position: relative;
   list-style: none;
 }
 
-.works .container .subcontainer-1 ul::before {
+.works .container #github-projects ul::before {
   content: "";
   display: inline-block;
   width: 2px;
@@ -532,13 +568,17 @@ section {
   height: calc(100% - 10px);
 }
 
-.works .container .subcontainer-1 ul li {
+.works .container #github-projects ul li {
   position: relative;
   padding-left: 15px;
   margin-bottom: 15px;
+  left: 40%;
+  opacity: 0.1;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
-.works .container .subcontainer-1 ul li::before {
+.works .container #github-projects ul li::before {
   content: "";
   display: inline-block;
   width: 8px;
@@ -550,115 +590,142 @@ section {
   border-radius: 10px;
 }
 
-.works .container .subcontainer-1 ul li:hover {
+.works .container #github-projects ul li:hover {
   cursor: pointer;
 }
 
-.works .container .subcontainer-2 {
-  position: relative;
-  /* Create four equal columns that sits next to each other */
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-}
-
-.works .container .subcontainer-2 .dropmenu {
-  position: relative;
-  top: 0;
-  left: 10px;
-  text-decoration: underline;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.works .container .subcontainer-2 .dropmenu:hover {
-  cursor: pointer;
-  color: #9797f3;
-}
-
-.works .container .subcontainer-2 img {
-  position: relative;
-  top: 20px;
-  opacity: 0;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.works .container .subcontainer-2 img[data-scroll="in"] {
+.works .container #github-projects ul li[data-scroll="in"] {
   opacity: 1;
-  top: 0;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  left: 0;
 }
 
-.works .container .subcontainer-2 img:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.works .container .subcontainer-2 .row {
-  display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0 4px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.works .container #image-gallary {
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.works .container .subcontainer-2 .column {
-  -webkit-box-flex: 25%;
-      -ms-flex: 25%;
-          flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+  -webkit-animation-name: jssorl-009-spin;
+          animation-name: jssorl-009-spin;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
-.works .container .subcontainer-2 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-@media screen and (max-width: 900px) {
-  .works .container .subcontainer-2 .column {
-    -webkit-box-flex: 75%;
-        -ms-flex: 75%;
-            flex: 75%;
-    max-width: 50%;
+@-webkit-keyframes jssorl-009-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@media screen and (max-width: 800px) {
-  .works .container .subcontainer-2 .column {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-    max-width: 50%;
+@keyframes jssorl-009-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@media screen and (max-width: 600px) {
-  .works .container .subcontainer-2 .column {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
-  }
+/*jssor slider bullet skin 072 css*/
+.jssorb072 .i {
+  position: absolute;
+  color: #000;
+  font-family: "Helvetica neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.jssorb072 .i .b {
+  fill: rgba(255, 255, 255, 0.631);
+  opacity: .3;
+}
+
+.jssorb072 .i:hover {
+  opacity: .7;
+}
+
+.jssorb072 .iav {
+  color: #fff;
+}
+
+.jssorb072 .iav .b {
+  fill: #000;
+  opacity: .5;
+}
+
+.jssorb072 .i.idn {
+  opacity: .3;
+}
+
+.n {
+  color: #161616;
+}
+
+/*jssor slider arrow skin 073 css*/
+.jssora073 {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.jssora073 .a {
+  fill: #ddd;
+  fill-opacity: .7;
+  stroke: #000;
+  stroke-width: 160;
+  stroke-miterlimit: 10;
+  stroke-opacity: .7;
+}
+
+.jssora073:hover {
+  opacity: .8;
+}
+
+.jssora073.jssora073dn {
+  opacity: .4;
+}
+
+.jssora073.jssora073ds {
+  opacity: .3;
+  pointer-events: none;
 }
 
 .services {
-  background: #222c3f;
+  background: url("../images/1.webp");
+  background-position: center;
 }
 
 .services .container {
+  padding-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,6 +735,23 @@ section {
           flex-direction: column;
   gap: 30px;
   padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services .container::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(26, 38, 45, 0.85);
 }
 
 .services #soft {

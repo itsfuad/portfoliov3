@@ -129,11 +129,13 @@ body{
 
 .title-1{
     font-size: 8rem;
+    z-index: 1;
 }
 
 .title-2{
     font-size: 3rem;
     font-family: Now;
+    z-index: 1;
 }
 
 .title-3{
@@ -210,6 +212,7 @@ section{
   padding-bottom: 4rem;
 }
 
+
 #home{
   display: flex;
   position: relative;
@@ -219,7 +222,15 @@ section{
   min-height: 100vh;
   transition: 600ms;
   color: var(--black);
-  background: var(--primary);
+  background: url("../images/2.webp");
+  background-position: center;
+  &::before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: rgba(28, 44, 60, 0.83);
+  }
     .content{
       transform: translateY(25%);
     }
@@ -386,11 +397,14 @@ section{
 .works::before{
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 90vw;
   height: 2px;
   background: #6d869c;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 
 .works{
   height: 100%;
@@ -400,12 +414,21 @@ section{
   justify-content: center;
   background: #222c35;
   color: var(white);
-  
+  margin: 0;
+  padding: 0;
   .container{
     color: rgb(204, 204, 204);
     height: 100%;
     text-align: justify;
-    .subcontainer-1{
+    #github-projects{
+      padding: 10px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
       ul{
         color: #6d869c;
         position: relative;
@@ -425,6 +448,9 @@ section{
           position: relative;
           padding-left: 15px;
           margin-bottom:15px;
+          left: 40%;
+          opacity: 0.1;
+          transition: 600ms;
           &::before{
             content:"";
             display: inline-block;
@@ -439,93 +465,76 @@ section{
           &:hover{
             cursor: pointer;
           }
+          &[data-scroll="in"]{
+            opacity: 1;
+            left: 0;
+          }
         }
+        
       }
-      
     }
-    .subcontainer-2{
-      position: relative;
-      .dropmenu{
-        position: relative;
-        top: 0;
-        left: 10px;
-        text-decoration: underline;
-        transition: 600ms;
-        &:hover{
-          cursor: pointer;
-          color: #9797f3;
-        }
-      }
-      img{
-        position: relative;
-        top: 20px;
-        opacity: 0;
-        transform: scale(0.7);
-        transform-origin: bottom;
-        transition: 1s;
-        &[data-scroll="in"]{
-          opacity: 1;
-          top: 0;
-          transform: scale(0.98);
-        }
-        &:hover{
-          cursor: pointer;
-          transform: scale(1);
-        }
-      }
-      .row {
-        display: none;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      /* Create four equal columns that sits next to each other */
-      .column {
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-      }
-      
-      .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-      }
-      
-      /* Responsive layout - makes a two column-layout instead of four columns */
-      @media screen and (max-width: 900px) {
-        .column {
-          flex: 75%;
-          max-width: 50%;
-        }
-      }
-      @media screen and (max-width: 800px) {
-        .column {
-          flex: 50%;
-          max-width: 50%;
-        }
-      }
-      
-      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .column {
-          flex: 100%;
-          max-width: 100%;
-        }
-      }
+    #image-gallary{
+      min-height: max-content;
+      padding-bottom: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
 
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider bullet skin 072 css*/
+.jssorb072 .i {position:absolute;color:#000;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;text-align:center;cursor:pointer;z-index:0;}
+.jssorb072 .i .b {fill:rgba(255, 255, 255, 0.631);opacity:.3;}
+.jssorb072 .i:hover {opacity:.7;}
+.jssorb072 .iav {color:#fff;}
+.jssorb072 .iav .b {fill:#000;opacity:.5;}
+.jssorb072 .i.idn {opacity:.3;}
+
+.n{color:rgb(22, 22, 22);}
+/*jssor slider arrow skin 073 css*/
+.jssora073 {display:block;position:absolute;cursor:pointer;}
+.jssora073 .a {fill:#ddd;fill-opacity:.7;stroke:#000;stroke-width:160;stroke-miterlimit:10;stroke-opacity:.7;}
+.jssora073:hover {opacity:.8;}
+.jssora073.jssora073dn {opacity:.4;}
+.jssora073.jssora073ds {opacity:.3;pointer-events:none;}
+
 .services{
-  background: rgb(34, 44, 63);
-.container{
+  background: url("../images/1.webp");
+  background-position: center;
+  .container{
+    padding-top: 0;
+    &::before{
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background: rgba(26, 38, 45, 0.85);
+    }
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+    align-items: center;
 }
 #soft{
   background: url("./../../src/images/software.webp");
