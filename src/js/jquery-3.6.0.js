@@ -1,16 +1,3 @@
-/*!
- * jQuery JavaScript Library v3.6.0
- * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
- *
- * Copyright OpenJS Foundation and other contributors
- * Released under the MIT license
- * https://jquery.org/license
- *
- * Date: 2021-03-02T17:08Z
- */
 ( function( global, factory ) {
 
 	"use strict";
@@ -35,14 +22,8 @@
 	} else {
 		factory( global );
 	}
-
-// Pass this if window is not defined yet
 } )( typeof window !== "undefined" ? window : this, function( window, noGlobal ) {
 
-// Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
-// throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
-// arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
-// enough that all such attempts are guarded in a try block.
 "use strict";
 
 var arr = [];
@@ -75,14 +56,6 @@ var ObjectFunctionString = fnToString.call( Object );
 var support = {};
 
 var isFunction = function isFunction( obj ) {
-
-		// Support: Chrome <=57, Firefox <=52
-		// In some browsers, typeof returns "function" for HTML <object> elements
-		// (i.e., `typeof document.createElement( "object" ) === "function"`).
-		// We don't want to classify *any* DOM node as a function.
-		// Support: QtWeb <=3.8.5, WebKit <=534.34, wkhtmltopdf tool <=0.12.5
-		// Plus for old WebKit, typeof returns "function" for HTML collections
-		// (e.g., `typeof document.getElementsByTagName("div") === "function"`). (gh-4756)
 		return typeof obj === "function" && typeof obj.nodeType !== "number" &&
 			typeof obj.item !== "function";
 	};
@@ -114,16 +87,6 @@ var document = window.document;
 		if ( node ) {
 			for ( i in preservedScriptAttributes ) {
 
-				// Support: Firefox 64+, Edge 18+
-				// Some browsers don't support the "nonce" property on scripts.
-				// On the other hand, just using `getAttribute` is not enough as
-				// the `nonce` attribute is reset to an empty string whenever it
-				// becomes browsing-context connected.
-				// See https://github.com/whatwg/html/issues/2369
-				// See https://html.spec.whatwg.org/#nonce-attributes
-				// The `node.getAttribute` check was added for the sake of
-				// `jQuery.globalEval` so that it can fake a nonce-containing node
-				// via an object.
 				val = node[ i ] || node.getAttribute && node.getAttribute( i );
 				if ( val ) {
 					script.setAttribute( i, val );
@@ -139,44 +102,38 @@ function toType( obj ) {
 		return obj + "";
 	}
 
-	// Support: Android <=2.3 only (functionish RegExp)
+
 	return typeof obj === "object" || typeof obj === "function" ?
 		class2type[ toString.call( obj ) ] || "object" :
 		typeof obj;
 }
-/* global Symbol */
-// Defining this global in .eslintrc.json would create a danger of using the global
-// unguarded in another place, it seems safer to define global only for this module
 
 
 
 var
 	version = "3.6.0",
 
-	// Define a local copy of jQuery
+
 	jQuery = function( selector, context ) {
 
-		// The jQuery object is actually just the init constructor 'enhanced'
-		// Need init if jQuery is called (just allow error to be thrown if not included)
+	
 		return new jQuery.fn.init( selector, context );
 	};
 
 jQuery.fn = jQuery.prototype = {
 
-	// The current version of jQuery being used
+	
 	jquery: version,
 
 	constructor: jQuery,
 
-	// The default length of a jQuery object is 0
 	length: 0,
 
 	toArray: function() {
 		return slice.call( this );
 	},
 
-	// Get the Nth element in the matched element set OR
-	// Get the whole matched element set as a clean array
+
 	get: function( num ) {
 
 		// Return all the elements in a clean array
