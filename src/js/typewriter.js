@@ -35,5 +35,3 @@ const caller = async () =>{
         //alert("Ended!");
     }
 }
-
-caller();

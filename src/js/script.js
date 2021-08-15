@@ -201,13 +201,11 @@ const popupclose = () => {
     document.getElementById("popup").classList.remove("active");
 }
 
-const sleep = (ms) => {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
   window.addEventListener("DOMContentLoaded", ()=>{
+    
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
+    caller();
     agent();
     const images = document.querySelectorAll(".lazy");
     images.forEach((image) => {
