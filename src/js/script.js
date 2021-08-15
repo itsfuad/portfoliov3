@@ -19,7 +19,6 @@ home.addEventListener("click", () => {
     
     window.scrollTo(0, 0);
     //window.location.href = url + "#home";
-    
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
