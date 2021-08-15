@@ -141,6 +141,7 @@ body{
 .title-3{
  font-size: 2rem;
  text-align: left;
+ z-index: 1;
 }
 
 strong{
@@ -224,6 +225,7 @@ section{
   color: var(--black);
   background: url("../images/2.webp");
   background-position: center;
+  background-size: cover;
   &::before{
     position: absolute;
     height: 100%;
@@ -394,18 +396,6 @@ section{
   }
 }
 
-.works::before{
-  content: "";
-  position: absolute;
-  top: 0px;
-  width: 90vw;
-  height: 2px;
-  background: #6d869c;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
 .works{
   height: 100%;
   width: 100%;
@@ -416,6 +406,13 @@ section{
   color: var(white);
   margin: 0;
   padding: 0;
+  &::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(14, 23, 31, 0.768);
+  }
   .container{
     color: rgb(204, 204, 204);
     height: 100%;
@@ -429,6 +426,9 @@ section{
       gap: 20px;
       justify-content: center;
       align-items: center;
+      background: url("../images/5.webp");
+      background-position: center;
+      background-size: cover;
       ul{
         color: #6d869c;
         position: relative;
@@ -481,6 +481,12 @@ section{
       gap: 20px;
       justify-content: center;
       align-items: center;
+      background: url("../images/4.webp");
+      background-position: center;
+      background-size: cover;
+      .title-2{
+        padding: 20px;
+      }
     }
   }
 }
@@ -517,6 +523,7 @@ section{
 .services{
   background: url("../images/1.webp");
   background-position: center;
+  background-size: cover;
   .container{
     padding-top: 0;
     &::before{

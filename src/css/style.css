@@ -169,6 +169,7 @@ body #mainlogo img {
 .title-3 {
   font-size: 2rem;
   text-align: left;
+  z-index: 1;
 }
 
 strong {
@@ -271,6 +272,7 @@ section {
   color: var(--black);
   background: url("../images/2.webp");
   background-position: center;
+  background-size: cover;
 }
 
 #home::before {
@@ -497,18 +499,6 @@ section {
   opacity: 1;
 }
 
-.works::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  width: 90vw;
-  height: 2px;
-  background: #6d869c;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
 .works {
   height: 100%;
   width: 100%;
@@ -523,6 +513,14 @@ section {
   color: var(white);
   margin: 0;
   padding: 0;
+}
+
+.works::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(14, 23, 31, 0.768);
 }
 
 .works .container {
@@ -549,6 +547,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url("../images/5.webp");
+  background-position: center;
+  background-size: cover;
 }
 
 .works .container #github-projects ul {
@@ -618,6 +619,13 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url("../images/4.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.works .container #image-gallary .title-2 {
+  padding: 20px;
 }
 
 /*jssor slider loading skin spin css*/
@@ -722,6 +730,7 @@ section {
 .services {
   background: url("../images/1.webp");
   background-position: center;
+  background-size: cover;
 }
 
 .services .container {
