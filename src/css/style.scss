@@ -490,9 +490,6 @@ section{
       }
     }
     .video{
-      .title-2{
-        padding: 20px;
-      }
       z-index: 1;
       position: relative;
       display: flex;
@@ -500,6 +497,10 @@ section{
       gap: 2px;
       justify-content: center;
       align-items: center;
+      padding-bottom: 20px;
+      .title-2{
+        padding: 20px;
+      }
       iframe{
         min-width: 50vw;
         min-height: 25vw;
