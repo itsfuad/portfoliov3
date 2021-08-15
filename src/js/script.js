@@ -151,15 +151,20 @@ const popupclose = () => {
     document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }
-/*
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 document.addEventListener("DOMContentLoaded", async () => {
+    sleep(2000);
     const images = document.querySelectorAll(".lazy");
     images.forEach((image) => {
       image.setAttribute("src", image.getAttribute("data-src"));
       image.removeAttribute("data-src");
     });
   });
-*/
+
 window.jssor_1_slider_init = function() {
     
     var jssor_1_SlideshowTransitions = [
