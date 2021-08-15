@@ -44,131 +44,13 @@ projects.addEventListener("click", () => {
     document.getElementsByClassName("works")[0].scrollIntoView(true);
 });
 
-window.addEventListener("DOMContentLoaded", ()=>{
-    document.getElementById("load").classList.toggle("done");
-    document.getElementsByTagName("header")[0].classList.add("loaded");
-    agent();
-    ScrollOut({
-        targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li, .subcontainer-2 img"
-    });
-    jssor_1_slider_init();
-});
 
 
-let nm, email, message;
-
-const get_ready = () => {
-    nm = document.getElementById("myname").value;
-    email = document.getElementById("email").value;
-    message = document.getElementById("message").value;
-    message = "Hey Baby! There is a new message for you.\n\nName: "+nm+"\nEmail: "+email+"\nMessage: "+message;
-    return message;
-}
-
-const sender = (message) => {
-    
-    var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
-    var chat_id = 1467252650;
-
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-        "method": "POST",
-        "headers": {
-        "Content-Type": "application/json",
-        "cache-control": "no-cache"
-        },
-        "data": JSON.stringify({
-        "chat_id": chat_id,
-        "text": message
-        })
-    }
-    $.ajax(settings).done(); 
-}
-
-function json(url) {
-    return fetch(url).then(res => res.json());
-  }
-
-var ip, city, country_code;
-let apiKey = '86c95de4ff7cc49dfcd0cbc49b9f78535c653bbb992310edd9243d48';
-  
-const agent = async () => {
-    await json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
-      ip = data.ip;
-      city = data.city;
-      country_code = data.country_code;
-      // so many more properties
-    });
-    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
-    //console.log(data);
-    if (localStorage.getItem("agent_f") != window.navigator.userAgent){
-        localStorage.setItem("agent_f", window.navigator.userAgent);
-        //console.log("new visitor");
-        sender(data);
-    }
-    /*
-    else{
-        console.log("already visited!");
-    }
-    */
-}
-
-function sound(src) {
-    try{       
-        this.sound = document.createElement("audio");
-        this.sound.src = src;
-        this.sound.setAttribute("preload", "auto");
-        this.sound.setAttribute("controls", "none");
-        this.sound.style.display = "none";
-        document.body.appendChild(this.sound);
-        this.play = function(){
-          this.sound.play();
-        }
-        this.stop = function(){
-          this.sound.pause();
-        }
-    }catch(err){
-        console.log(err);
-    }
-}
-
-
-var mySound =  new sound("src/msg.wav");
-
-const send = () => {
-    mySound.play();
-    document.getElementById("popupwrap").classList.add("active");
-    document.getElementById("popup").classList.add("active");
-    sender(get_ready());
-    document.getElementById("myname").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-    return false;
-}
-const popupclose = () => {
-    document.getElementById("popupwrap").classList.remove("active");
-    document.getElementById("popup").classList.remove("active");
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-document.addEventListener("DOMContentLoaded", async () => {
-    sleep(2000);
-    const images = document.querySelectorAll(".lazy");
-    images.forEach((image) => {
-      image.setAttribute("src", image.getAttribute("data-src"));
-      image.removeAttribute("data-src");
-    });
-  });
 
 window.jssor_1_slider_init = function() {
     
     var jssor_1_SlideshowTransitions = [
-      {$Duration:800,x:0.25,$Zoom:1.5,$Easing:{$Left:$Jease$.$InWave,$Zoom:$Jease$.$InCubic},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:800,x:-0.25,$Zoom:1.5,$Easing:{$Left:$Jease$.$InWave,$Zoom:$Jease$.$InCubic},$Opacity:2,$ZIndex:-10}},
+        {$Duration:800,x:0.25,$Zoom:1.5,$Easing:{$Left:$Jease$.$InWave,$Zoom:$Jease$.$InCubic},$Opacity:2,$ZIndex:-10,$Brother:{$Duration:800,x:-0.25,$Zoom:1.5,$Easing:{$Left:$Jease$.$InWave,$Zoom:$Jease$.$InCubic},$Opacity:2,$ZIndex:-10}},
       {$Duration:1200,x:0.5,$Cols:2,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InOutCubic},$Opacity:2,$Brother:{$Duration:1200,$Opacity:2}},
       {$Duration:600,x:0.3,$During:{$Left:[0.6,0.4]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2,$Brother:{$Duration:600,x:-0.3,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}},
       {$Duration:800,x:0.25,y:0.5,$Rotate:-0.1,$Easing:{$Left:$Jease$.$InQuad,$Top:$Jease$.$InQuad,$Opacity:$Jease$.$Linear,$Rotate:$Jease$.$InQuad},$Opacity:2,$Brother:{$Duration:800,x:-0.1,y:-0.7,$Rotate:0.1,$Easing:{$Left:$Jease$.$InQuad,$Top:$Jease$.$InQuad,$Opacity:$Jease$.$Linear,$Rotate:$Jease$.$InQuad},$Opacity:2}},
@@ -182,15 +64,15 @@ window.jssor_1_slider_init = function() {
     ];
     
     var jssor_1_options = {
-      $AutoPlay: 1,
+        $AutoPlay: 1,
       $FillMode: 5,
       $SlideshowOptions: {
-        $Class: $JssorSlideshowRunner$,
-        $Transitions: jssor_1_SlideshowTransitions,
+          $Class: $JssorSlideshowRunner$,
+          $Transitions: jssor_1_SlideshowTransitions,
         $TransitionsOrder: 1
       },
       $ArrowNavigatorOptions: {
-        $Class: $JssorArrowNavigator$
+          $Class: $JssorArrowNavigator$
       },
       $BulletNavigatorOptions: {
         $Class: $JssorBulletNavigator$,
@@ -231,4 +113,123 @@ window.jssor_1_slider_init = function() {
 
 
 
+let nm, email, message;
 
+const get_ready = () => {
+    nm = document.getElementById("myname").value;
+    email = document.getElementById("email").value;
+    message = document.getElementById("message").value;
+    message = "Hey Baby! There is a new message for you.\n\nName: "+nm+"\nEmail: "+email+"\nMessage: "+message;
+    return message;
+}
+
+const sender = (message) => {
+    
+    var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
+    var chat_id = 1467252650;
+    
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "method": "POST",
+        "headers": {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache"
+        },
+        "data": JSON.stringify({
+        "chat_id": chat_id,
+        "text": message
+        })
+    }
+    $.ajax(settings).done(); 
+}
+
+function json(url) {
+    return fetch(url).then(res => res.json());
+  }
+
+var ip, city, country_code;
+let apiKey = '86c95de4ff7cc49dfcd0cbc49b9f78535c653bbb992310edd9243d48';
+
+const agent = async () => {
+    await json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
+      ip = data.ip;
+      city = data.city;
+      country_code = data.country_code;
+      // so many more properties
+    });
+    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent + `\nIP: ${ip}\nCity: ${city}\nContry Code: ${country_code}`;
+    //console.log(data);
+    if (localStorage.getItem("agent_f") != window.navigator.userAgent){
+        localStorage.setItem("agent_f", window.navigator.userAgent);
+        //console.log("new visitor");
+        sender(data);
+    }
+    /*
+    else{
+        console.log("already visited!");
+    }
+    */
+}
+
+function sound(src) {
+    try{       
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function(){
+          this.sound.play();
+        }
+        this.stop = function(){
+            this.sound.pause();
+        }
+    }catch(err){
+        console.log(err);
+    }
+}
+
+
+var mySound =  new sound("src/msg.wav");
+
+const send = () => {
+    mySound.play();
+    document.getElementById("popupwrap").classList.add("active");
+    document.getElementById("popup").classList.add("active");
+    sender(get_ready());
+    document.getElementById("myname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+    return false;
+}
+const popupclose = () => {
+    document.getElementById("popupwrap").classList.remove("active");
+    document.getElementById("popup").classList.remove("active");
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    //sleep(60);
+    const images = document.querySelectorAll(".lazy");
+    images.forEach((image) => {
+        image.setAttribute("src", image.getAttribute("data-src"));
+        image.removeAttribute("data-src");
+    });
+  });
+
+
+  window.addEventListener("DOMContentLoaded", ()=>{
+    document.getElementById("load").classList.toggle("done");
+    document.getElementsByTagName("header")[0].classList.add("loaded");
+    agent();
+    ScrollOut({
+        targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li, .subcontainer-2 img"
+    });
+    jssor_1_slider_init();
+});
