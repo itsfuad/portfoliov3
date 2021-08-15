@@ -197,10 +197,14 @@ header.loaded {
   right: 0;
 }
 
-header nav {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
@@ -213,13 +217,13 @@ header nav {
   margin: 1rem;
 }
 
-header nav li {
+header nav ul li {
   position: relative;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
 
-header nav li:hover {
+header nav ul li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: var(--blue) !important;
@@ -626,6 +630,35 @@ section {
 
 .works .container #image-gallary .title-2 {
   padding: 20px;
+}
+
+.works .container .video {
+  z-index: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works .container .video .title-2 {
+  padding: 20px;
+}
+
+.works .container .video iframe {
+  min-width: 50vw;
+  min-height: 25vw;
+  max-width: 90vw;
 }
 
 /*jssor slider loading skin spin css*/

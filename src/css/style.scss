@@ -167,8 +167,9 @@ header{
       right: 0;
     }
     nav{
-        display: grid;
-        grid-auto-flow: column;
+      ul{
+        display: flex;
+        flex-direction: row;
         justify-content: right;
         gap: 2rem;
         padding: 1rem 2rem;
@@ -177,7 +178,6 @@ header{
         background: var(--white);
         border-radius: 50px;
         margin: 1rem;
-        
         li{
           position: relative;
           transition: 600ms;
@@ -189,6 +189,7 @@ header{
             cursor: pointer;
           }
         }
+      }
     }
 }
 
@@ -486,6 +487,23 @@ section{
       background-size: cover;
       .title-2{
         padding: 20px;
+      }
+    }
+    .video{
+      .title-2{
+        padding: 20px;
+      }
+      z-index: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      justify-content: center;
+      align-items: center;
+      iframe{
+        min-width: 50vw;
+        min-height: 25vw;
+        max-width: 90vw;
       }
     }
   }
