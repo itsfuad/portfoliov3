@@ -489,24 +489,6 @@ section{
         padding: 20px;
       }
     }
-    .video{
-      z-index: 1;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 20px;
-      .title-2{
-        padding: 20px;
-      }
-      iframe{
-        min-width: 50vw;
-        min-height: 25vw;
-        max-width: 90vw;
-      }
-    }
   }
 }
 

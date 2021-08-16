@@ -632,36 +632,6 @@ section {
   padding: 20px;
 }
 
-.works .container .video {
-  z-index: 1;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 20px;
-}
-
-.works .container .video .title-2 {
-  padding: 20px;
-}
-
-.works .container .video iframe {
-  min-width: 50vw;
-  min-height: 25vw;
-  max-width: 90vw;
-}
-
 /*jssor slider loading skin spin css*/
 .jssorl-009-spin img {
   -webkit-animation-name: jssorl-009-spin;
