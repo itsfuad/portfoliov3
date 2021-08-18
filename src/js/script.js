@@ -139,11 +139,13 @@ const popupclose = () => {
     document.getElementsByTagName("header")[0].classList.add("loaded");
     caller();
     agent();
+    /*
     const images = document.querySelectorAll(".lazy");
     images.forEach((image) => {
     image.setAttribute("src", image.getAttribute("data-src"));
     image.removeAttribute("data-src");
     });
+    */
     ScrollOut({
         targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
     });

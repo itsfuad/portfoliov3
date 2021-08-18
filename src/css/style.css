@@ -139,27 +139,6 @@ body #load.done {
   z-index: -10;
 }
 
-body #mainlogo {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 10;
-  padding: 2rem 0 0 2rem;
-  mix-blend-mode: soft-light;
-}
-
-body #mainlogo img {
-  height: 5rem;
-  width: 5rem;
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.title-1 {
-  font-size: 8rem;
-  z-index: 1;
-}
-
 .title-2 {
   font-size: 3rem;
   font-family: Now;
@@ -903,47 +882,18 @@ section {
   transition: 1s;
 }
 
-.services .language {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: var(--black);
-  position: relative;
-  background: rgba(135, 193, 225, 0.309);
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-}
-
-.services .language div {
-  width: 100%;
-}
-
-.services .language .skillbox .percentage {
+.services .skillbox .percentage {
   background-color: #bababa;
   border-radius: 5px;
+  height: 5px;
 }
 
-.services .language .skillbox .percentage div {
+.services .skillbox .percentage div {
   border-radius: 5px;
   padding-left: 3px;
 }
 
-.services .language .skillbox .percentage {
-  height: 5px;
-}
-
-.services .language .skillbox #c {
+.services #c {
   background-color: #4f89f5;
   width: 85%;
   color: var(--white);
@@ -952,7 +902,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #cplus {
+.services #cplus {
   background-color: #3402a7;
   width: 90%;
   color: var(--white);
@@ -961,7 +911,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #cs {
+.services #cs {
   background-color: #4e4eca;
   width: 70%;
   color: var(--white);
@@ -970,7 +920,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #java {
+.services #java {
   background-color: #F56161;
   width: 75%;
   color: var(--white);
@@ -979,7 +929,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #py {
+.services #py {
   background-color: #1463da;
   width: 80%;
   color: var(--white);
@@ -988,7 +938,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #kt {
+.services #kt {
   background-color: #123f92;
   width: 60%;
   color: var(--white);
@@ -997,7 +947,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #go {
+.services #go {
   background-color: #4f9ffa;
   width: 60%;
   color: var(--white);
@@ -1006,7 +956,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #html {
+.services #html {
   background-color: #ff8800;
   width: 90%;
   color: var(--white);
@@ -1015,7 +965,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #css {
+.services #css {
   background-color: #8ac1ff;
   width: 75%;
   color: var(--white);
@@ -1024,7 +974,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #js {
+.services #js {
   background-color: #f8fa76;
   width: 60%;
   color: var(--black);
@@ -1033,7 +983,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #php {
+.services #php {
   background-color: #7699fa;
   width: 50%;
   color: var(--white);
@@ -1042,7 +992,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #sketch {
+.services #sketch {
   background-color: var(--black);
   width: 80%;
   color: var(--white);
@@ -1051,7 +1001,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #digi {
+.services #digi {
   background-color: #ffc493;
   width: 85%;
   color: var(--black);
@@ -1060,7 +1010,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #logo {
+.services #logo {
   background-color: #ff3b3b;
   width: 90%;
   color: var(--white);
@@ -1069,7 +1019,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #threed {
+.services #threed {
   background-color: #fdff70;
   width: 65%;
   color: var(--black);
@@ -1078,7 +1028,7 @@ section {
   transition: 600ms;
 }
 
-.services .language .skillbox #twod {
+.services #twod {
   background-color: #7473ac;
   width: 70%;
   color: var(--white);

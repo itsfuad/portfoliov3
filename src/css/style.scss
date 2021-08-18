@@ -111,26 +111,8 @@ body{
           z-index: -10;
         }
     }
-
-    #mainlogo{
-      top: 0;
-      left: 0;
-      position: absolute;
-      z-index: 10;
-      padding: 2rem 0 0 2rem;
-      img{
-        height: 5rem;
-        width: 5rem;
-        filter: invert(1);
-      }
-      mix-blend-mode: soft-light;
-   }
 }
 
-.title-1{
-    font-size: 8rem;
-    z-index: 1;
-}
 
 .title-2{
     font-size: 3rem;
@@ -641,162 +623,146 @@ section{
         transition: 1s;
     }
 }
-.language{
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  color: var(--black);
-  position: relative;
-  background: rgba(135, 193, 225, 0.309);
-  border-radius: 10px;
-  width: 100%;
-  height:100%;
-  div{
-    width: 100%;
+
+  .skillbox .percentage {
+    background-color: #bababa;
+    border-radius: 5px;
+    height: 5px;
+    div {
+    border-radius: 5px;
+    padding-left: 3px;
+    }
   }
-}
-      .language .skillbox .percentage {
-          background-color: #bababa;
-          border-radius: 5px;
-        }
-        .language .skillbox .percentage div {
-          border-radius: 5px;
-          padding-left: 3px;
-        }
-        .language .skillbox .percentage{
-          height: 5px;
-        }
-        .language .skillbox #c {
-          background-color: #4f89f5;
-          width: 85%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-        
-        .language .skillbox #cplus {
-          background-color: #3402a7;
-          width: 90%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-        
-        .language .skillbox #cs {
-          background-color: #4e4eca;
-          width: 70%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #java {
-          background-color: #F56161;
-          width: 75%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #py {
-          background-color: #1463da;
-          width: 80%;
-          color: var(--white);
-          padding-left: 5px;transition: 600ms;
-        }
-       
-        .language .skillbox #kt {
-          background-color: #123f92;
-          width: 60%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #go {
-          background-color: #4f9ffa;
-          width: 60%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #html {
-          background-color: #ff8800;
-          width: 90%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #css {
-          background-color: #8ac1ff;
-          width: 75%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #js {
-          background-color: #f8fa76;
-          width: 60%;
-          color: var(--black);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #php {
-          background-color: #7699fa;
-          width: 50%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #sketch {
-          background-color: var(--black);
-          width: 80%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-      
-        .language .skillbox #digi {
-          background-color: #ffc493;
-          width: 85%;
-          color: var(--black);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #logo {
-          background-color: #ff3b3b;
-          width: 90%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-       
-        .language .skillbox #threed {
-          background-color: #fdff70;
-          width: 65%;
-          color: var(--black);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-        
-        .language .skillbox #twod {
-          background-color: #7473ac;
-          width: 70%;
-          color: var(--white);
-          padding-left: 5px;
-          transition: 600ms;
-        }
-        
-        .percentage div {
-          height: 5px;
-        }
+      #c {
+    background-color: #4f89f5;
+    width: 85%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #cplus {
+    background-color: #3402a7;
+    width: 90%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #cs {
+    background-color: #4e4eca;
+    width: 70%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #java {
+    background-color: #F56161;
+    width: 75%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #py {
+    background-color: #1463da;
+    width: 80%;
+    color: var(--white);
+    padding-left: 5px;transition: 600ms;
+  }
+  
+      #kt {
+    background-color: #123f92;
+    width: 60%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #go {
+    background-color: #4f9ffa;
+    width: 60%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #html {
+    background-color: #ff8800;
+    width: 90%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #css {
+    background-color: #8ac1ff;
+    width: 75%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #js {
+    background-color: #f8fa76;
+    width: 60%;
+    color: var(--black);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #php {
+    background-color: #7699fa;
+    width: 50%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #sketch {
+    background-color: var(--black);
+    width: 80%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+
+      #digi {
+    background-color: #ffc493;
+    width: 85%;
+    color: var(--black);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #logo {
+    background-color: #ff3b3b;
+    width: 90%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #threed {
+    background-color: #fdff70;
+    width: 65%;
+    color: var(--black);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+      #twod {
+    background-color: #7473ac;
+    width: 70%;
+    color: var(--white);
+    padding-left: 5px;
+    transition: 600ms;
+  }
+  
+  .percentage div {
+    height: 5px;
+  }
 }
 
 .contact_me {
