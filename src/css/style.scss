@@ -564,7 +564,7 @@ section{
         transition: 1s;
         padding: 20px;
     }
-    #services{
+    .language{
         .title{
           font-size: 1.2rem;
         }
@@ -573,6 +573,7 @@ section{
         transition: 1s;
         min-width: 100%;
         padding: 10px;
+        color: var(--black);
     }
     .title-3{
         position: relative;
@@ -590,7 +591,7 @@ section{
         .title-3{
             opacity: 0;
         }
-        #services{
+        .language{
             opacity: 1;
         }
     }
@@ -633,7 +634,7 @@ section{
     padding-left: 3px;
     }
   }
-      #c {
+  #c {
     background-color: #4f89f5;
     width: 85%;
     color: var(--white);
@@ -641,7 +642,7 @@ section{
     transition: 600ms;
   }
   
-      #cplus {
+  #cplus {
     background-color: #3402a7;
     width: 90%;
     color: var(--white);
@@ -649,7 +650,7 @@ section{
     transition: 600ms;
   }
   
-      #cs {
+  #cs {
     background-color: #4e4eca;
     width: 70%;
     color: var(--white);
@@ -657,7 +658,7 @@ section{
     transition: 600ms;
   }
   
-      #java {
+  #java {
     background-color: #F56161;
     width: 75%;
     color: var(--white);
@@ -665,14 +666,14 @@ section{
     transition: 600ms;
   }
   
-      #py {
+  #py {
     background-color: #1463da;
     width: 80%;
     color: var(--white);
     padding-left: 5px;transition: 600ms;
   }
   
-      #kt {
+  #kt {
     background-color: #123f92;
     width: 60%;
     color: var(--white);
@@ -680,7 +681,7 @@ section{
     transition: 600ms;
   }
   
-      #go {
+  #go {
     background-color: #4f9ffa;
     width: 60%;
     color: var(--white);
@@ -688,7 +689,7 @@ section{
     transition: 600ms;
   }
   
-      #html {
+  #html {
     background-color: #ff8800;
     width: 90%;
     color: var(--white);
@@ -696,7 +697,7 @@ section{
     transition: 600ms;
   }
   
-      #css {
+  #css {
     background-color: #8ac1ff;
     width: 75%;
     color: var(--white);
@@ -704,7 +705,7 @@ section{
     transition: 600ms;
   }
   
-      #js {
+  #js {
     background-color: #f8fa76;
     width: 60%;
     color: var(--black);
@@ -712,7 +713,7 @@ section{
     transition: 600ms;
   }
   
-      #php {
+  #php {
     background-color: #7699fa;
     width: 50%;
     color: var(--white);
@@ -720,7 +721,7 @@ section{
     transition: 600ms;
   }
   
-      #sketch {
+  #sketch {
     background-color: var(--black);
     width: 80%;
     color: var(--white);
@@ -728,7 +729,7 @@ section{
     transition: 600ms;
   }
 
-      #digi {
+  #digi {
     background-color: #ffc493;
     width: 85%;
     color: var(--black);
@@ -736,7 +737,7 @@ section{
     transition: 600ms;
   }
   
-      #logo {
+  #logo {
     background-color: #ff3b3b;
     width: 90%;
     color: var(--white);
@@ -744,7 +745,7 @@ section{
     transition: 600ms;
   }
   
-      #threed {
+  #threed {
     background-color: #fdff70;
     width: 65%;
     color: var(--black);
@@ -752,7 +753,7 @@ section{
     transition: 600ms;
   }
   
-      #twod {
+  #twod {
     background-color: #7473ac;
     width: 70%;
     color: var(--white);
@@ -764,7 +765,6 @@ section{
     height: 5px;
   }
 }
-
 .contact_me {
     position: relative;
     margin: 0;
@@ -776,7 +776,6 @@ section{
     background:  radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow-y: hidden;
   }
-  
   .contact_me  input[type=text], .contact_me  input[type=email] {
     background: none;
     margin: 20px auto;
@@ -830,7 +829,6 @@ section{
     width: 90vw;
     border-color: #1ca1c2;
   }
-
   ::placeholder {
     font-family: Now;
     color: var(--white);
@@ -843,27 +841,21 @@ section{
     align-content: center;
     text-align: center;
   }
-
   .socials {
     text-align: center;
     margin-top: 100px;
   }
-  
   .socials .title-3 {
     text-align: center;
   }
-  
   .socials #sites {
     padding: 10px;
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     gap: 1rem;
   }
-
 .game{
   width: min-content;
   position: relative;
@@ -895,8 +887,6 @@ footer {
       
     }
 }
-
-
 @keyframes blink {
   50%{
     opacity: 1;
@@ -905,25 +895,6 @@ footer {
     opacity: 0;
   }
 }
-
-@-webkit-keyframes move-chevron {
-  25% {
-    opacity: 1;
-  }
-  33.3% {
-    opacity: 1;
-    transform: translateY(2.28rem);
-  }
-  66.6% {
-    opacity: 1;
-    transform: translateY(3.12rem);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(4.8rem) scale(0.5);
-  }
-}
-
 @keyframes move-chevron {
   25% {
     opacity: 1;
@@ -941,21 +912,16 @@ footer {
     transform: translateY(4.8rem) scale(0.5);
   }
 }
-
-
 @media screen and (max-width: 900px) {
   html{
     font-size: 11px;
   }
 }
-
 @media screen and (max-width: 700px) {
   html{
     font-size: 10px;
   }
 }
-
-
 @media (orientation: landscape) and (min-device-aspect-ratio: 1/1) {
     #popup{
       min-width: 50vh;

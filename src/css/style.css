@@ -805,16 +805,17 @@ section {
   padding: 20px;
 }
 
-.services .card #services {
+.services .card .language {
   position: absolute;
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
   min-width: 100%;
   padding: 10px;
+  color: var(--black);
 }
 
-.services .card #services .title {
+.services .card .language .title {
   font-size: 1.2rem;
 }
 
@@ -840,7 +841,7 @@ section {
   opacity: 0;
 }
 
-.services .card:hover #services {
+.services .card:hover .language {
   opacity: 1;
 }
 
@@ -1171,8 +1172,8 @@ section {
   display: grid;
   grid-auto-flow: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
 }
 

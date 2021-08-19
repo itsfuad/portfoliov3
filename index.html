@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head prefix="og: https://ogp.me/ns#">
-
-
+    <link rel="stylesheet" href="src/css/style.min.css">
     <title>Fuad</title>
-    
+    <!--SEO Tags-->
     <meta name="google-site-verification" content="fbFUN-vjY9HalvYHeArMfwjj8559AXSDY67NzvY9Oio" />
     <meta name="theme-color" content="#1E2025" />
     <!--social media preview tag-->
-
-    <!-- ... other tags like title, link, charset, viewport -->
     <meta property="og:title" content="Fuad Hasan - Software Developer | Web Designer | Visual Artist" />
-
-    <meta
-
-      property="og:description"
-      content="Hi, I'm a 20 years old software developer, web designer and visual artist. You'll get the best services here.
-      I have experience working with many personal and open source projects. I also had made Visuals for most of the startup companies. Don't shy to contact me with your beautiful messages if I can help you with something. Have a nice day."
-    />
-    <meta
-      property="og:image"
-      content="https://itsfuad.netlify.app/profile.jpg"
-    />
-    
-    
-    
+    <meta property="og:description" content="Hi, I'm a 20 years old software developer, web designer and visual artist. You'll get the best services here. I have experience working with many personal and open source projects. I also had made Visuals for most of the startup companies. Don't shy to contact me with your beautiful messages if I can help you with something. Have a nice day."/>
+    <meta property="og:image" content="https://itsfuad.netlify.app/profile.jpg"/>
     <!--Meta tags-->
     <meta charset="UTF-8">
     <meta lang="en-us">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.min.css">
     <link rel="stylesheet" href="src/css/stars.min.css">
-    <!--Scripts-->
     <link rel="icon" href="favicon.ico">
-   
+    <!--Script-->
+    <script defer src="dist/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
     <!--Preloader-->
-    <div id="load"><img src="src/images/load2.gif" height="200px" width="260px" ></div>
-            
+    <div id="load"><img src="src/images/load2.gif" height="200px" width="260px" ></div> 
     <!--Header-->
     <header >
         <!--Navigation Bar-->
@@ -54,7 +36,6 @@
             </ul>
         </nav>
     </header>
-
     <!--Main Web Content-->
     <main>
         <!--Home Area-->
@@ -88,35 +69,33 @@
                 <div class="content" id="about-content">
                     I would like to adress myself as a 
                     <strong>programmer.</strong> I have learnt and worked
-                     with many programming languages such as C, C++, C#, 
-                     Java, Python, Ruby, Php, JavaScript and Lua. Mostly
-                      I work with C++. I love this language too much. 
-                      Currently I am working with my own 
-                      <strong>Game Engine</strong> named <strong>Xebec Engine.
-                      </strong> I am using OpenGL for the graphics pipeline.
-                       I also make arts of type human <strong>portraits
-                       </strong>, still life drawings, graphics designing
-                        stuffs. You can follow me on Instagram to see 
-                        those artworks. I make <strong>educational short Videos
-                        </strong> on programming concepts.
-                        I like to share my way to learn programming in the 
-                        easiest way here.
+                    with many programming languages such as C, C++, C#, 
+                    Java, Python, Ruby, Php, JavaScript and Lua. Mostly
+                    I work with C++. I love this language too much. 
+                    Currently I am working with my own 
+                    <strong>Game Engine</strong> named <strong>Xebec Engine.
+                    </strong> I am using OpenGL for the graphics pipeline.
+                    I also make arts of type human <strong>portraits
+                    </strong>, still life drawings, graphics designing
+                    stuffs. You can follow me on Instagram to see 
+                    those artworks. I make <strong>educational short Videos
+                    </strong> on programming concepts.
+                    I like to share my way to learn programming in the 
+                    easiest way here.
                 </div>
             </div>
         </section>
-      
+        <!--Projects-->
         <section class="works" id="works">
             <div class="container">
                 <div class="subcontainer-1" id="github-projects">
                     <div class="title-2">Github Projets</div>
                     <div>
                         <ul>
-                
                             <li>Lua Interpreter</li>
                             <li>Telegram API</li>
                             <li>Xebec Engine (OpenGL)</li>
                             <li>Telegram CMS</li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -184,12 +163,10 @@
             </div>
         </section>
         <!--services-->
-        <section class="services" id="services">
+        <section class="services">
             <div class="title-2">Services</div>
             <div class="container">
-        
                 <div class="card" id="soft">
-                        
                         <div class="title-3">Software Development</div>
                         <div class="bookmark"></div>
                         <div class="content">
@@ -197,7 +174,7 @@
                             In this case, I work with algorithms and game graphics. I use C++ as my main Language. 
                             I'm also experienced with all 'C family languages. I have been programming for more than 5 years.
                         </div>
-                        <div class="language" id="services">
+                        <div class="language">
                             <div class="title"><br>Language skills as Software Dev.</div>
                             <div class="box" id="soft_services">
                                 <div class="skillbox">C<div class="percentage"><div id="c"></div></div></div>
@@ -209,17 +186,15 @@
                                 <div class="skillbox">Go<div class="percentage"><div id="go"></div></div></div>
                             </div>
                         </div>
-                        
                 </div>
                 <div class="card" id="web">
-                
                     <div class="title-3"><br>Web Development</div>
                     <div class="bookmark"></div>
                     <div class="content">
                         I won't call myself a web developer but I can make a website for you. I do front-end web development most of the cases. I could do a little bit server side coding too if needed. I work with HTML, CSS, Vanila JavaScript and React. 
                         Mainly I can make responsive personal websites. 
                     </div>
-                    <div class="language" id="services">
+                    <div class="language">
                         <div class="title"><br>Language skills as Web Dev.</div>
                         <div class="box">
                             <div class="skillbox">HTML5<div class="percentage"><div id="html"></div></div></div>
@@ -228,11 +203,8 @@
                             <div class="skillbox">Php<div class="percentage"><div id="php"></div></div></div>
                         </div>
                     </div>
-    
-    
                 </div>
                 <div class="card" id="visuals">
-                
                     <div class="title-3"><br>Visual Artist</div>
                     <div class="bookmark"></div>
                     <div class="content">
@@ -240,8 +212,7 @@
                         I make digital arts too. I also make digital assets for games and filters. 
                         Sometimes I make 3d models for peoples. 
                     </div>
-    
-                    <div class="language" id="services">
+                    <div class="language">
                         <div class="title"><br>Skills</div>
                         <div class="box">
                             <div class="skillbox">Sketch<div class="percentage"><div id="sketch"></div></div></div>
@@ -252,8 +223,6 @@
                         </div>
                     </div>
                 </div>
-    
-    
         </div>
         </section>
         <div class="popupwrap" id="popupwrap">
@@ -295,17 +264,13 @@
                     </div>
                         <div class="game"><br>Bored? Then play this game <a href="RadiusRaid/index.html"><img class="lazy" src="src/images/Capture.PNG" heigth="50px" width="250px" alt="Game Icon"> </a> </div><br>
                 </div>
-        
         </section>
-    
     </main>
     <!--Footer-->
     <footer>
         <div class="copyright">Developded by Fuad Hasan<br>&copy; All Images and source code - 2021</div>
     </footer>
-
     <!--Scripts-->
-    <script defer src="dist/jquery-3.6.0.min.js"></script>
     <script defer src="src/js/script.min.js"></script>
     <script defer src="src/js/typewriter.min.js"></script>
     <script defer src="dist/scroll.min.js"></script>
