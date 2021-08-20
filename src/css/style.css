@@ -24,6 +24,41 @@ html {
   scroll-behavior: smooth;
 }
 
+#load {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  left: 50%;
+  top: 50%;
+  background: white;
+  color: black;
+  font-size: 20px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#load.done {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  z-index: -10 !important;
+}
+
+.viewport {
+  display: block !important;
+}
+
 #popupwrap {
   position: fixed;
   top: 0;
@@ -116,29 +151,6 @@ body {
   color: var(--white);
 }
 
-body #load {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  padding: 100%;
-  background: var(--white);
-  color: var(--black);
-  font-size: 20px;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1);
-          transform: translate(-50%, -50%) rotate(0deg) scale(1);
-  z-index: 100;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-body #load.done {
-  visibility: hidden;
-  opacity: 0;
-  z-index: -10;
-}
-
 .title-2 {
   font-size: 3rem;
   font-family: Now;
@@ -168,8 +180,8 @@ header {
   top: 0;
   right: -50vw;
   z-index: 5;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 header.loaded {
@@ -289,8 +301,8 @@ section {
   position: relative;
   top: 0px;
   opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
   color: var(--white);
 }
 
@@ -300,8 +312,8 @@ section {
 }
 
 #home #cursor {
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
+  -webkit-animation: blink 600ms infinite;
+          animation: blink 600ms infinite;
 }
 
 #home .resume {
@@ -366,18 +378,18 @@ section {
   opacity: 0;
   -webkit-transform: scale(0.3);
           transform: scale(0.3);
-  -webkit-animation: move-chevron 3s ease-out infinite;
-          animation: move-chevron 3s ease-out infinite;
+  -webkit-animation: move-chevron 1.5s ease-out infinite;
+          animation: move-chevron 1.5s ease-out infinite;
 }
 
 #home .btn .chevron:first-child {
-  -webkit-animation: move-chevron 3s ease-out 1s infinite;
-          animation: move-chevron 3s ease-out 1s infinite;
+  -webkit-animation: move-chevron 1.5s ease-out 0.5s infinite;
+          animation: move-chevron 1.5s ease-out 0.5s infinite;
 }
 
 #home .btn .chevron:nth-child(2) {
-  -webkit-animation: move-chevron 3s ease-out 2s infinite;
-          animation: move-chevron 3s ease-out 2s infinite;
+  -webkit-animation: move-chevron 1.5s ease-out 1s infinite;
+          animation: move-chevron 1.5s ease-out 1s infinite;
 }
 
 #home .btn .chevron:before, #home .btn .chevron:after {
@@ -800,16 +812,16 @@ section {
 .services .card .content {
   text-align: justify;
   color: var(--black);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
   padding: 20px;
 }
 
 .services .card .language {
   position: absolute;
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
   min-width: 100%;
   padding: 10px;
   color: var(--black);
@@ -825,8 +837,8 @@ section {
   font-size: 1.5rem;
   top: 0;
   opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 .services .card:hover {
@@ -879,8 +891,8 @@ section {
   right: 10%;
   background: var(--bookmark);
   color: var(--white);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 .services .skillbox .percentage {

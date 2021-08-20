@@ -24,7 +24,32 @@ html{
     //scroll-snap-type: y proximity;
 }
 
+#load{
+  position: fixed;	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;	
+  left: 50%;
+  top: 50%;		
+  background: white;
+  color: black;
+  font-size:20px;
+  opacity:1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+    &.done{
+      visibility: hidden !important;
+      opacity:0 !important;
+      z-index: -10 !important;
+    }
+}
 
+.viewport{
+  display: block !important;
+}
 #popupwrap{
   position: fixed;
   top: 0;
@@ -92,25 +117,6 @@ body{
     z-index: 2;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     color: var(--white);
-    #load{
-        position: fixed;		
-        left: 50%;
-        top: 50%;				
-        padding: 100%;
-        background: var(--white);
-        color:var(--black);
-        font-size:20px;
-        opacity:1;
-        visibility: visible;
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-        z-index: 100;
-        transition:600ms;
-        &.done{
-          visibility: hidden;
-          opacity:0;
-          z-index: -10;
-        }
-    }
 }
 
 
@@ -143,8 +149,7 @@ header{
       top: 0;
       right: -50vw;
       z-index: 5;
-      transition: 1s;
-
+      transition: 600ms;
     &.loaded{
       right: 0;
     }
@@ -234,7 +239,7 @@ section{
       position: relative;
       top: 0px;
       opacity: 1;
-      transition: 1s;
+      transition: 600ms;
       color: var(--white);
     }    
     .bio{
@@ -243,7 +248,7 @@ section{
     }
 
     #cursor{
-      animation: blink 1s infinite;
+      animation: blink 600ms infinite;
     }
 
     .resume{
@@ -290,15 +295,13 @@ section{
           height: 0.48rem;
           opacity: 0;
           transform: scale(0.3);
-          animation: move-chevron 3s ease-out infinite;
+          animation: move-chevron 1.5s ease-out infinite;
           &:first-child {
-            animation: move-chevron 3s ease-out 1s infinite;
+            animation: move-chevron 1.5s ease-out 0.5s infinite;
           }
-          
           &:nth-child(2) {
-            animation: move-chevron 3s ease-out 2s infinite;
+            animation: move-chevron 1.5s ease-out 1s infinite;
           }
-          
           &:before,
           &:after {
             content: "";
@@ -561,7 +564,7 @@ section{
     .content{
         text-align: justify;
         color: var(--black);
-        transition: 1s;
+        transition: 600ms;
         padding: 20px;
     }
     .language{
@@ -570,7 +573,7 @@ section{
         }
         position: absolute;
         opacity: 0;
-        transition: 1s;
+        transition: 600ms;
         min-width: 100%;
         padding: 10px;
         color: var(--black);
@@ -581,7 +584,7 @@ section{
         font-size: 1.5rem;
         top: 0;
         opacity: 1;
-        transition: 1s;
+        transition: 600ms;
     }
     &:hover{
         cursor: pointer;
@@ -621,7 +624,7 @@ section{
         right: 10%;
         background: var(--bookmark);
         color: var(--white);
-        transition: 1s;
+        transition: 600ms;
     }
 }
 

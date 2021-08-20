@@ -82,10 +82,10 @@ function json(url) {
   }
 
 const agent = async () => {
-    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent;
+    data = "Hey baby! Your website was visited by: " + window.navigator.userAgentData;
     //console.log(data);
-    if (localStorage.getItem("agent_f") != window.navigator.userAgent){
-        localStorage.setItem("agent_f", window.navigator.userAgent);
+    if (localStorage.getItem("agent_f") != window.navigator.userAgentData){
+        localStorage.setItem("agent_f", window.navigator.userAgentData);
         //console.log("new visitor");
         sender(data);
     }
@@ -134,7 +134,6 @@ const popupclose = () => {
 }
 
   window.addEventListener("DOMContentLoaded", ()=>{
-    
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
     caller();
