@@ -82,10 +82,10 @@ function json(url) {
   }
 
 const agent = async () => {
-    data = "Hey baby! Your website was visited by: " + window.navigator.userAgentData;
+    data = "Hey baby! Your website was visited by: " + navigator.userAgent;
     //console.log(data);
-    if (localStorage.getItem("agent_f") != window.navigator.userAgentData){
-        localStorage.setItem("agent_f", window.navigator.userAgentData);
+    if (localStorage.getItem("agent_f") != navigator.userAgent){
+        localStorage.setItem("agent_f", navigator.userAgent);
         //console.log("new visitor");
         sender(data);
     }
