@@ -201,7 +201,11 @@ section{
   padding-bottom: 4rem;
 }
 
-
+#st{
+  margin: 0;
+  padding: 0;
+  position: fixed;
+}
 #home{
   display: flex;
   position: relative;
@@ -211,15 +215,16 @@ section{
   min-height: 100vh;
   transition: 600ms;
   color: var(--black);
-  background: url("../images/2.webp");
+  background: url("../images/1t.png");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   &::before{
     position: absolute;
     height: 100%;
     width: 100%;
     content: "";
-    background: rgba(28, 44, 60, 0.83);
+    background: rgba(28, 44, 60, 0.823);
   }
     .content{
       transform: translateY(25%);
@@ -415,6 +420,7 @@ section{
       background: url("../images/5.webp");
       background-position: center;
       background-size: cover;
+      background-attachment: fixed;
       ul{
         color: #6d869c;
         position: relative;
@@ -467,9 +473,7 @@ section{
       gap: 20px;
       justify-content: center;
       align-items: center;
-      background: url("../images/4.webp");
-      background-position: center;
-      background-size: cover;
+      background: rgba(49, 32, 84, 0.707);
       .title-2{
         padding: 20px;
       }
