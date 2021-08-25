@@ -21,7 +21,7 @@
 html{
     font-size: 12px;
     scroll-behavior: smooth;
-    //scroll-snap-type: y proximity;
+    //scroll-snap-type: y mandatory;
 }
 
 #load{
@@ -115,7 +115,7 @@ html{
 body{
     user-select: none;
     z-index: 2;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: var(--primary);
     color: var(--white);
 }
 
@@ -199,6 +199,7 @@ section{
   font-size: 1.2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  //scroll-snap-align: start;
 }
 
 #st{
@@ -215,7 +216,7 @@ section{
   min-height: 100vh;
   transition: 600ms;
   color: var(--black);
-  background: url("../images/1t.png");
+  background: url("../images/1t-small.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -224,7 +225,7 @@ section{
     height: 100%;
     width: 100%;
     content: "";
-    background: rgba(28, 44, 60, 0.823);
+    background: rgba(12, 16, 28, 0.82)
   }
     .content{
       transform: translateY(25%);
@@ -473,7 +474,7 @@ section{
       gap: 20px;
       justify-content: center;
       align-items: center;
-      background: rgba(49, 32, 84, 0.707);
+      background: rgba(107, 138, 163, 0.707);
       .title-2{
         padding: 20px;
       }
@@ -781,7 +782,7 @@ section{
     opacity: 1;
     transition: 600ms;
     z-index: 2;
-    background:  radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background:  linear-gradient(-30deg, #1b252c 55%, #303c45);
     overflow-y: hidden;
   }
   .contact_me  input[type=text], .contact_me  input[type=email] {

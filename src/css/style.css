@@ -147,7 +147,7 @@ body {
       -ms-user-select: none;
           user-select: none;
   z-index: 2;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: var(--primary);
   color: var(--white);
 }
 
@@ -271,7 +271,7 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   color: var(--black);
-  background: url("../images/1t.png");
+  background: url("../images/1t-small.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -282,7 +282,7 @@ section {
   height: 100%;
   width: 100%;
   content: "";
-  background: rgba(28, 44, 60, 0.823);
+  background: rgba(12, 16, 28, 0.82);
 }
 
 #home .content {
@@ -622,7 +622,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(49, 32, 84, 0.707);
+  background: rgba(107, 138, 163, 0.707);
 }
 
 .works .container #image-gallary .title-2 {
@@ -1066,7 +1066,7 @@ section {
   -webkit-transition: 600ms;
   transition: 600ms;
   z-index: 2;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: linear-gradient(-30deg, #1b252c 55%, #303c45);
   overflow-y: hidden;
 }
 
