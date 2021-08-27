@@ -5,9 +5,9 @@
 
 :root {
   --bookmark: white;
-  --white: rgb(255, 255, 255);
-  --black: rgb(0, 0, 0);
-  --blue: rgb(2, 163, 226);
+  --white: rgba(255, 255, 255, 0.9);
+  --black: rgba(0, 0, 0, 0.9);
+  --blue: rgba(2, 163, 226, 0.9);
   --primary: #1E2025;
 }
 
@@ -22,6 +22,7 @@
 html {
   font-size: 12px;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 #load {
@@ -39,8 +40,8 @@ html {
   width: 100vw;
   left: 50%;
   top: 50%;
-  background: white;
-  color: black;
+  background: black;
+  color: var(--white);
   font-size: 20px;
   opacity: 1;
   visibility: visible;
@@ -178,48 +179,84 @@ strong:hover {
 header {
   position: fixed;
   top: 0;
-  right: -50vw;
+  right: 0;
   z-index: 5;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
 
-header.loaded {
-  right: 0;
+header #navbar {
+  display: none;
 }
 
-header nav ul {
+header #navbar.active {
+  display: block;
+  position: fixed;
+  width: 90vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.967);
+}
+
+header #navbar.active ul {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  list-style: none;
-  color: var(--black);
-  background: var(--white);
-  border-radius: 50px;
-  margin: 1rem;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
 }
 
-header nav ul li {
+header #navbar.active ul li {
   position: relative;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  margin: 5px;
+  font-size: 1.5rem;
 }
 
-header nav ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  color: var(--blue) !important;
-  text-shadow: 0 0 2px var(--blue);
+header #navbar.active ul li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: var(--blue);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header #navbar.active ul li:hover {
   cursor: pointer;
+}
+
+header #navbar.active ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header #cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 3rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 2;
 }
 
 section {
@@ -1299,6 +1336,59 @@ footer .copyright a:hover {
 }
 
 @media (orientation: landscape) and (min-device-aspect-ratio: 1 / 1) {
+  #cross {
+    display: none;
+  }
+  header #navbar {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+  header #navbar ul {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+  }
+  header #navbar ul li {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  header #navbar ul li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--blue);
+    left: 0;
+    bottom: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  header #navbar ul li:hover {
+    cursor: pointer;
+  }
+  header #navbar ul li:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
   #popup {
     min-width: 50vh;
     min-height: 40vh;

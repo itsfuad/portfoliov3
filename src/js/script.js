@@ -7,6 +7,8 @@ const contact = document.getElementById("contact-btn");
 const projects = document.getElementById("projects-btn");
 const instaprofile = document.getElementById('instaprofile');
 
+const media = window.matchMedia("(orientation: landscape) and (min-device-aspect-ratio: 1/1)");
+
 
 let url = window.location.href;
 url = url.slice(url.lastIndexOf("/")+1);
@@ -132,8 +134,9 @@ const popupclose = () => {
     document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }
-
-  window.addEventListener("DOMContentLoaded", ()=>{
+const cross = document.getElementById('cross');
+const navbar = document.getElementById('navbar');
+window.addEventListener("DOMContentLoaded", ()=>{
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
     caller();
@@ -149,4 +152,11 @@ const popupclose = () => {
         targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
     });
     jssor_1_slider_init();
+});
+
+cross.addEventListener("click", ()=>{
+    navbar.classList.toggle("active");
+    cross.style.transition = "300ms";
+    cross.style.transform = "rotate(360deg)";
+    cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
 });

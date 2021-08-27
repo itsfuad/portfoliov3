@@ -5,9 +5,9 @@
 
 :root{
   --bookmark: white;
-  --white: rgb(255, 255, 255);
-  --black: rgb(0, 0, 0);
-  --blue: rgb(2, 163, 226);
+  --white: rgba(255, 255, 255, 0.9);
+  --black: rgba(0, 0, 0, 0.9);
+  --blue: rgba(2, 163, 226, 0.9);
   --primary: #1E2025;
 }
 
@@ -21,6 +21,7 @@
 html{
     font-size: 12px;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
     //scroll-snap-type: y mandatory;
 }
 
@@ -33,8 +34,8 @@ html{
   width: 100vw;	
   left: 50%;
   top: 50%;		
-  background: white;
-  color: black;
+  background: black;
+  color: var(--white);
   font-size:20px;
   opacity:1;
   visibility: visible;
@@ -145,38 +146,63 @@ strong{
 
 
 header{
-      position: fixed;
-      top: 0;
-      right: -50vw;
-      z-index: 5;
-      transition: 600ms;
-    &.loaded{
-      right: 0;
-    }
-    nav{
-      ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        gap: 2rem;
-        padding: 1rem 2rem;
-        list-style: none;
-        color: var(--black);
-        background: var(--white);
-        border-radius: 50px;
-        margin: 1rem;
-        li{
-          position: relative;
-          transition: 600ms;
-
-          &:hover{
-            transform: scale(1.1);
-            color: var(--blue)!important;
-            text-shadow: 0 0 2px var(--blue);
-            cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    transition: 600ms;
+    #navbar{
+      display: none;
+      &.active{
+        display: block;
+        position: fixed;
+        width: 90vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.967);
+        ul{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          list-style-type: none;
+          li{
+            position: relative;
+            margin: 5px;
+            font-size: 1.5rem;
+            &::after{
+              content: "";
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background: var(--blue);
+                transform: scaleX(0);
+                transition: 300ms;
+            }
+            &:hover{
+              cursor: pointer;
+              &::after{
+                transform: scaleX(1);
+              }
+            }
           }
         }
       }
+    }
+    #cross{
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 10px;
+      font-size: 3rem;
+      transition: 300ms;
+      z-index: 2;
     }
 }
 
@@ -225,7 +251,7 @@ section{
     height: 100%;
     width: 100%;
     content: "";
-    background: rgba(12, 16, 28, 0.82)
+    background: rgba(12, 16, 28, 0.82);
   }
     .content{
       transform: translateY(25%);
@@ -932,6 +958,49 @@ footer {
   }
 }
 @media (orientation: landscape) and (min-device-aspect-ratio: 1/1) {
+    #cross{
+      display: none;
+    }
+    header{
+      #navbar{
+        display: block;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        ul{
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: right;
+          align-items: center;
+          list-style: none;
+          li{
+            position: relative;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            &::after{
+              content: "";
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              background: var(--blue);
+              left: 0;
+              bottom: 0;
+              transition: 300ms;
+              transform: scaleX(0);
+            }
+            &:hover{
+              cursor: pointer;
+              &::after{
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
     #popup{
       min-width: 50vh;
     min-height: 40vh;
