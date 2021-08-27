@@ -186,20 +186,18 @@ header {
 }
 
 header #navbar {
-  display: none;
-}
-
-header #navbar.active {
-  display: block;
   position: fixed;
+  visibility: hidden;
+  opacity: 0;
   width: 90vw;
   height: 100vh;
   top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.967);
+  right: -50vw;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
-header #navbar.active ul {
+header #navbar ul {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,13 +217,13 @@ header #navbar.active ul {
   list-style-type: none;
 }
 
-header #navbar.active ul li {
+header #navbar ul li {
   position: relative;
   margin: 5px;
   font-size: 1.5rem;
 }
 
-header #navbar.active ul li::after {
+header #navbar ul li::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -239,13 +237,20 @@ header #navbar.active ul li::after {
   transition: 300ms;
 }
 
-header #navbar.active ul li:hover {
+header #navbar ul li:hover {
   cursor: pointer;
 }
 
-header #navbar.active ul li:hover::after {
+header #navbar ul li:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+header #navbar.active {
+  visibility: visible;
+  opacity: 1;
+  right: 0;
+  background: rgba(0, 0, 0, 0.967);
 }
 
 header #cross {
@@ -1340,7 +1345,7 @@ footer .copyright a:hover {
     display: none;
   }
   header #navbar {
-    display: block;
+    visibility: visible;
     top: 0;
     left: 0;
     position: fixed;

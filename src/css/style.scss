@@ -152,47 +152,51 @@ header{
     z-index: 5;
     transition: 600ms;
     #navbar{
-      display: none;
-      &.active{
-        display: block;
-        position: fixed;
-        width: 90vw;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.967);
-        ul{
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          width: 100%;
-          justify-content: center;
-          align-items: center;
-          list-style-type: none;
-          li{
-            position: relative;
-            margin: 5px;
-            font-size: 1.5rem;
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      width: 90vw;
+      height: 100vh;
+      top: 0;
+      right: -50vw;
+      transition: 300ms;
+      ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        li{
+          position: relative;
+          margin: 5px;
+          font-size: 1.5rem;
+          &::after{
+            content: "";
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+              background: var(--blue);
+              transform: scaleX(0);
+              transition: 300ms;
+          }
+          &:hover{
+            cursor: pointer;
             &::after{
-              content: "";
-                position: absolute;
-                height: 2px;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                background: var(--blue);
-                transform: scaleX(0);
-                transition: 300ms;
-            }
-            &:hover{
-              cursor: pointer;
-              &::after{
-                transform: scaleX(1);
-              }
+              transform: scaleX(1);
             }
           }
         }
+      }
+      &.active{
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+        background: rgba(0, 0, 0, 0.967);
       }
     }
     #cross{
@@ -963,7 +967,7 @@ footer {
     }
     header{
       #navbar{
-        display: block;
+        visibility: visible;
         top: 0;
         left: 0;
         position: fixed;
