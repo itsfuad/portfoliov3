@@ -970,6 +970,8 @@ footer {
         visibility: visible;
         top: 0;
         left: 0;
+        height: unset;
+        opacity: 1;
         position: fixed;
         width: 100%;
         ul{
@@ -984,6 +986,7 @@ footer {
             margin: 5px;
             padding: 5px;
             border-radius: 5px;
+            font-size: unset;
             &::after{
               content: "";
               position: absolute;

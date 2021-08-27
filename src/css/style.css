@@ -1348,6 +1348,8 @@ footer .copyright a:hover {
     visibility: visible;
     top: 0;
     left: 0;
+    height: unset;
+    opacity: 1;
     position: fixed;
     width: 100%;
   }
@@ -1373,6 +1375,7 @@ footer .copyright a:hover {
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
+    font-size: unset;
   }
   header #navbar ul li::after {
     content: "";
