@@ -220,6 +220,7 @@ header #navbar ul {
 header #navbar ul li {
   position: relative;
   margin: 5px;
+  margin-top: 20px;
   font-size: 1.5rem;
 }
 
