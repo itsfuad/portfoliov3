@@ -455,7 +455,6 @@ section{
       background: url("../images/5.webp");
       background-position: center;
       background-size: cover;
-      background-attachment: fixed;
       ul{
         color: #6d869c;
         position: relative;
@@ -550,6 +549,7 @@ section{
   background-position: center;
   background-size: cover;
   .container{
+    margin-top: 10px;
     padding-top: 0;
     &::before{
       position: absolute;
