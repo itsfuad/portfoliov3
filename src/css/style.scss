@@ -206,8 +206,11 @@ header{
       right: 0;
       margin: 10px;
       font-size: 3rem;
-      transition: 300ms;
       z-index: 2;
+      transition: 300ms;
+      &.rotate{
+        transform: rotate(180deg);
+      }
     }
 }
 
@@ -979,7 +982,7 @@ footer {
           position: relative;
           display: flex;
           flex-direction: row;
-          justify-content: right;
+          justify-content: flex-end;
           align-items: center;
           list-style: none;
           li{

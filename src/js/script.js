@@ -156,7 +156,6 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
 cross.addEventListener("click", ()=>{
     navbar.classList.toggle("active");
-    cross.style.transition = "300ms";
-    cross.style.transform = "rotate(360deg)";
+    cross.classList.toggle("rotate");
     cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
 });

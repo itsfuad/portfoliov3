@@ -260,9 +260,14 @@ header #cross {
   right: 0;
   margin: 10px;
   font-size: 3rem;
+  z-index: 2;
   -webkit-transition: 300ms;
   transition: 300ms;
-  z-index: 2;
+}
+
+header #cross.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 section {
@@ -1363,9 +1368,9 @@ footer .copyright a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
