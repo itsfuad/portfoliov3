@@ -150,7 +150,10 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     image.removeAttribute("data-src");
     });
     */
-    scrollFunction();
+    if (media.matches) {
+      window.onscroll = () => { scrollFunction(); };
+      scrollFunction();
+    }
     ScrollOut({
         targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
     });
@@ -162,9 +165,11 @@ cross.addEventListener("click", async ()=>{
     cross.classList.toggle("rotate");
     cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
 });
-
-window.onscroll = () => {scrollFunction()};
-
+window.addEventListener("orientationchange", ()=>{
+  window.onscroll = ()=>{
+    scrollFunction();
+  }
+});
 const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     //document.getElementById("navbar").style.top = "0";
@@ -173,4 +178,5 @@ const scrollFunction = () => {
     //document.getElementById("navbar").style.top = "-50px";
     document.getElementById("nv").classList.remove("scrolled");
   }
+  //console.log("scrollong...");
 }
