@@ -412,7 +412,6 @@ section{
     }
   }
 }
-
 .works{
   height: 100%;
   width: 100%;
@@ -444,7 +443,7 @@ section{
       background: url("../images/5.webp") center;
       background-size: cover;
       ul{
-        color: #6d869c;
+        color: var(--white);
         position: relative;
         list-style: none;
         //background:#1b2735;
@@ -452,7 +451,7 @@ section{
           content:"";
           display: inline-block;
           width: 2px;
-          background: #6d869c;
+          background: var(--white);
           position: absolute;
           left:3px;
           top: 5px;
@@ -972,6 +971,13 @@ footer {
           justify-content: flex-end;
           align-items: center;
           list-style: none;
+          transition: 300ms;
+          &.scrolled{
+            background: var(--blue);
+            li::after{
+                background: var(--white);
+            }
+          }
           li{
             position: relative;
             margin: 5px;

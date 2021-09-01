@@ -591,7 +591,7 @@ section {
 }
 
 .works .container #github-projects ul {
-  color: #6d869c;
+  color: var(--white);
   position: relative;
   list-style: none;
 }
@@ -600,7 +600,7 @@ section {
   content: "";
   display: inline-block;
   width: 2px;
-  background: #6d869c;
+  background: var(--white);
   position: absolute;
   left: 3px;
   top: 5px;
@@ -1358,6 +1358,14 @@ footer .copyright a:hover {
         -ms-flex-align: center;
             align-items: center;
     list-style: none;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  header #navbar ul.scrolled {
+    background: var(--blue);
+  }
+  header #navbar ul.scrolled li::after {
+    background: var(--white);
   }
   header #navbar ul li {
     position: relative;
