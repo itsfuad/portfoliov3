@@ -19,7 +19,7 @@
 }
 
 html{
-    font-size: 12px;
+    font-size: 10px;
     scroll-behavior: smooth;
     scrollbar-width: thin;
     //scroll-snap-type: y mandatory;
@@ -123,7 +123,7 @@ body{
 
 .title-2{
     font-size: 3rem;
-    font-family: Now;
+    font-family: Now, serif;
     z-index: 1;
 }
 
@@ -171,8 +171,7 @@ header{
         list-style-type: none;
         li{
           position: relative;
-          margin: 5px;
-          margin-top: 20px;
+          margin: 20px 5px 5px;
           font-size: 1.5rem;
           &::after{
             content: "";
@@ -224,15 +223,10 @@ section{
   min-height: 100vh;
   justify-content: center;
   text-align: justify;
-  padding-left: 5%;
-  padding-right: 5%;
   overflow: hidden;
-  min-height: -webkit-fill-available;
-  height: -webkit-fill-available;
-  height: max-content;
+  height: max(100%, 100vh);
   font-size: 1.2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 5%;
   //scroll-snap-align: start;
 }
 
@@ -250,10 +244,9 @@ section{
   min-height: 100vh;
   transition: 600ms;
   color: var(--black);
-  background: url("../images/1t-small.png");
-  background-position: center;
+  background: url("../images/1t-small.png") fixed center;
   background-size: cover;
-  background-attachment: fixed;
+
   &::before{
     position: absolute;
     height: 100%;
@@ -277,7 +270,7 @@ section{
     }
     #bio {
       position: relative;
-      top: 0px;
+      top: 0;
       opacity: 1;
       transition: 600ms;
       color: var(--white);
@@ -300,8 +293,6 @@ section{
       background: var(--white);
       color: var(--black);
       border-radius: 5px;
-      max-width: -webkit-max-content;
-      max-width: -moz-max-content;
       max-width: max-content;
       padding: 1rem;
       left: 50%;
@@ -319,6 +310,7 @@ section{
       left: 50%;
       transform: translateX(-50%);
       margin-top: 3rem;
+      margin-bottom: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -388,7 +380,6 @@ section{
     height: 60vw;
     z-index: 5;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px var(--white);
     margin-bottom: 20px;
     transition: 600ms;
     &[data-scroll="in"]{
@@ -444,16 +435,13 @@ section{
     height: 100%;
     text-align: justify;
     #github-projects{
-      padding: 10px;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 50px 10px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       justify-content: center;
       align-items: center;
-      background: url("../images/5.webp");
-      background-position: center;
+      background: url("../images/5.webp") center;
       background-size: cover;
       ul{
         color: #6d869c;
@@ -545,12 +533,9 @@ section{
 .jssora073.jssora073ds {opacity:.3;pointer-events:none;}
 
 .services{
-  background: url("../images/1.webp");
-  background-position: center;
+  background: url("../images/1.webp") center;
   background-size: cover;
   .container{
-    margin-top: 10px;
-    padding-top: 0;
     &::before{
       position: absolute;
       content: "";
@@ -563,31 +548,23 @@ section{
     display: grid;
     grid-auto-flow: row;
     gap: 30px;
-    padding: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 20px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
 }
 #soft{
-  background: url("./../../src/images/software.webp");
-  background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;
-  
+  background-size: cover;                      /* <------ */
+  background: url("./../../src/images/software.webp") no-repeat center center;
+
 }
 #web{
-  background: url("./../../src/images/web.webp");
   background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;
+  background: url("./../../src/images/web.webp") no-repeat center center;
 }
 #visuals{
-  background: url("./../../src/images/visuals.webp");
-  background-blend-mode:color-dodge;
+  background: url("./../../src/images/visuals.webp") no-repeat center center;
   background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;
 }
 .card{
     position: relative;
@@ -642,7 +619,7 @@ section{
         position: absolute;
         content: "";
         bottom: -15px;
-        width: 0rem;
+        width: 0;
         height: 2rem;
         border-left: 1.5rem solid var(--bookmark);
         border-right: 1.5rem solid var(--bookmark);
@@ -873,7 +850,7 @@ section{
     border-color: #1ca1c2;
   }
   ::placeholder {
-    font-family: Now;
+    font-family: Now, serif;
     color: var(--white);
     font-size: 1rem;
   }
@@ -907,7 +884,6 @@ section{
 }
 
 img .lazy{
-  min-height: 100px;
   min-height: 100px;
 }
 
@@ -991,23 +967,6 @@ footer {
             padding: 5px;
             border-radius: 5px;
             font-size: unset;
-            &::after{
-              content: "";
-              position: absolute;
-              height: 2px;
-              width: 100%;
-              background: var(--blue);
-              left: 0;
-              bottom: 0;
-              transition: 300ms;
-              transform: scaleX(0);
-            }
-            &:hover{
-              cursor: pointer;
-              &::after{
-                transform: scaleX(1);
-              }
-            }
           }
         }
       }

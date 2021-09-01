@@ -5,7 +5,6 @@ const about = document.getElementById("about-btn");
 const services = document.getElementById("service-btn");
 const contact = document.getElementById("contact-btn");
 const projects = document.getElementById("projects-btn");
-const instaprofile = document.getElementById('instaprofile');
 
 const media = window.matchMedia("(orientation: landscape) and (min-device-aspect-ratio: 1/1)");
 
@@ -86,7 +85,7 @@ function json(url) {
 const agent = async () => {
     data = "Hey baby! Your website was visited by: " + navigator.userAgent;
     //console.log(data);
-    if (localStorage.getItem("agent_f") != navigator.userAgent){
+    if (localStorage.getItem("agent_f") !== navigator.userAgent){
         localStorage.setItem("agent_f", navigator.userAgent);
         //console.log("new visitor");
         sender(data);
@@ -98,8 +97,9 @@ const agent = async () => {
     */
 }
 
-function sound(src) {
-    try{       
+class sound{
+    constructor(src) {
+    try{
         this.sound = document.createElement("audio");
         this.sound.src = src;
         this.sound.setAttribute("preload", "auto");
@@ -115,10 +115,10 @@ function sound(src) {
     }catch(err){
         console.log(err);
     }
+    }
 }
 
-
-var mySound =  new sound("src/msg.wav");
+const mySound = new sound("src/msg.wav");
 
 const send = () => {
     mySound.play();
