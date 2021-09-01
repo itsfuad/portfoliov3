@@ -11,37 +11,37 @@ const media = window.matchMedia("(orientation: landscape) and (min-device-aspect
 
 let url = window.location.href;
 url = url.slice(url.lastIndexOf("/")+1);
-more.addEventListener("click", () => {
+more.addEventListener("click", async () => {
     document.getElementsByClassName("about")[0].scrollIntoView(true);
     //window.location.href = url + "#about";
 });
 
-home.addEventListener("click", () => {
+home.addEventListener("click", async () => {
     
     window.scrollTo(0, 0);
     //window.location.href = url + "#home";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
-about.addEventListener("click", () => {
+about.addEventListener("click", async () => {
     
     document.getElementsByClassName("about")[0].scrollIntoView(true);
     //window.location.href = url + "#about";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
-services.addEventListener("click", () => {
+services.addEventListener("click", async () => {
     document.getElementsByClassName("services")[0].scrollIntoView(true);
     //window.location.href = url + "#services";
 });
 
 url = url.slice(url.lastIndexOf("/")+1);
-contact.addEventListener("click", () => {
+contact.addEventListener("click", async () => {
     document.getElementsByClassName("contact_me")[0].scrollIntoView(true);
     //window.location.href = url + "#contact";
 });
 
-projects.addEventListener("click", () => {
+projects.addEventListener("click", async () => {
     document.getElementsByClassName("works")[0].scrollIntoView(true);
 });
 
@@ -56,7 +56,7 @@ const get_ready = () => {
     return message;
 }
 
-const sender = (message) => {
+const sender = async (message) => {
     
     var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
     var chat_id = 1467252650;
@@ -78,7 +78,7 @@ const sender = (message) => {
     $.ajax(settings).done();
 }
 
-function json(url) {
+const json = (url) => {
     return fetch(url).then(res => res.json());
 }
 
@@ -88,7 +88,7 @@ const agent = async () => {
     if (localStorage.getItem("agent_f") !== navigator.userAgent){
         localStorage.setItem("agent_f", navigator.userAgent);
         //console.log("new visitor");
-        sender(data);
+        await sender(data);
     }
     /*
     else{
@@ -122,21 +122,23 @@ const mySound = new sound("src/msg.wav");
 
 const send = () => {
     mySound.play();
+    console.log("preparing message");
     document.getElementById("popupwrap").classList.add("active");
     document.getElementById("popup").classList.add("active");
     sender(get_ready());
+    console.log("message sent");
     document.getElementById("myname").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
     return false;
 }
-const popupclose = () => {
+const popupclose = async () => {
     document.getElementById("popupwrap").classList.remove("active");
     document.getElementById("popup").classList.remove("active");
 }
 const cross = document.getElementById('cross');
 const navbar = document.getElementById('navbar');
-window.addEventListener("DOMContentLoaded", ()=>{
+window.addEventListener("DOMContentLoaded", async ()=>{
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
     caller();
@@ -154,7 +156,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
     jssor_1_slider_init();
 });
 
-cross.addEventListener("click", ()=>{
+cross.addEventListener("click", async ()=>{
     navbar.classList.toggle("active");
     cross.classList.toggle("rotate");
     cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
