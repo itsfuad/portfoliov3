@@ -72,7 +72,7 @@ const sender = (message) => {
         },
         "data": JSON.stringify({
         "chat_id": chat_id,
-        "text": message
+        "text": message,
         })
     }
     $.ajax(settings).done();
@@ -80,7 +80,7 @@ const sender = (message) => {
 
 function json(url) {
     return fetch(url).then(res => res.json());
-  }
+}
 
 const agent = async () => {
     data = "Hey baby! Your website was visited by: " + navigator.userAgent;

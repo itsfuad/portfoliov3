@@ -221,10 +221,10 @@ section{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: max-content;
   justify-content: center;
   text-align: justify;
   overflow: hidden;
-  height: max(100%, 100vh);
   font-size: 1.2rem;
   padding: 4rem 5%;
   //scroll-snap-align: start;
@@ -785,6 +785,19 @@ section{
     height: 5px;
   }
 }
+::file-selector-button{
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 0;
+}
+
+@mixin hover {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 0 20px var(--white);
+}
+
 .contact_me {
     position: relative;
     margin: 0;
@@ -795,59 +808,57 @@ section{
     z-index: 2;
     background:  linear-gradient(-30deg, #1b252c 55%, #303c45);
     overflow-y: hidden;
-  }
-  .contact_me  input[type=text], .contact_me  input[type=email] {
-    background: none;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid var(--white);
-    padding: 14px 10px;
-    width: 88vw;
-    outline: none;
-    color: var(--white);
-    border-radius: 24px;
-    transition: 0.25s;
-  }
-  .contact_me  input[type=text]:focus, .contact_me  input[type=email]:focus {
-    background-color: transparent;
-    width: 90vw;
-    border-color: #1ca1c2;
-  }
-  .contact_me  input[type=submit] {
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid var(--white);
-    padding: 14px 40px;
-    outline: none;
-    color: var(--white);
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
-  }
-  .contact_me input[type=submit]:hover {
-    background: var(--white);
-    color: var(--black);
-            box-shadow: 0 0 20px var(--white);
-  }
-  .contact_me textarea {
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid var(--white);
-    padding: 14px 10px;
-    width: 88vw;
-    outline: none;
-    color: var(--white);
-    border-radius: 24px;
-    -webkit-transition: 0.25s;
-    transition: 0.25s;
-  }
-  .contact_me textarea:focus {
-    width: 90vw;
-    border-color: #1ca1c2;
+    #myname, #email{
+        background: none;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid var(--white);
+        padding: 14px 10px;
+        width: 88vw;
+        outline: none;
+        color: var(--white);
+        border-radius: 24px;
+        transition: 0.25s;
+        &:focus {
+          background-color: transparent;
+          width: 90vw;
+          border-color: #1ca1c2;
+        }
+      }
+    #submit{
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid var(--white);
+        padding: 10px 30px;
+        outline: none;
+        color: var(--white);
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        &:hover {
+          @include hover;
+        }
+    }
+    #message{
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid var(--white);
+        padding: 14px 10px;
+        width: 88vw;
+        outline: none;
+        color: var(--white);
+        border-radius: 24px;
+        -webkit-transition: 0.25s;
+        transition: 0.25s;
+        &:focus {
+          width: 90vw;
+          border-color: #1ca1c2;
+        }
+      }
   }
   ::placeholder {
     font-family: Now, serif;
@@ -999,16 +1010,19 @@ footer {
         padding: 20px;
     }
     }
-    .contact_me  input[type=text], .contact_me  input[type=email] {
-      width: 50vw;
-    }
-    .contact_me  input[type=text]:focus, .contact_me  input[type=email]:focus {
-      width: 55vw;
-    }
-    .contact_me  textarea {
-      width: 50vw;
-    }
-    .contact_me  textarea:focus {
-      width: 55vw;
-    }
-}
+    .contact_me{
+      #myname, #email{
+        width: 50vw;
+        &:focus {
+          width: 55vw;
+        }
+      }
+      #message {
+           width: 50vw;
+           &:focus {
+                 width: 55vw;
+               }
+           }
+       }
+    }  
+    
