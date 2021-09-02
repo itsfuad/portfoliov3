@@ -1105,12 +1105,12 @@ canvas {
 .contact_me {
   position: relative;
   margin: 0;
+  padding-top: 10vh;
   color: var(--white);
   text-align: center;
   opacity: 1;
   -webkit-transition: 600ms;
   transition: 600ms;
-  background: linear-gradient(-30deg, #1b252c 55%, #303c45);
   overflow-y: hidden;
   z-index: 5;
 }
@@ -1256,9 +1256,9 @@ footer {
   font-size: 1rem;
   text-align: center;
   color: var(--white);
-  background: var(--black);
+  background: black;
   padding: 5px;
-  z-index: 100;
+  z-index: 5;
 }
 
 footer .copyright a {
