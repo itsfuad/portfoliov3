@@ -123,13 +123,13 @@ body{
 .title-2{
     font-size: 3rem;
     font-family: Now, serif;
-    z-index: 1;
+    z-index: 2;
 }
 
 .title-3{
  font-size: 2rem;
  text-align: left;
- z-index: 1;
+ z-index: 2;
 }
 
 strong{
@@ -234,6 +234,8 @@ section{
   padding: 0;
   position: fixed;
 }
+
+
 #home{
   display: flex;
   position: relative;
@@ -243,29 +245,27 @@ section{
   min-height: 100vh;
   transition: 600ms;
   color: var(--black);
-  background: url("../images/1t-small.png") fixed center;
-  background-size: cover;
-
-  &::before{
-    position: absolute;
-    height: 100%;
+  canvas {
+    position: fixed;
     width: 100%;
-    content: "";
-    background: rgba(12, 16, 28, 0.82);
+    height: 100%;
   }
+  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  background-size: cover;
     .content{
       transform: translateY(25%);
     }
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-    }
     #name {
+      position: relative;
       transition: 600ms;
       font-size: 2.3rem;
       text-align: left;
       color: var(--white);
+      h1{
+        position: relative;
+        z-index: 4;
+      }
     }
     #bio {
       position: relative;
@@ -282,26 +282,29 @@ section{
     #cursor{
       animation: blink 600ms infinite;
     }
-
-    .resume{
-      a, a:hover, a:focus, a:active {
-        text-decoration: none;
-        color: inherit;
-      }
+    .buttons{
       position: relative;
-      background: var(--white);
-      color: var(--black);
-      border-radius: 5px;
-      max-width: max-content;
-      padding: 1rem;
-      left: 50%;
-      top: 10px;
-      transform: translateX(-50%) scale(1);
-      text-shadow: none;
-      transition: 800ms;
-      &:hover{
-        cursor: pointer;
-        transform: translateX(-50%)scale(1.1);
+      .resume{
+        position: relative;
+        a, a:hover, a:focus, a:active {
+          text-decoration: none;
+          color: inherit;
+        }
+        
+        background: var(--white);
+        color: var(--black);
+        border-radius: 5px;
+        max-width: max-content;
+        padding: 1rem;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%) scale(1);
+        text-shadow: none;
+        transition: 800ms;
+        &:hover{
+          cursor: pointer;
+          transform: translateX(-50%)scale(1.1);
+        }
       }
     }
     .btn{
@@ -802,7 +805,6 @@ section{
     text-align: center;
     opacity: 1;
     transition: 600ms;
-    z-index: 2;
     background:  linear-gradient(-30deg, #1b252c 55%, #303c45);
     overflow-y: hidden;
     #myname, #email{
