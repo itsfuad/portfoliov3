@@ -115,7 +115,6 @@ html{
 
 body{
     user-select: none;
-    z-index: 2;
     background: var(--primary);
     color: var(--white);
 }
@@ -553,17 +552,16 @@ section{
     align-items: center;
 }
 #soft{
-  background-size: cover;                      /* <------ */
   background: url("./../../src/images/software.webp") no-repeat center center;
-
+  background-size: cover;                      /* <------ */
 }
 #web{
-  background-size:     cover;                      /* <------ */
   background: url("./../../src/images/web.webp") no-repeat center center;
+  background-size: cover;                      /* <------ */
 }
 #visuals{
   background: url("./../../src/images/visuals.webp") no-repeat center center;
-  background-size:     cover;                      /* <------ */
+  background-size: cover;                      /* <------ */
 }
 .card{
     position: relative;
@@ -990,7 +988,7 @@ footer {
     }
     #popup{
       min-width: 50vh;
-    min-height: 40vh;
+      min-height: 40vh;
     }
     #home .content{
       padding: 0 15vw 0 15vw;
