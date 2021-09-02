@@ -303,6 +303,11 @@ section {
   z-index: 4;
 }
 
+canvas {
+  position: fixed;
+  z-index: 4;
+}
+
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
