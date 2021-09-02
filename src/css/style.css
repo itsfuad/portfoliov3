@@ -303,11 +303,6 @@ section {
   z-index: 4;
 }
 
-canvas {
-  position: fixed;
-  z-index: 4;
-}
-
 #home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,7 +341,7 @@ canvas {
 
 #home #name h1 {
   position: relative;
-  z-index: 4;
+  z-index: 5;
 }
 
 #home #bio {
@@ -403,6 +398,7 @@ canvas {
 
 #home .btn {
   position: relative;
+  z-index: 7;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1391,7 +1387,7 @@ footer .copyright a:hover {
     min-height: 40vh;
   }
   #home .content {
-    padding: 0 15vw 0 15vw;
+    margin: 0 15vw 0 15vw;
   }
   .about {
     display: -webkit-box;

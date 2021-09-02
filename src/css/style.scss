@@ -241,10 +241,6 @@ header{
   width: 100%;
   z-index: 4;
 }
-canvas{
-  position: fixed;
-  z-index: 4;
-}
 #home{
   display: flex;
   position: relative;
@@ -270,7 +266,7 @@ canvas{
       color: var(--white);
       h1{
         position: relative;
-        z-index: 4;
+        z-index: 5;
       }
     }
     #bio {
@@ -296,7 +292,6 @@ canvas{
           text-decoration: none;
           color: inherit;
         }
-        
         background: var(--white);
         color: var(--black);
         border-radius: 5px;
@@ -315,6 +310,7 @@ canvas{
     }
     .btn{
       position: relative;
+      z-index: 7;
       left: 50%;
       transform: translateX(-50%);
       margin-top: 3rem;
@@ -1003,7 +999,7 @@ footer {
       min-height: 40vh;
     }
     #home .content{
-      padding: 0 15vw 0 15vw;
+      margin: 0 15vw 0 15vw;
     }
     .about{
       display: flex;
