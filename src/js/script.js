@@ -165,11 +165,18 @@ cross.addEventListener("click", async ()=>{
     cross.classList.toggle("rotate");
     cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
 });
-window.addEventListener("orientationchange", ()=>{
+
+window.onorientationchange = ()=>{
   window.onscroll = ()=>{
     scrollFunction();
   }
-});
+};
+
+window.onresize = ()=>{
+    window.onscroll = ()=>{
+      scrollFunction();
+    }
+};
 const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     //document.getElementById("navbar").style.top = "0";
