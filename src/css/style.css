@@ -1462,6 +1462,8 @@ footer .copyright a:hover {
   }
   header #navbar ul.scrolled {
     background: var(--blue);
+    -webkit-box-shadow: 0 -2px 5px black;
+            box-shadow: 0 -2px 5px black;
   }
   header #navbar ul.scrolled li::after {
     background: var(--white);

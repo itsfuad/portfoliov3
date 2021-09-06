@@ -1031,6 +1031,7 @@ footer {
           transition: 300ms;
           &.scrolled{
             background: var(--blue);
+            box-shadow: 0 -2px 5px black;
             li::after{
                 background: var(--white);
             }
