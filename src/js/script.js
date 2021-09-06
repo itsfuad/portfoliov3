@@ -180,10 +180,10 @@ window.onresize = ()=>{
 const scrollFunction = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     //document.getElementById("navbar").style.top = "0";
-    document.getElementById("nv").classList.add("scrolled");
+    document.getElementsByClassName("nv")[0].classList.add("scrolled");
   } else {
     //document.getElementById("navbar").style.top = "-50px";
-    document.getElementById("nv").classList.remove("scrolled");
+    document.getElementsByClassName("nv")[0].classList.remove("scrolled");
   }
   //console.log("scrollong...");
 }

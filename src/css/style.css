@@ -19,6 +19,10 @@
   font-family: Now, Arial, Helvetica, sans-serif;
 }
 
+a {
+  color: var(--blue);
+}
+
 html {
   font-size: 12px;
   scroll-behavior: smooth;
@@ -220,6 +224,11 @@ header #navbar ul li {
   position: relative;
   margin: 20px 5px 5px;
   font-size: 1.5rem;
+}
+
+header #navbar ul li a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 header #navbar ul li::after {
@@ -1095,13 +1104,6 @@ canvas {
   height: 5px;
 }
 
-::file-selector-button {
-  background: none;
-  border: none;
-  color: var(--white);
-  width: 0;
-}
-
 .contact_me {
   position: relative;
   margin: 0;
@@ -1115,16 +1117,24 @@ canvas {
   z-index: 5;
 }
 
+.contact_me #myname {
+  grid-area: name;
+}
+
+.contact_me #email {
+  grid-area: email;
+}
+
 .contact_me #myname, .contact_me #email {
   background: none;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid var(--white);
+  border: none;
+  border-bottom: 2px solid var(--white);
   padding: 14px 10px;
   width: 88vw;
   outline: none;
   color: var(--white);
-  border-radius: 24px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -1135,7 +1145,29 @@ canvas {
   border-color: #1ca1c2;
 }
 
+.contact_me #message {
+  grid-area: message;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid var(--white);
+  padding: 14px 10px;
+  width: 88vw;
+  outline: none;
+  color: var(--white);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.contact_me #message:focus {
+  width: 90vw;
+  border-color: #1ca1c2;
+}
+
 .contact_me #submit {
+  grid-area: send;
   background: none;
   display: block;
   margin: 20px auto;
@@ -1144,7 +1176,7 @@ canvas {
   padding: 10px 30px;
   outline: none;
   color: var(--white);
-  border-radius: 24px;
+  border-radius: 10px;
   -webkit-transition: 0.25s;
   transition: 0.25s;
   cursor: pointer;
@@ -1155,26 +1187,6 @@ canvas {
   color: var(--black);
   -webkit-box-shadow: 0 0 20px var(--white);
           box-shadow: 0 0 20px var(--white);
-}
-
-.contact_me #message {
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid var(--white);
-  padding: 14px 10px;
-  width: 88vw;
-  outline: none;
-  color: var(--white);
-  border-radius: 24px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-
-.contact_me #message:focus {
-  width: 90vw;
-  border-color: #1ca1c2;
 }
 
 ::-webkit-input-placeholder {
@@ -1201,6 +1213,74 @@ canvas {
   font-size: 1rem;
 }
 
+.contact-info {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink";
+  gap: 10px;
+}
+
+.contact-info .some-words {
+  grid-area: some-words;
+  padding: 20px;
+  text-align: left;
+}
+
+.contact-info .title-3 {
+  padding: 10px;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: slinkcap;
+}
+
+.contact-info .social-links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: slink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-info address {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: address;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.contact-info .quicklinks {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: qlink;
+}
+
 .game {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1215,29 +1295,6 @@ canvas {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
-}
-
-.socials {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.socials .title-3 {
-  text-align: center;
-}
-
-.socials #sites {
-  padding: 10px;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-}
-
-.game {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -1259,6 +1316,22 @@ footer {
   background: black;
   padding: 5px;
   z-index: 5;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  cursor: pointer;
 }
 
 footer .copyright a {
@@ -1421,17 +1494,76 @@ footer .copyright a:hover {
     gap: 30px;
     padding: 20px;
   }
+  footer {
+    overflow: hidden;
+    min-height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 20px;
+    -ms-grid-rows: 90% 5%;
+        grid-template-rows: 90% 5%;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "socials contact" "socials contact" "footer footer";
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer ul li {
+    cursor: pointer;
+  }
+  .contact_me {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: contact;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact_me #form {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "name message message" "email message message" ". send .";
+    overflow: hidden;
+  }
   .contact_me #myname, .contact_me #email {
-    width: 50vw;
+    width: 90%;
   }
   .contact_me #myname:focus, .contact_me #email:focus {
-    width: 55vw;
+    width: 100%;
   }
   .contact_me #message {
-    width: 50vw;
+    width: 90%;
   }
   .contact_me #message:focus {
-    width: 55vw;
+    width: 100%;
+  }
+  .socials {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: socials;
+  }
+  .copyright {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: footer;
   }
 }
 /*# sourceMappingURL=style.css.map */

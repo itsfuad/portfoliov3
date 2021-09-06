@@ -18,6 +18,10 @@
     font-family: Now, Arial, Helvetica, sans-serif;
 }
 
+a{
+  color: var(--blue);
+}
+
 html{
     font-size: 12px;
     scroll-behavior: smooth;
@@ -172,6 +176,10 @@ header{
           position: relative;
           margin: 20px 5px 5px;
           font-size: 1.5rem;
+          a{
+            color: var(--white);
+            text-decoration: none;
+          }
           &::after{
             content: "";
             position: absolute;
@@ -794,12 +802,6 @@ canvas{
     height: 5px;
   }
 }
-::file-selector-button{
-  background: none;
-  border: none;
-  color: var(--white);
-  width: 0;
-}
 
 @mixin hover {
     background: var(--white);
@@ -815,19 +817,24 @@ canvas{
     text-align: center;
     opacity: 1;
     transition: 600ms;
-    //background:  linear-gradient(-30deg, #1b252c 55%, #303c45);
     overflow-y: hidden;
     z-index: 5;
+    #myname{
+      grid-area: name;
+    }
+    #email{
+      grid-area: email;
+    }
     #myname, #email{
         background: none;
         margin: 20px auto;
         text-align: center;
-        border: 2px solid var(--white);
+        border: none;
+        border-bottom: 2px solid var(--white);
         padding: 14px 10px;
         width: 88vw;
         outline: none;
         color: var(--white);
-        border-radius: 24px;
         transition: 0.25s;
         &:focus {
           background-color: transparent;
@@ -835,45 +842,84 @@ canvas{
           border-color: #1ca1c2;
         }
       }
-    #submit{
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid var(--white);
-        padding: 10px 30px;
-        outline: none;
-        color: var(--white);
-        border-radius: 24px;
-        transition: 0.25s;
-        cursor: pointer;
-        &:hover {
-          @include hover;
-        }
-    }
-    #message{
-        background: none;
-        display: block;
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid var(--white);
-        padding: 14px 10px;
-        width: 88vw;
-        outline: none;
-        color: var(--white);
-        border-radius: 24px;
-        -webkit-transition: 0.25s;
-        transition: 0.25s;
-        &:focus {
-          width: 90vw;
-          border-color: #1ca1c2;
-        }
+      #message{
+          grid-area: message;
+          background: none;
+          display: block;
+          margin: 20px auto;
+          text-align: center;
+          border: none;
+          border-bottom: 2px solid var(--white);
+          padding: 14px 10px;
+          width: 88vw;
+          outline: none;
+          color: var(--white);
+          -webkit-transition: 0.25s;
+          transition: 0.25s;
+          &:focus {
+            width: 90vw;
+            border-color: #1ca1c2;
+          }
       }
+    #submit{
+      grid-area: send;
+      background: none;
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid var(--white);
+      padding: 10px 30px;
+      outline: none;
+      color: var(--white);
+      border-radius: 10px;
+      transition: 0.25s;
+      cursor: pointer;
+      &:hover {
+        @include hover;
+      }
+    }
   }
   ::placeholder {
     font-family: Now, serif;
     color: var(--white);
     font-size: 1rem;
+  }
+
+  .contact-info{
+    display: grid;
+    grid-template-areas: "slinkcap slinkcap"
+                          "slink slink"
+                          "address qlink";
+    gap: 10px;
+    .some-words{
+      grid-area: some-words;
+      padding: 20px;
+      text-align: left;
+    }
+    .title-3{
+      padding: 10px;
+      text-align: center;
+      grid-area: slinkcap;
+    }
+    .social-links{
+      grid-area: slink;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: space-around;
+      align-items: center;
+    }
+    address{
+      grid-area: address;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .quicklinks{
+      grid-area: qlink;
+    }
   }
   .game {
     display: flex;
@@ -881,28 +927,11 @@ canvas{
     justify-content: center;
     align-content: center;
     text-align: center;
+    width: min-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .socials {
-    text-align: center;
-    margin-top: 100px;
-  }
-  .socials .title-3 {
-    text-align: center;
-  }
-  .socials #sites {
-    padding: 10px;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-.game{
-  width: min-content;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 img .lazy{
   min-height: 100px;
@@ -916,6 +945,15 @@ footer {
     background: black;
     padding: 5px;
     z-index: 5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    ul{
+      list-style: none;
+      li{
+        cursor: pointer;
+      }
+    }
     .copyright{
       a{
         text-decoration: none;
@@ -1025,21 +1063,59 @@ footer {
         grid-auto-flow: column;
         gap: 30px;
         padding: 20px;
+      }
     }
+    footer{
+      overflow: hidden;
+      ul{
+        list-style: none;
+        li{
+          cursor: pointer;
+        }
+      }
+      min-height: 100vh;
+      display: grid;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      grid-template-rows: 90% 5%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "socials contact"
+                            "socials contact"
+                            "footer footer";
     }
     .contact_me{
+      grid-area: contact;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      #form{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "name message message"
+                            "email message message"
+                            ". send .";
+        overflow: hidden; 
+      }
       #myname, #email{
-        width: 50vw;
+        width: 90%;
         &:focus {
-          width: 55vw;
+          width: 100%;
         }
       }
       #message {
-           width: 50vw;
+           width: 90%;
            &:focus {
-                 width: 55vw;
+                 width: 100%;
                }
            }
-       }
-    }  
+    }
+    .socials{
+      grid-area: socials;
+    }
+    .copyright{
+      grid-area: footer;
+    }
+}  
     
