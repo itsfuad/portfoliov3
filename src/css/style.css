@@ -1285,7 +1285,7 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "title title" "radiusraid haloween";
+      grid-template-areas: "title title title title" ". radiusraid haloween .";
   gap: 10px;
 }
 
@@ -1297,19 +1297,19 @@ canvas {
   font-size: 1.1rem;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: title;
 }
 
 .game #radiusraid {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: radiusraid;
 }
 
 .game #haloween {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   grid-area: haloween;
 }
 

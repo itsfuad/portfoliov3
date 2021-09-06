@@ -922,8 +922,8 @@ canvas{
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-areas: "title title"
-                          "radiusraid haloween";
+    grid-template-areas: "title title title title"
+                          ". radiusraid haloween .";
     gap: 10px;
     img{
       border-radius: 10px;
