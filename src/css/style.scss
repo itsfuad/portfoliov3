@@ -889,13 +889,10 @@ canvas{
     display: grid;
     grid-template-areas: "slinkcap slinkcap"
                           "slink slink"
-                          "address qlink";
+                          "address address"
+                          "game qlink";
+                          
     gap: 10px;
-    .some-words{
-      grid-area: some-words;
-      padding: 20px;
-      text-align: left;
-    }
     .title-3{
       padding: 10px;
       text-align: center;
@@ -922,15 +919,25 @@ canvas{
     }
   }
   .game {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
-    align-content: center;
-    text-align: center;
-    width: min-content;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    align-items: center;
+    grid-template-areas: "title title"
+                          "radiusraid haloween";
+    gap: 10px;
+    img{
+      border-radius: 10px;
+    }
+    .title-3{
+      font-size: 1.1rem;
+      grid-area: title;
+    }
+    #radiusraid{
+      grid-area: radiusraid;
+    }
+    #haloween{
+      grid-area: haloween;
+    }
   }
 
 img .lazy{
@@ -955,6 +962,7 @@ footer {
       }
     }
     .copyright{
+      padding-top: 30px;
       a{
         text-decoration: none;
         color:var(--white);
@@ -1116,6 +1124,12 @@ footer {
     }
     .copyright{
       grid-area: footer;
+    }
+    .contact-info{
+      grid-template-areas: "slinkcap slinkcap"
+      "slink slink"
+      "address qlink"
+      "game qlink";
     }
 }  
     

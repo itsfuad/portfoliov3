@@ -1216,14 +1216,8 @@ canvas {
 .contact-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink";
+      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "game qlink";
   gap: 10px;
-}
-
-.contact-info .some-words {
-  grid-area: some-words;
-  padding: 20px;
-  text-align: left;
 }
 
 .contact-info .title-3 {
@@ -1258,6 +1252,7 @@ canvas {
 .contact-info address {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: address;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1276,32 +1271,46 @@ canvas {
 }
 
 .contact-info .quicklinks {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: qlink;
 }
 
 .game {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "title title" "radiusraid haloween";
+  gap: 10px;
+}
+
+.game img {
+  border-radius: 10px;
+}
+
+.game .title-3 {
+  font-size: 1.1rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+}
+
+.game #radiusraid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: radiusraid;
+}
+
+.game #haloween {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: haloween;
 }
 
 img .lazy {
@@ -1332,6 +1341,10 @@ footer ul {
 
 footer ul li {
   cursor: pointer;
+}
+
+footer .copyright {
+  padding-top: 30px;
 }
 
 footer .copyright a {
@@ -1564,6 +1577,9 @@ footer .copyright a:hover {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: footer;
+  }
+  .contact-info {
+        grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink" "game qlink";
   }
 }
 /*# sourceMappingURL=style.css.map */
