@@ -7,7 +7,7 @@
   --bookmark: white;
   --white: rgba(255, 255, 255, 0.9);
   --black: rgba(0, 0, 0, 0.9);
-  --blue: rgba(2, 163, 226, 0.9);
+  --theme: rgba(43, 177, 255, 0.719);
   --primary: #222C35;
 }
 
@@ -19,7 +19,7 @@
 }
 
 a{
-  color: var(--blue);
+  color: var(--theme);
 }
 
 html{
@@ -89,7 +89,7 @@ html{
   gap: 2rem;
   transition: 400ms;
   z-index: 100;
-  box-shadow: 0 0 45px var(--blue);
+  box-shadow: 0 0 45px var(--theme);
   h1{
     position: relative;
     font-size: 4rem;
@@ -137,12 +137,12 @@ body{
 }
 
 strong{
-  color: var(--blue);
+  color: var(--theme);
   transition: 600ms;
   &:hover{
     cursor: pointer;
     color: var(--white);
-    text-shadow: 0 0 10px var(--blue);
+    text-shadow: 0 0 10px var(--theme);
   }
 }
 
@@ -187,7 +187,7 @@ header{
               width: 100%;
               bottom: 0;
               left: 0;
-              background: var(--blue);
+              background: var(--theme);
               transform: scaleX(0);
               transition: 300ms;
             }
@@ -304,8 +304,8 @@ canvas{
           text-decoration: none;
           color: inherit;
         }
-        background: var(--white);
-        color: var(--black);
+        background: var(--theme);
+        color: var(--white);
         border-radius: 5px;
         max-width: max-content;
         padding: 1rem;
@@ -313,7 +313,7 @@ canvas{
         top: 10px;
         transform: translateX(-50%) scale(1);
         text-shadow: none;
-        transition: 800ms;
+        transition: 300ms;
         &:hover{
           cursor: pointer;
           transform: translateX(-50%)scale(1.1);
@@ -332,7 +332,7 @@ canvas{
       align-items: center;
       height: 50px;
       width: 30px;
-      transition: 600ms;
+      transition: 300ms;
       &:hover{
         cursor: pointer;
       }
@@ -357,7 +357,7 @@ canvas{
             top: 0;
             height: 100%;
             width: 50%;
-            background: #A0C1FF;
+            background: var(--theme);
           }
           
           &:before {
@@ -1030,7 +1030,7 @@ footer {
           list-style: none;
           transition: 300ms;
           &.scrolled{
-            background: var(--blue);
+            background: var(--theme);
             box-shadow: 0 -2px 5px black;
             li::after{
                 background: var(--white);

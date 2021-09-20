@@ -7,7 +7,7 @@
   --bookmark: white;
   --white: rgba(255, 255, 255, 0.9);
   --black: rgba(0, 0, 0, 0.9);
-  --blue: rgba(2, 163, 226, 0.9);
+  --theme: rgba(43, 177, 255, 0.719);
   --primary: #222C35;
 }
 
@@ -20,7 +20,7 @@
 }
 
 a {
-  color: var(--blue);
+  color: var(--theme);
 }
 
 html {
@@ -109,8 +109,8 @@ html {
   -webkit-transition: 400ms;
   transition: 400ms;
   z-index: 100;
-  -webkit-box-shadow: 0 0 45px var(--blue);
-          box-shadow: 0 0 45px var(--blue);
+  -webkit-box-shadow: 0 0 45px var(--theme);
+          box-shadow: 0 0 45px var(--theme);
 }
 
 #popup h1 {
@@ -168,7 +168,7 @@ body {
 }
 
 strong {
-  color: var(--blue);
+  color: var(--theme);
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -176,7 +176,7 @@ strong {
 strong:hover {
   cursor: pointer;
   color: var(--white);
-  text-shadow: 0 0 10px var(--blue);
+  text-shadow: 0 0 10px var(--theme);
 }
 
 header {
@@ -238,7 +238,7 @@ header #navbar ul li::after {
   width: 100%;
   bottom: 0;
   left: 0;
-  background: var(--blue);
+  background: var(--theme);
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: 300ms;
@@ -383,8 +383,8 @@ canvas {
 
 #home .buttons .resume {
   position: relative;
-  background: var(--white);
-  color: var(--black);
+  background: var(--theme);
+  color: var(--white);
   border-radius: 5px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -395,8 +395,8 @@ canvas {
   -webkit-transform: translateX(-50%) scale(1);
           transform: translateX(-50%) scale(1);
   text-shadow: none;
-  -webkit-transition: 800ms;
-  transition: 800ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 #home .buttons .resume a, #home .buttons .resume a:hover, #home .buttons .resume a:focus, #home .buttons .resume a:active {
@@ -429,8 +429,8 @@ canvas {
           align-items: center;
   height: 50px;
   width: 30px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 #home .btn:hover {
@@ -465,7 +465,7 @@ canvas {
   top: 0;
   height: 100%;
   width: 50%;
-  background: #A0C1FF;
+  background: var(--theme);
 }
 
 #home .btn .chevron:before {
@@ -1461,7 +1461,7 @@ footer .copyright a:hover {
     transition: 300ms;
   }
   header #navbar ul.scrolled {
-    background: var(--blue);
+    background: var(--theme);
     -webkit-box-shadow: 0 -2px 5px black;
             box-shadow: 0 -2px 5px black;
   }
