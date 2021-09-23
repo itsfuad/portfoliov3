@@ -48,9 +48,9 @@ html{
   transition: 1s;
   z-index: 100;
     &.done{
-      //visibility: hidden !important;
-      //opacity:0 !important;
-      top: -100%;
+      ///visibility: hidden !important;
+      ///opacity:0 !important;
+      left: -100%;
       z-index: -10 !important;
     }
 }

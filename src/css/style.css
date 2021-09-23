@@ -59,7 +59,7 @@ html {
 }
 
 #load.done {
-  top: -100%;
+  left: -100%;
   z-index: -10 !important;
 }
 
