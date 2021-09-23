@@ -1514,15 +1514,15 @@ footer .copyright a:hover {
     min-height: 100vh;
     display: -ms-grid;
     display: grid;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 20px;
-    -ms-grid-rows: 90% 5%;
-        grid-template-rows: 90% 5%;
+    -ms-grid-rows: 60% 10%;
+        grid-template-rows: 60% 10%;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
         grid-template-areas: "socials contact" "socials contact" "footer footer";

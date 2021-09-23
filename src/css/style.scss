@@ -1084,10 +1084,10 @@ footer {
       }
       min-height: 100vh;
       display: grid;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
       gap: 20px;
-      grid-template-rows: 90% 5%;
+      grid-template-rows: 60% 10%;
       grid-template-columns: 50% 50%;
       grid-template-areas: "socials contact"
                             "socials contact"
