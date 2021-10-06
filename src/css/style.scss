@@ -926,7 +926,7 @@ canvas{
     justify-content: center;
     align-items: center;
     grid-template-areas: "title title title title"
-                          ". radiusraid haloween .";
+                          ". flappybird haloween .";
     gap: 10px;
     img{
       border-radius: 10px;
@@ -935,8 +935,8 @@ canvas{
       font-size: 1.1rem;
       grid-area: title;
     }
-    #radiusraid{
-      grid-area: radiusraid;
+    #flappybird{
+      grid-area: flappybird;
     }
     #haloween{
       grid-area: haloween;
