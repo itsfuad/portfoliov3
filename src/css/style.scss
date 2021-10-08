@@ -925,8 +925,8 @@ canvas{
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-areas: "title title title title"
-                          ". flappybird haloween .";
+    grid-template-areas: "title title title"
+                          "flappybird snake haloween";
     gap: 10px;
     img{
       border-radius: 10px;
@@ -940,6 +940,9 @@ canvas{
     }
     #haloween{
       grid-area: haloween;
+    }
+    #snake{
+      grid-area: snake;
     }
   }
 
