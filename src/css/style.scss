@@ -124,6 +124,7 @@ body{
     user-select: none;
     background: var(--primary);
     color: var(--white);
+    overscroll-behavior: contain;
 }
 
 

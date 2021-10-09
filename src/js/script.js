@@ -163,7 +163,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
 cross.addEventListener("click", async ()=>{
     navbar.classList.toggle("active");
     cross.classList.toggle("rotate");
-    cross.innerText = navbar.classList.contains("active") ? '×' : '≡';
+    cross.innerHTML = navbar.classList.contains("active") ? '&#10006;' : '&#9776;';
 });
 
 window.onorientationchange = ()=>{
