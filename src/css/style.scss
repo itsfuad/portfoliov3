@@ -29,31 +29,6 @@ html{
     //scroll-snap-type: y mandatory;
 }
 
-#load{
-  position: fixed;	
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;	
-  left: 50%;
-  top: 50%;		
-  background: black;
-  color: var(--white);
-  font-size:20px;
-  opacity:1;
-  visibility: visible;
-  transform: translate(-50%, -50%);
-  transform-origin: top;
-  transition: 1s;
-  z-index: 100;
-    &.done{
-      ///visibility: hidden !important;
-      ///opacity:0 !important;
-      left: -100%;
-      z-index: -10 !important;
-    }
-}
 
 .viewport{
   display: block !important;
