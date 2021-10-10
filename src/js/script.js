@@ -138,7 +138,8 @@ const popupclose = async () => {
 }
 const cross = document.getElementById('cross');
 const navbar = document.getElementById('navbar');
-window.addEventListener("DOMContentLoaded", async ()=>{
+
+window.onload =  async ()=>{
     document.getElementById("load").classList.toggle("done");
     document.getElementsByTagName("header")[0].classList.add("loaded");
     caller();
@@ -158,7 +159,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
         targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
     });
     jssor_1_slider_init();
-});
+}
 
 cross.addEventListener("click", async ()=>{
     navbar.classList.toggle("active");
