@@ -1256,7 +1256,7 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "title title title" "flappybird snake haloween";
+      grid-template-areas: "title title title" "flappybird snake tetris" ". haloween .";
   gap: 10px;
 }
 
@@ -1279,8 +1279,8 @@ canvas {
 }
 
 .game #haloween {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: haloween;
 }
 
@@ -1288,6 +1288,12 @@ canvas {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: snake;
+}
+
+.game #tetris {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: tetris;
 }
 
 img .lazy {

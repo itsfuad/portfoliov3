@@ -903,7 +903,8 @@ canvas{
     justify-content: center;
     align-items: center;
     grid-template-areas: "title title title"
-                          "flappybird snake haloween";
+                          "flappybird snake tetris"
+                          ". haloween .";
     gap: 10px;
     img{
       border-radius: 10px;
@@ -920,6 +921,9 @@ canvas{
     }
     #snake{
       grid-area: snake;
+    }
+    #tetris{
+      grid-area: tetris;
     }
   }
 
