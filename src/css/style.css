@@ -1187,7 +1187,10 @@ canvas {
 .contact-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "game qlink";
+      grid-template-areas: "slinkcap slinkcap"
+ "slink slink"
+ "address address"
+ "game qlink";
   gap: 10px;
 }
 
@@ -1256,7 +1259,9 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "title title title" "flappybird snake tetris" ". haloween .";
+      grid-template-areas: "title title title"
+ "flappybird snake tetris"
+ ". haloween .";
   gap: 10px;
 }
 
@@ -1508,7 +1513,9 @@ footer .copyright a:hover {
         grid-template-rows: 60% 10%;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-        grid-template-areas: "socials contact" "socials contact" "footer footer";
+        grid-template-areas: "socials contact"
+ "socials contact"
+ "footer footer";
   }
   footer ul {
     list-style: none;
@@ -1536,7 +1543,9 @@ footer .copyright a:hover {
     grid-auto-flow: column;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "name message message" "email message message" ". send .";
+        grid-template-areas: "name message message"
+ "email message message"
+ ". send .";
     overflow: hidden;
   }
   .contact_me #myname, .contact_me #email {
@@ -1564,7 +1573,10 @@ footer .copyright a:hover {
     grid-area: footer;
   }
   .contact-info {
-        grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink" "game qlink";
+        grid-template-areas: "slinkcap slinkcap"
+ "slink slink"
+ "address qlink"
+ "game qlink";
   }
 }
 /*# sourceMappingURL=style.css.map */
