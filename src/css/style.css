@@ -319,7 +319,7 @@ canvas {
   position: relative;
   -webkit-transition: 600ms;
   transition: 600ms;
-  font-size: 2.3rem;
+  font-size: 2rem;
   text-align: left;
   color: var(--white);
 }

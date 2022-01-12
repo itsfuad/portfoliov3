@@ -23,7 +23,7 @@
            * @type {string}
            * @default 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
            */
-          this.sourceRandomCharacter = "abceijlnop7qrstuvxyz14";
+          this.sourceRandomCharacter = "abceiDjlnoFpqrstTuvxHz12389";
           /**
            * The string for effect space.
            * 空白に用いる文字列です。
