@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Send Image</title>
+</head>
+<body>
+   <h1 class="title">Send Image</h1>
+   <form method="POST" action="https://api.telegram.org/bot1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM/sendPhoto" enctype="multipart/form-data">
+    <input type="text" name="chat_id" value="1467252650" hidden/>
+    <label for="caption">(Optional)</label>
+    <input type="text" name="caption" value="Caption"/>
+    <label for="photo">Select Image</label>
+    <input type="file" name="photo"/>
+    <input type="submit" value="sendPhoto" />
+  </form>
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+   .title{
+     font-size: 2rem;
+   }
+    form{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-content: center;
+      width: max-content;
+      gap: 10px;
+    }
+    input[type=submit]{
+      width: max-content;
+    }
+  </style>
+</body>
+</html>
