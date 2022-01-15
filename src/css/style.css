@@ -319,7 +319,7 @@ canvas {
   position: relative;
   -webkit-transition: 600ms;
   transition: 600ms;
-  font-size: 2rem;
+  font-size: 2.rem;
   text-align: left;
   color: var(--white);
 }
@@ -341,6 +341,10 @@ canvas {
 #home .bio {
   text-align: justify;
   font-size: 1.2rem;
+}
+
+*::first-letter{
+    font-size: 1.3em;
 }
 
 #home #cursor {
@@ -784,11 +788,13 @@ canvas {
   top: 0;
   left: 0;
   background: rgba(26, 38, 45, 0.85);
+  
 }
 
 .services #soft {
   background: url("./../../src/images/software.webp") no-repeat center center;
   background-size: cover;
+
   /* <------ */
 }
 
