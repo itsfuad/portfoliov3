@@ -768,6 +768,7 @@ canvas {
   background-size: cover;
   background-attachment: fixed;
   z-index: 5;
+  
 }
 
 .services .container {
@@ -834,6 +835,7 @@ canvas {
           align-items: center;
   -webkit-transition: 300ms;
   transition: 300ms;
+  
 }
 
 .services .card:hover {
@@ -843,10 +845,12 @@ canvas {
 
 .services .card .content {
   text-align: justify;
-  color: var(--black);
+  color: black;
   -webkit-transition: 600ms;
   transition: 600ms;
   padding: 20px;
+  text-shadow: 0 0 20px white;
+  
 }
 
 .services .card .language {
