@@ -319,13 +319,9 @@ canvas {
   position: relative;
   -webkit-transition: 600ms;
   transition: 600ms;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: left;
   color: var(--white);
-}
-
-#gigs{
-    font-size: 2rem;
 }
 
 #home #name h1 {
@@ -347,14 +343,9 @@ canvas {
   font-size: 1.2rem;
 }
 
-*::first-letter{
-    font-size: 1.3em;
-}
-
 #home #cursor {
   -webkit-animation: blink 600ms infinite;
           animation: blink 600ms infinite;
-    font-size: 2rem;
 }
 
 #home .buttons {
@@ -768,7 +759,6 @@ canvas {
   background-size: cover;
   background-attachment: fixed;
   z-index: 5;
-  
 }
 
 .services .container {
@@ -794,13 +784,11 @@ canvas {
   top: 0;
   left: 0;
   background: rgba(26, 38, 45, 0.85);
-  
 }
 
 .services #soft {
   background: url("./../../src/images/software.webp") no-repeat center center;
   background-size: cover;
-
   /* <------ */
 }
 
@@ -835,7 +823,6 @@ canvas {
           align-items: center;
   -webkit-transition: 300ms;
   transition: 300ms;
-  
 }
 
 .services .card:hover {
@@ -845,12 +832,10 @@ canvas {
 
 .services .card .content {
   text-align: justify;
-  color: black;
+  color: var(--black);
   -webkit-transition: 600ms;
   transition: 600ms;
   padding: 20px;
-  text-shadow: 0 0 20px white;
-  
 }
 
 .services .card .language {
@@ -1202,10 +1187,7 @@ canvas {
 .contact-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "slinkcap slinkcap"
- "slink slink"
- "address address"
- "game qlink";
+      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "game qlink";
   gap: 10px;
 }
 
@@ -1274,9 +1256,7 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "title title title"
- "flappybird snake tetris"
- ". haloween .";
+      grid-template-areas: "title title title" "flappybird snake tetris" ". haloween .";
   gap: 10px;
 }
 
@@ -1528,9 +1508,7 @@ footer .copyright a:hover {
         grid-template-rows: 60% 10%;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-        grid-template-areas: "socials contact"
- "socials contact"
- "footer footer";
+        grid-template-areas: "socials contact" "socials contact" "footer footer";
   }
   footer ul {
     list-style: none;
@@ -1558,9 +1536,7 @@ footer .copyright a:hover {
     grid-auto-flow: column;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "name message message"
- "email message message"
- ". send .";
+        grid-template-areas: "name message message" "email message message" ". send .";
     overflow: hidden;
   }
   .contact_me #myname, .contact_me #email {
@@ -1588,10 +1564,7 @@ footer .copyright a:hover {
     grid-area: footer;
   }
   .contact-info {
-        grid-template-areas: "slinkcap slinkcap"
- "slink slink"
- "address qlink"
- "game qlink";
+        grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink" "game qlink";
   }
 }
 /*# sourceMappingURL=style.css.map */
