@@ -248,6 +248,29 @@ header #cross.rotate {
           transform: rotate(180deg);
 }
 
+     #btt{
+            font-size: 4rem;
+            position: fixed;
+            bottom: -50px;
+            right: 10px;
+            height: 30px;
+            width: 30px;
+            background: white;
+            color: black;
+            border-radius: 50%;
+            text-align: justify;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 400ms;
+            transform: scale(1);
+            z-index: 8;
+        }
+        #btt.active{
+            bottom: 20px;
+            transform: scale(1);
+        }
+
 section {
   position: relative;
   display: -webkit-box;
@@ -1187,7 +1210,10 @@ canvas {
 .contact-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "game qlink";
+      grid-template-areas: "slinkcap slinkcap"
+ "slink slink"
+ "address address"
+ "game qlink";
   gap: 10px;
 }
 
@@ -1256,7 +1282,9 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "title title title" "flappybird snake tetris" ". haloween .";
+      grid-template-areas: "title title title"
+ "flappybird snake tetris"
+ ". haloween .";
   gap: 10px;
 }
 
@@ -1508,7 +1536,9 @@ footer .copyright a:hover {
         grid-template-rows: 60% 10%;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-        grid-template-areas: "socials contact" "socials contact" "footer footer";
+        grid-template-areas: "socials contact"
+ "socials contact"
+ "footer footer";
   }
   footer ul {
     list-style: none;
@@ -1536,7 +1566,9 @@ footer .copyright a:hover {
     grid-auto-flow: column;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "name message message" "email message message" ". send .";
+        grid-template-areas: "name message message"
+ "email message message"
+ ". send .";
     overflow: hidden;
   }
   .contact_me #myname, .contact_me #email {
@@ -1564,7 +1596,10 @@ footer .copyright a:hover {
     grid-area: footer;
   }
   .contact-info {
-        grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink" "game qlink";
+        grid-template-areas: "slinkcap slinkcap"
+ "slink slink"
+ "address qlink"
+ "game qlink";
   }
 }
 /*# sourceMappingURL=style.css.map */
