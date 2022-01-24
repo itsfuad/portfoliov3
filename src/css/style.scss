@@ -126,7 +126,7 @@ strong{
 }
 
 #btt{
-      font-size: 4rem;
+      font-size: 1.5rem;
       position: fixed;
       bottom: -50px;
       right: 10px;
@@ -135,13 +135,15 @@ strong{
       background: var(--theme);
       color: white;
       border-radius: 50%;
-      text-align: justify;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       transition: 400ms;
       transform: scale(1);
       z-index: 8;
+      text-align: justify;
+      //center text vertically and horizontally without flexbox
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
       &.active {
           bottom: 20px;
           transform: scale(1);

@@ -150,7 +150,7 @@ strong:hover {
 }
 
 #btt {
-  font-size: 4rem;
+  font-size: 1.5rem;
   position: fixed;
   bottom: -50px;
   right: 10px;
@@ -159,6 +159,11 @@ strong:hover {
   background: var(--theme);
   color: white;
   border-radius: 50%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 8;
   text-align: justify;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,11 +174,6 @@ strong:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  z-index: 8;
 }
 
 #btt.active {
