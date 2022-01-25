@@ -274,19 +274,61 @@ header #navbar.active {
 }
 
 header #cross {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  height: 2px;
+  width: 15px;
   margin: 10px;
-  font-size: 3rem;
-  z-index: 2;
+  background: skyblue;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 9;
+}
+
+header #cross::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15px;
+  top: 5px;
+  background: skyblue;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-header #cross.rotate {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+header #cross::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15px;
+  top: -5px;
+  background: skyblue;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header #cross:hover {
+  cursor: pointer;
+}
+
+header #cross.active {
+  cursor: pointer;
+  background: transparent;
+}
+
+header #cross.active::before {
+  top: 0;
+  background: red;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header #cross.active::after {
+  background: red;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 section {

@@ -216,15 +216,51 @@ header{
       }
     }
     #cross{
-      position: absolute;
-      top: 0;
-      right: 0;
+      position: fixed;
+      top: 20px;
+      right: 10px;
+      height: 2px;
+      width: 15px;
       margin: 10px;
-      font-size: 3rem;
-      z-index: 2;
+      background: skyblue;
       transition: 300ms;
-      &.rotate{
-        transform: rotate(180deg);
+      z-index: 9;
+      &::before{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 15px;
+        top: 5px;
+        background: skyblue;
+          transition: 300ms;
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 15px;
+        top: -5px;
+        background: skyblue;
+          transition: 300ms;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+      &.active{
+        cursor: pointer;
+        background: transparent;
+          &::before{
+          //width: 20px;
+            top: 0;
+          background: red;
+            transform: rotate(-45deg);
+      }
+      &::after{
+        //width: 10px;
+        background: red;
+        top: 0;
+         transform: rotate(45deg);
+        }
       }
     }
   }
