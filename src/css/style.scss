@@ -131,7 +131,7 @@ strong{
   align-items: center;
   justify-content: center;
   bottom: -100px;
-  right: 20px;
+  right: 10px;
   height: 50px;
   width: 50px;
   opacity: 0;
@@ -516,6 +516,7 @@ canvas{
   margin: 0;
   padding: 0;
   z-index: 5;
+
   &::before{
     content: "";
     position: absolute;
