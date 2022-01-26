@@ -3,6 +3,11 @@
   src: url("./../fonts/Now-Regular.otf");
 }
 
+@font-face {
+  font-family: Comforter;
+  src: url("./../fonts/Comforter-Regular.ttf");
+}
+
 :root{
   --bookmark: white;
   --white: rgba(255, 255, 255, 0.9);
@@ -354,6 +359,7 @@ canvas{
       h1{
         position: relative;
         z-index: 5;
+	font-family: 'Comforter', serif;
       }
     }
     #bio {
