@@ -9,17 +9,29 @@ const nav = document.getElementsByTagName("nav")[0],
 let url = window.location.href,
     nm, email, message;
 url = url.slice(url.lastIndexOf("/") + 1), more.addEventListener("click", async () => {
-    document.getElementsByClassName("about")[0].scrollIntoView(!0)
+    document.getElementsByClassName("about")[0].scrollIntoView(!0);
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 }), home.addEventListener("click", async () => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0),
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 }), url = url.slice(url.lastIndexOf("/") + 1), about.addEventListener("click", async () => {
-    document.getElementsByClassName("about")[0].scrollIntoView(!0)
+    document.getElementsByClassName("about")[0].scrollIntoView(!0),
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 }), url = url.slice(url.lastIndexOf("/") + 1), services.addEventListener("click", async () => {
-    document.getElementsByClassName("services")[0].scrollIntoView(!0)
+    document.getElementsByClassName("services")[0].scrollIntoView(!0),
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 }), url = url.slice(url.lastIndexOf("/") + 1), contact.addEventListener("click", async () => {
-    document.getElementsByClassName("contact_me")[0].scrollIntoView(!0)
+    document.getElementsByClassName("contact_me")[0].scrollIntoView(!0),
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 }), projects.addEventListener("click", async () => {
-    document.getElementsByClassName("works")[0].scrollIntoView(!0)
+    document.getElementsByClassName("works")[0].scrollIntoView(!0),
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
 });
 const get_ready = () => (nm = document.getElementById("myname").value, email = document.getElementById("email").value, message = document.getElementById("message").value, message = "Hey Baby! There is a new message for you.\n\nName: " + nm + "\nEmail: " + email + "\nMessage: " + message, message),
     sender = async message => {
