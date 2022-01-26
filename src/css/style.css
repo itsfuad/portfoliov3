@@ -150,44 +150,81 @@ strong:hover {
 }
 
 #btt {
-  font-size: 1.5rem;
   position: fixed;
-  bottom: -50px;
-  right: 10px;
-  height: 30px;
-  width: 30px;
-  background: var(--theme);
-  color: white;
-  border-radius: 50%;
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  z-index: 8;
-  text-align: justify;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -100px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  background: rgba(128, 255, 0, 0);
+  border-radius: 20px;
+  z-index: 100;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
-#btt.active {
-  bottom: 20px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+#btt .chevron2 {
+  position: absolute;
+  top: 0;
+  width: 2.1rem;
+  height: 0.48rem;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: move-chevron 1.5s ease-out infinite;
+          animation: move-chevron 1.5s ease-out infinite;
+}
+
+#btt .chevron2:first-child {
+  -webkit-animation: move-chevron 1.5s ease-out 0.5s infinite;
+          animation: move-chevron 1.5s ease-out 0.5s infinite;
+}
+
+#btt .chevron2:nth-child(2) {
+  -webkit-animation: move-chevron 1.5s ease-out 1s infinite;
+          animation: move-chevron 1.5s ease-out 1s infinite;
+}
+
+#btt .chevron2:before, #btt .chevron2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: var(--theme);
+}
+
+#btt .chevron2:before {
+  left: 0;
+  -webkit-transform: skewY(30deg);
+          transform: skewY(30deg);
+}
+
+#btt .chevron2:after {
+  right: 0;
+  width: 50%;
+  -webkit-transform: skewY(-30deg);
+          transform: skewY(-30deg);
 }
 
 #btt:hover {
   cursor: pointer;
-  background: white;
-  -webkit-box-shadow: 0 0 40px var(--theme);
-          box-shadow: 0 0 40px var(--theme);
-  color: var(--theme);
+}
+
+#btt.active {
+  bottom: 20px;
+  opacity: 1;
 }
 
 header {
@@ -273,17 +310,28 @@ header #navbar.active {
   background: rgba(0, 0, 0, 0.967);
 }
 
-header #cross {
+header #cross-wrapper {
   position: fixed;
   top: 20px;
   right: 10px;
+  background: #4e4eca00;
+  padding: auto;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+header #cross-wrapper:hover {
+  cursor: pointer;
+}
+
+header #cross {
+  position: relative;
   height: 2px;
   width: 15px;
   margin: 10px;
-  background: skyblue;
+  background: white;
   -webkit-transition: 300ms;
   transition: 300ms;
-  z-index: 9;
 }
 
 header #cross::before {
@@ -292,7 +340,7 @@ header #cross::before {
   height: 2px;
   width: 15px;
   top: 5px;
-  background: skyblue;
+  background: white;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -303,13 +351,9 @@ header #cross::after {
   height: 2px;
   width: 15px;
   top: -5px;
-  background: skyblue;
+  background: white;
   -webkit-transition: 300ms;
   transition: 300ms;
-}
-
-header #cross:hover {
-  cursor: pointer;
 }
 
 header #cross.active {
@@ -351,12 +395,6 @@ section {
   overflow: hidden;
   font-size: 1.2rem;
   padding: 4rem 5%;
-}
-
-#st {
-  margin: 0;
-  padding: 0;
-  position: fixed;
 }
 
 #particles-js {
@@ -626,7 +664,7 @@ canvas {
       -ms-flex-pack: center;
           justify-content: center;
   background: #222c35;
-  color: var(white);
+  color: var(--white);
   margin: 0;
   padding: 0;
   z-index: 5;
@@ -637,16 +675,29 @@ canvas {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(14, 23, 31, 0.768);
+  background: #222c35;
 }
 
 .works .container {
   color: #cccccc;
   height: 100%;
   text-align: justify;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "github"  "arts";
 }
 
 .works .container #github-projects {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: github;
   padding: 50px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -659,11 +710,9 @@ canvas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: url("../images/5.webp") center;
-  background-size: cover;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .works .container #github-projects ul {
@@ -687,8 +736,8 @@ canvas {
   position: relative;
   padding-left: 15px;
   margin-bottom: 15px;
-  left: 40%;
-  opacity: 0.1;
+  left: 0;
+  opacity: 1;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -709,15 +758,14 @@ canvas {
   cursor: pointer;
 }
 
-.works .container #github-projects ul li[data-scroll="in"] {
-  opacity: 1;
-  left: 0;
-}
-
 .works .container #image-gallary {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: arts;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
+  width: 90vw;
   padding-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1565,6 +1613,19 @@ footer .copyright a:hover {
   .about #quote {
     height: 50px;
     width: 50px;
+  }
+  .works .container {
+    padding: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "github arts";
+  }
+  .works .container #image-gallary {
+    width: unset;
   }
   .services {
     padding-left: 5%;

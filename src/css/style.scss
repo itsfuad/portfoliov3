@@ -126,35 +126,63 @@ strong{
 }
 
 #btt{
-      font-size: 1.5rem;
-      position: fixed;
-      bottom: -50px;
-      right: 10px;
-      height: 30px;
-      width: 30px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -100px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  background: rgba(128, 255, 0, 0);
+  border-radius: 20px;
+  z-index: 100;
+  transform: rotate(180deg);
+  transition: 300ms;
+  .chevron2 {
+    position: absolute;
+    top: 0;
+    width: 2.1rem;
+    height: 0.48rem;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: move-chevron 1.5s ease-out infinite;
+    &:first-child {
+      animation: move-chevron 1.5s ease-out 0.5s infinite;
+    }
+    &:nth-child(2) {
+      animation: move-chevron 1.5s ease-out 1s infinite;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
       background: var(--theme);
-      color: white;
-      border-radius: 50%;
-      transition: 400ms;
-      transform: scale(1);
-      z-index: 8;
-      text-align: justify;
-      //center text vertically and horizontally without flexbox
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      &.active {
-          bottom: 20px;
-          transform: scale(1);
-      }
-      &:hover{
-        cursor: pointer;
-        background: white;
-        box-shadow: 0 0 40px var(--theme);
-        color: var(--theme);
-      }
+    }
+    
+    &:before {
+      left: 0;
+      transform: skewY(30deg);
+    }
+    
+    &:after {
+      right: 0;
+      width: 50%;
+      transform: skewY(-30deg);
+    }
   }
+  &:hover{
+    cursor: pointer;
+  }
+  &.active{
+    bottom: 20px;
+    opacity: 1;
+  }
+}
 
 header{
   position: fixed;
@@ -215,23 +243,33 @@ header{
         background: rgba(0, 0, 0, 0.967);
       }
     }
-    #cross{
+    #cross-wrapper{
       position: fixed;
       top: 20px;
       right: 10px;
+      background: #4e4eca00;
+      padding: auto;
+      border-radius: 50%;
+      z-index: 9;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    #cross{
+      position: relative;
       height: 2px;
       width: 15px;
       margin: 10px;
-      background: skyblue;
+      background: rgb(255, 255, 255);
       transition: 300ms;
-      z-index: 9;
+      
       &::before{
         position: absolute;
         content: '';
         height: 2px;
         width: 15px;
         top: 5px;
-        background: skyblue;
+        background: rgb(255, 255, 255);
           transition: 300ms;
       }
       &::after{
@@ -240,26 +278,24 @@ header{
         height: 2px;
         width: 15px;
         top: -5px;
-        background: skyblue;
+        background: rgb(255, 255, 255);
           transition: 300ms;
       }
-      &:hover{
-        cursor: pointer;
-      }
+      
       &.active{
         cursor: pointer;
         background: transparent;
           &::before{
           //width: 20px;
-            top: 0;
+          top: 0;
           background: red;
-            transform: rotate(-45deg);
-      }
-      &::after{
-        //width: 10px;
-        background: red;
-        top: 0;
-         transform: rotate(45deg);
+          transform: rotate(-45deg);
+        }
+          &::after{
+          //width: 10px;
+          background: red;
+          top: 0;
+          transform: rotate(45deg);
         }
       }
     }
@@ -280,12 +316,6 @@ header{
   font-size: 1.2rem;
   padding: 4rem 5%;
   //scroll-snap-align: start;
-}
-
-#st{
-  margin: 0;
-  padding: 0;
-  position: fixed;
 }
 
 #particles-js{
@@ -482,7 +512,7 @@ canvas{
   position: relative;
   justify-content: center;
   background: #222c35;
-  color: var(white);
+  color: var(--white);
   margin: 0;
   padding: 0;
   z-index: 5;
@@ -491,21 +521,28 @@ canvas{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(14, 23, 31, 0.768);
+    background: #222c35;
   }
   .container{
     color: rgb(204, 204, 204);
     height: 100%;
     text-align: justify;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "github" 
+                          "arts";
     #github-projects{
+      grid-area: github;
       padding: 50px 10px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       justify-content: center;
-      align-items: center;
-      background: url("../images/5.webp") center;
-      background-size: cover;
+      align-items: flex-start;
+      //background: url("../images/5.webp") center;
+      //background-size: cover;
       ul{
         color: var(--white);
         position: relative;
@@ -525,8 +562,8 @@ canvas{
           position: relative;
           padding-left: 15px;
           margin-bottom:15px;
-          left: 40%;
-          opacity: 0.1;
+          left: 0;
+          opacity: 1;
           transition: 600ms;
           &::before{
             content:"";
@@ -542,16 +579,14 @@ canvas{
           &:hover{
             cursor: pointer;
           }
-          &[data-scroll="in"]{
-            opacity: 1;
-            left: 0;
-          }
         }
         
       }
     }
     #image-gallary{
+      grid-area: arts;
       min-height: max-content;
+      width: 90vw;
       padding-bottom: 5%;
       display: flex;
       flex-direction: column;
@@ -1116,6 +1151,17 @@ footer {
       #quote{
         height: 50px;
         width: 50px;
+      }
+    }
+    .works{
+      .container{
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: "github arts";
+        #image-gallary{
+          width:unset;
+        }
       }
     }
     .services{

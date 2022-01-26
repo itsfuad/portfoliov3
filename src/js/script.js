@@ -59,14 +59,14 @@ const mySound = new sound("src/msg.wav"),
     send = () => (mySound.play(), console.log("preparing message"), document.getElementById("popupwrap").classList.add("active"), document.getElementById("popup").classList.add("active"), sender(get_ready()), console.log("message sent"), document.getElementById("myname").value = "", document.getElementById("email").value = "", document.getElementById("message").value = "", !1),
     popupclose = async () => {
         document.getElementById("popupwrap").classList.remove("active"), document.getElementById("popup").classList.remove("active")
-    }, cross = document.getElementById("cross"), navbar = document.getElementById("navbar");
+    }, crossWrap = document.getElementById("cross-wrapper"), cross = document.getElementById("cross"), navbar = document.getElementById("navbar");
 window.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("load").classList.toggle("done"), document.getElementsByTagName("header")[0].classList.add("loaded"), caller(), agent(), media.matches && (window.onscroll = () => {
         scrollFunction()
     }, scrollFunction()), ScrollOut({
-        targets: "#home, .about div, #about-img, .card, .subcontainer-1 ul li"
+        targets: "#home, .about div, #about-img, .card"
     }), jssor_1_slider_init()
-}), cross.addEventListener("click", async () => {
+}), crossWrap.addEventListener("click", async () => {
     navbar.classList.toggle("active");
     cross.classList.toggle("active");
 }), window.onorientationchange = () => {
