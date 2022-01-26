@@ -355,10 +355,12 @@ canvas{
       transition: 600ms;
       font-size: 2rem;
       text-align: left;
+      margin-left: 20px;
       color: var(--white);
       h1{
         position: relative;
         z-index: 5;
+        font-size: 4rem;
 	font-family: 'Comforter', serif;
       }
     }

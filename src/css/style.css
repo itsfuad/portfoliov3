@@ -447,12 +447,14 @@ canvas {
   transition: 600ms;
   font-size: 2rem;
   text-align: left;
+  margin-left: 20px;
   color: var(--white);
 }
 
 #home #name h1 {
   position: relative;
   font-family: 'Comforter', serif;
+  font-size: 4rem;
   z-index: 5;
 }
 
