@@ -10,22 +10,36 @@
    <h1 class="title">Send Image</h1>
    <form method="POST" action="https://api.telegram.org/bot1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM/sendPhoto" enctype="multipart/form-data">
     <input type="text" name="chat_id" value="1467252650" hidden/>
-    <label for="caption">(Optional)</label>
+    <label for="caption">Caption (Optional)</label>
     <input type="text" name="caption" value=""/>
     <label for="photo">Select Image</label>
     <input type="file" name="photo" required/>
     <input type="submit" value="sendPhoto" />
   </form>
   <style>
+    @font-face {
+    font-family: Now;
+    src: url("src/fonts/Now-Regular.otf");
+    }
+
+    @font-face {
+      font-family: Comforter;
+      src: url("src/fonts/Comforter-Regular.ttf");
+    }
     body{
+      font-family: 'Now';
+      color: rgb(221, 237, 252);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      background: linear-gradient( -212deg, rgb(189, 218, 230), rgb(0, 102, 255));
+      overflow: hidden;
     }
    .title{
      font-size: 2rem;
+     font-family: 'Comforter';
    }
     form{
       display: flex;
@@ -34,9 +48,37 @@
       justify-content: center;
       width: max-content;
       gap: 10px;
+      background: rgba(255, 255, 255, 0.22);
+      padding: 20px;
+      border-radius: 20px;
+    }
+    input{
+      background: rgba(255, 255, 255, 0.316);
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+    input[type=file]::file-selector-button {
+    border: 2px solid rgba(255, 255, 255, 0.316);
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: rgba(255, 255, 255, 0.316);
+    transition: 600ms;
+    }
+
+    input[type=file]::file-selector-button:hover {
+      background-color: rgb(40, 153, 206);
+      border: 2px solid rgb(40, 153, 206);
     }
     input[type=submit]{
-      width: max-content;
+      width: 100%;
+      padding: 5px;
+      color: rgb(221, 237, 252);
+      transition: 600ms;
+    }
+    input[type=submit]:hover{
+      cursor: pointer;
+      background-color: rgb(40, 153, 206);
     }
   </style>
 </body>

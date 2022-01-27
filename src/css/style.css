@@ -453,9 +453,9 @@ canvas {
 
 #home #name h1 {
   position: relative;
-  font-family: 'Comforter', serif;
-  font-size: 4rem;
   z-index: 5;
+  font-size: 4rem;
+  font-family: 'Comforter', serif;
 }
 
 #home #bio {
@@ -1071,145 +1071,81 @@ canvas {
 .services #c {
   background-color: #4f89f5;
   width: 85%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #cplus {
   background-color: #3402a7;
   width: 90%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #cs {
   background-color: #4e4eca;
   width: 70%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #java {
   background-color: #F56161;
   width: 75%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #py {
   background-color: #1463da;
   width: 80%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #kt {
   background-color: #123f92;
   width: 60%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #go {
   background-color: #4f9ffa;
   width: 60%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #html {
   background-color: #ff8800;
   width: 90%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #css {
   background-color: #8ac1ff;
   width: 75%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #js {
   background-color: #f8fa76;
   width: 60%;
-  color: var(--black);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #php {
   background-color: #7699fa;
   width: 50%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #sketch {
   background-color: var(--black);
   width: 80%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #digi {
   background-color: #ffc493;
   width: 85%;
-  color: var(--black);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #logo {
   background-color: #ff3b3b;
   width: 90%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #threed {
   background-color: #fdff70;
   width: 65%;
-  color: var(--black);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services #twod {
   background-color: #7473ac;
   width: 70%;
-  color: var(--white);
-  padding-left: 5px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
 }
 
 .services .percentage div {
