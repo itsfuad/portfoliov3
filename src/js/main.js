@@ -48,72 +48,87 @@ projects.addEventListener("click", async () => {
     cross.classList.remove("active");
 });
 
+
 const get_ready = () => {
     nm = document.getElementById("myname").value;
     email = document.getElementById("email").value;
     message = document.getElementById("message").value;
-    message = "Hey Baby! There is a new message for you.\n\nName: " + nm + "\nEmail: " + email + "\nMessage: " + message, message;
+    message = "Hey Baby! There is a new message for you.\n\nName: "+nm+"\nEmail: "+email+"\nMessage: "+message;
+    return message;
 }
-sender = async message => {
-    var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM", chat_id = 1467252650,
-        settings = {
-            async: !0,
-            crossDomain: !0,
-            url: "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "cache-control": "no-cache"
-            },
-            data: JSON.stringify({
-                chat_id: chat_id,
-                text: message
-            })
-        };
-    $.ajax(settings).done();
-}
-json = url => {
-    fetch(url).then(res => {
-        res.json()
-    })
-}
-const agent = async () => {
-    data = "Hey baby! Your website was visited by: " + navigator.userAgent;
-    if (localStorage.getItem("agent_f") !== navigator.userAgent){
-        localStorage.setItem("agent_f", navigator.userAgent);
-        await sender(data);
+
+const sender = (message) => {
+    
+    var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
+    var chat_id = 1467252650;
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "method": "POST",
+        "headers": {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache"
+        },
+        "data": JSON.stringify({
+        "chat_id": chat_id,
+        "parse_mode": "HTML",
+        "text": message
+        })
     }
-};
+    $.ajax(settings).done(); 
+}
+
+const agent = async () => {
+    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent;
+    //console.log(data);
+    if (localStorage.getItem("agent_f") != window.navigator.userAgent){
+        localStorage.setItem("agent_f", window.navigator.userAgent);
+        //console.log("new visitor");
+        sender(data);
+    }
+    /*
+    else{
+        console.log("already visited!");
+    }
+    */
+}
+
+
+
 class sound {
     constructor(src) {
         try {
-            this.sound = document.createElement("audio")
-            this.sound.src = src
-            this.sound.setAttribute("preload", "auto")
-            this.sound.setAttribute("controls", "none")
-            this.sound.style.display = "none"
-            document.body.appendChild(this.sound)
+            this.sound = document.createElement("audio");
+            this.sound.src = src;
+            this.sound.setAttribute("preload", "auto");
+            this.sound.setAttribute("controls", "none");
+            this.sound.style.display = "none";
+            document.body.appendChild(this.sound);
             this.play = function() {
-                this.sound.play()
+                this.sound.play();
             }
             this.stop = function() {
-                this.sound.pause()
+                this.sound.pause();
             }
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
     }
 }
-const mySound = new sound("src/msg.wav");
+const mySound = new sound("src/audio/msg.wav");
 send = () => {
     mySound.play();
     console.log("preparing message");
     document.getElementById("popupwrap").classList.add("active");
     document.getElementById("popup").classList.add("active");
-    sender(get_ready()), console.log("message sent");
+    sender(get_ready());
+    console.log("message sent");
     document.getElementById("myname").value = "";
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
+    return false;
 }
 popupclose = async () => {
     document.getElementById("popupwrap").classList.remove("active");
