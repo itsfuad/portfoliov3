@@ -53,19 +53,19 @@ const get_ready = () => {
     nm = document.getElementById("myname").value;
     email = document.getElementById("email").value;
     message = document.getElementById("message").value;
-    message = "Hey Baby! There is a new message for you.\n\nName: "+nm+"\nEmail: "+email+"\nMessage: "+message;
+    message = `Hey Baby! New Message from ${nm}\nEmail: ${email}\nMessage: ${message}`;
     return message;
 }
 
 const sender = (message) => {
     
-    var telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
-    var chat_id = 1467252650;
+    const telegram_bot_id = "1947500257:AAELEwND435QBq1pEsDKNtAmcecMl5rhDtM";
+    const chat_id = 1467252650;
 
-    var settings = {
+    const settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+        "url": `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`,
         "method": "POST",
         "headers": {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const sender = (message) => {
 }
 
 const agent = async () => {
-    data = "Hey baby! Your website was visited by: " + window.navigator.userAgent;
+    data = `Hey baby! Your website was visited by: ${window.navigator.userAgent}`;
     //console.log(data);
     if (localStorage.getItem("agent_f") != window.navigator.userAgent){
         localStorage.setItem("agent_f", window.navigator.userAgent);
