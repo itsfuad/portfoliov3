@@ -832,8 +832,6 @@ canvas {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 
 .works .container .games .wrapper {
