@@ -34,7 +34,7 @@ firebase.database().ref("All Pin/Contents").on('child_added', (snapshot, prevChi
 });
 
 
-var channelID = "UCsBjURrPoezykLs9EqgamOA";
+var channelID = "UC0SO-iZgpZRVS38qt6xgh7Q";
     var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
     $.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
        var link = data.items[0].link;

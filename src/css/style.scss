@@ -34,6 +34,10 @@ html{
     //scroll-snap-type: y mandatory;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 
 .viewport{
   display: block !important;
@@ -105,6 +109,8 @@ body{
     background: var(--primary);
     color: var(--white);
     overscroll-behavior: contain;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -140,7 +146,6 @@ strong{
   height: 50px;
   width: 50px;
   opacity: 0;
-  background: rgba(128, 255, 0, 0);
   border-radius: 20px;
   z-index: 100;
   transform: rotate(180deg);
@@ -540,7 +545,8 @@ canvas{
     gap: 20px;
     justify-content: center;
     align-items: center;
-    grid-template-areas: "github" 
+    grid-template-areas: "github"
+                          "games"
                           "arts";
     #github-projects{
       grid-area: github;
@@ -549,7 +555,7 @@ canvas{
       flex-direction: column;
       gap: 20px;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       //background: url("../images/5.webp") center;
       //background-size: cover;
       ul{
@@ -605,6 +611,32 @@ canvas{
       background: rgba(107, 138, 163, 0.707);
       .title-2{
         padding: 20px;
+      }
+    }
+    .games{
+      position: relative;
+      grid-area: games;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      max-width: 90vw;
+      img{
+        overflow: auto;
+        border-radius: 5px;
+        height: 10vh;
+        width: fit-content;
+        cursor: grab;
+      }
+      .wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
       }
     }
   }
@@ -931,10 +963,11 @@ canvas{
 
   .contact-info{
     display: grid;
+    align-items: center;
     grid-template-areas: "slinkcap slinkcap"
                           "slink slink"
                           "address address"
-                          "game qlink";
+                          "videos videos";
                           
     gap: 10px;
     .title-3{
@@ -961,33 +994,14 @@ canvas{
     .quicklinks{
       grid-area: qlink;
     }
-  }
-  .game {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas: "title title title"
-                          "flappybird snake tetris"
-                          ". haloween .";
-    gap: 10px;
-    img{
-      border-radius: 10px;
-    }
-    .title-3{
-      font-size: 1.1rem;
-      grid-area: title;
-    }
-    #flappybird{
-      grid-area: flappybird;
-    }
-    #haloween{
-      grid-area: haloween;
-    }
-    #snake{
-      grid-area: snake;
-    }
-    #tetris{
-      grid-area: tetris;
+    .videos{
+      grid-area: videos;
+      iframe{
+        padding: 10px;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
     }
   }
 
@@ -1005,7 +1019,7 @@ footer {
     z-index: 5;
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     ul{
       list-style: none;
       li{
@@ -1118,11 +1132,17 @@ footer {
     .works{
       .container{
         padding: 20px;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        grid-template-areas: "github arts";
+        grid-template-areas: "github games"
+                              "arts arts";
         #image-gallary{
           width:unset;
+        }
+        .games{
+          img{
+            height: 10vw;
+          }
         }
       }
     }
@@ -1146,11 +1166,10 @@ footer {
       }
       min-height: 100vh;
       display: grid;
-      align-items: center;
-      justify-content: space-between;
+      align-items: end;
+      justify-content: stretch;
       gap: 20px;
-      grid-template-rows: 60% 10%;
-      grid-template-columns: 50% 50%;
+
       grid-template-areas: "socials contact"
                             "socials contact"
                             "footer footer";
@@ -1160,6 +1179,7 @@ footer {
       display: grid;
       align-items: center;
       justify-content: center;
+      gap: 20px;
       #form{
         display: grid;
         grid-auto-flow: column;
@@ -1189,10 +1209,11 @@ footer {
       grid-area: footer;
     }
     .contact-info{
-      grid-template-areas: "slinkcap slinkcap"
+      grid-template-areas: "videos videos"
+      "slinkcap slinkcap"
       "slink slink"
-      "address qlink"
-      "game qlink";
+      "address address";
+      gap: 10px;
     }
 }  
     

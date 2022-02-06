@@ -34,6 +34,10 @@ html {
   scrollbar-width: thin;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .viewport {
   display: block !important;
 }
@@ -128,6 +132,10 @@ body {
   background: var(--primary);
   color: var(--white);
   overscroll-behavior: contain;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .title-2 {
@@ -170,7 +178,6 @@ strong:hover {
   height: 50px;
   width: 50px;
   opacity: 0;
-  background: rgba(128, 255, 0, 0);
   border-radius: 20px;
   z-index: 100;
   -webkit-transform: rotate(180deg);
@@ -699,7 +706,7 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "github"  "arts";
+      grid-template-areas: "github" "games" "arts";
 }
 
 .works .container #github-projects {
@@ -718,9 +725,9 @@ canvas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .works .container #github-projects ul {
@@ -767,7 +774,7 @@ canvas {
 }
 
 .works .container #image-gallary {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: arts;
   min-height: -webkit-max-content;
@@ -794,6 +801,58 @@ canvas {
 
 .works .container #image-gallary .title-2 {
   padding: 20px;
+}
+
+.works .container .games {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: games;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 90vw;
+}
+
+.works .container .games img {
+  overflow: auto;
+  border-radius: 5px;
+  height: 10vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.works .container .games .wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /*jssor slider loading skin spin css*/
@@ -1264,7 +1323,10 @@ canvas {
 .contact-info {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "game qlink";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "videos videos";
   gap: 10px;
 }
 
@@ -1319,58 +1381,21 @@ canvas {
 }
 
 .contact-info .quicklinks {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
   grid-area: qlink;
 }
 
-.game {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-      grid-template-areas: "title title title" "flappybird snake tetris" ". haloween .";
-  gap: 10px;
-}
-
-.game img {
-  border-radius: 10px;
-}
-
-.game .title-3 {
-  font-size: 1.1rem;
-  -ms-grid-row: 1;
+.contact-info .videos {
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: title;
+  -ms-grid-column-span: 2;
+  grid-area: videos;
 }
 
-.game #flappybird {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: flappybird;
-}
-
-.game #haloween {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: haloween;
-}
-
-.game #snake {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: snake;
-}
-
-.game #tetris {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: tetris;
+.contact-info .videos iframe {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 img .lazy {
@@ -1390,9 +1415,9 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 footer ul {
@@ -1560,16 +1585,18 @@ footer .copyright a:hover {
   }
   .works .container {
     padding: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-        grid-template-areas: "github arts";
+        grid-template-areas: "github games" "arts arts";
   }
   .works .container #image-gallary {
     width: unset;
+  }
+  .works .container .games img {
+    height: 10vw;
   }
   .services {
     padding-left: 5%;
@@ -1587,17 +1614,13 @@ footer .copyright a:hover {
     min-height: 100vh;
     display: -ms-grid;
     display: grid;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
     gap: 20px;
-    -ms-grid-rows: 60% 10%;
-        grid-template-rows: 60% 10%;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
         grid-template-areas: "socials contact" "socials contact" "footer footer";
   }
   footer ul {
@@ -1619,6 +1642,7 @@ footer .copyright a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 20px;
   }
   .contact_me #form {
     display: -ms-grid;
@@ -1654,7 +1678,8 @@ footer .copyright a:hover {
     grid-area: footer;
   }
   .contact-info {
-        grid-template-areas: "slinkcap slinkcap" "slink slink" "address qlink" "game qlink";
+        grid-template-areas: "videos videos" "slinkcap slinkcap" "slink slink" "address address";
+    gap: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
