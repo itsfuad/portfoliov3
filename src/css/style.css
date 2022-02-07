@@ -12,8 +12,8 @@
   --bookmark: white;
   --white: rgba(255, 255, 255, 0.9);
   --black: rgba(0, 0, 0, 0.9);
-  --theme: #065fd4;
-  --primary: #020304;
+  --theme: #167ac6;
+  --primary: #0d131a;
 }
 
 * {
@@ -440,6 +440,16 @@ canvas {
   background-size: cover;
   background-attachment: fixed;
   z-index: 5;
+}
+
+#home::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #0d131a9f;
 }
 
 #home .content {
@@ -990,7 +1000,7 @@ canvas {
   width: 100%;
   top: 0;
   left: 0;
-  background: #000000b9;
+  background: #070a12db;
 }
 
 .services #soft {
@@ -1545,6 +1555,7 @@ footer .copyright a:hover {
   }
   header #navbar ul {
     position: relative;
+    font-size: 1.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1564,8 +1575,8 @@ footer .copyright a:hover {
   }
   header #navbar ul.scrolled {
     background: transparent;
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
   }
   header #navbar ul li {
     position: relative;
