@@ -1441,6 +1441,7 @@ footer {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  gap: 50px;
 }
 
 footer ul {
@@ -1641,13 +1642,13 @@ footer .copyright a:hover {
     min-height: 100vh;
     display: -ms-grid;
     display: grid;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
-    gap: 20px;
+    gap: 10px;
         grid-template-areas: "socials contact" "socials contact" "footer footer";
   }
   footer ul {
@@ -1669,6 +1670,7 @@ footer .copyright a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    align-self: flex-start;
     gap: 20px;
   }
   .contact_me #form {
@@ -1707,6 +1709,8 @@ footer .copyright a:hover {
   .contact-info {
         grid-template-areas: "videos videos" "slinkcap slinkcap" "slink slink" "address address";
     gap: 10px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 /*# sourceMappingURL=style.css.map */

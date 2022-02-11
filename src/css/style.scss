@@ -1045,7 +1045,7 @@ footer {
     display: grid;
     justify-content: center;
     align-items: end;
-
+    gap: 50px;
     ul{
       list-style: none;
       li{
@@ -1184,19 +1184,20 @@ footer {
       }
     }
     footer{
-      overflow: hidden;
       ul{
         list-style: none;
         li{
           cursor: pointer;
         }
       }
+
+      overflow: hidden;
       min-height: 100vh;
       display: grid;
-      align-items: end;
+      align-items: start;
       justify-content: stretch;
-      gap: 20px;
-
+      gap: 10px;
+      
       grid-template-areas: "socials contact"
                             "socials contact"
                             "footer footer";
@@ -1206,8 +1207,8 @@ footer {
       display: grid;
       align-items: center;
       justify-content: center;
+      align-self: flex-start;
       gap: 20px;
-
       #form{
         display: grid;
         grid-auto-flow: column;
@@ -1242,6 +1243,7 @@ footer {
       "slink slink"
       "address address";
       gap: 10px;
+      align-self: flex-end;
     }
 }  
     
