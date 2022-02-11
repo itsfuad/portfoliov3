@@ -700,7 +700,6 @@ canvas {
   background: var(--primary);
   color: var(--white);
   margin: 0;
-  padding: 0;
   z-index: 5;
 }
 
@@ -725,6 +724,8 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: "github" "games" "arts";
 }
 
@@ -835,19 +836,13 @@ canvas {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 90vw;
 }
 
 .works .container .games img {
   overflow: auto;
   border-radius: 5px;
-  height: 10vh;
+  height: -webkit-fill-available;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -856,20 +851,11 @@ canvas {
 .works .container .games .wrapper {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  gap: 40px;
+  justify-items: center;
 }
 
 /*jssor slider loading skin spin css*/
