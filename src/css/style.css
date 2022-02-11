@@ -848,11 +848,15 @@ canvas {
 .works .container .games img {
   overflow: auto;
   border-radius: 5px;
-  height: -webkit-fill-available;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   aspect-ratio: 1/1;
 }
 
@@ -1620,9 +1624,6 @@ footer .copyright a:hover {
   }
   .works .container #image-gallary {
     width: unset;
-  }
-  .works .container .games img {
-    height: 10vw;
   }
   .services {
     padding-left: 5%;

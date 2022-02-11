@@ -645,9 +645,10 @@ canvas{
       img{
         overflow: auto;
         border-radius: 5px;
-        height: -webkit-fill-available;
+        height: fit-content;
         width: fit-content;
         max-width: 100px;
+        object-fit: scale-down;
         aspect-ratio: 1/1;
       }
       .wrapper{
@@ -1169,11 +1170,6 @@ footer {
                               "arts arts";
         #image-gallary{
           width:unset;
-        }
-        .games{
-          img{
-            height: 10vw;
-          }
         }
       }
     }
