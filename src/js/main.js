@@ -12,40 +12,34 @@ let url = window.location.href, nm, email, message;
 url = url.slice(url.lastIndexOf("/") + 1);
 more.addEventListener("click", async () => {
     document.getElementsByClassName("about")[0].scrollIntoView(!0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 home.addEventListener("click", async () => {
     window.scrollTo(0, 0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 url = url.slice(url.lastIndexOf("/") + 1);
 about.addEventListener("click", async () => {
     document.getElementsByClassName("about")[0].scrollIntoView(!0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 url = url.slice(url.lastIndexOf("/") + 1), services.addEventListener("click", async () => {
     document.getElementsByClassName("services")[0].scrollIntoView(!0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 url = url.slice(url.lastIndexOf("/") + 1);
 contact.addEventListener("click", async () => {
     document.getElementsByClassName("contact_me")[0].scrollIntoView(!0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 projects.addEventListener("click", async () => {
     document.getElementsByClassName("works")[0].scrollIntoView(!0);
-    navbar.classList.remove("active");
-    cross.classList.remove("active");
+
 });
 
 
@@ -168,6 +162,7 @@ window.onresize = () => {
 const scrollFunction = () => {
     document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? document.getElementsByClassName("nv")[0].classList.add("scrolled") : document.getElementsByClassName("nv")[0].classList.remove("scrolled");
 }
+
 window.addEventListener("scroll", () => {
     document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ? document.getElementById("btt").classList.add("active") : document.getElementById("btt").classList.remove("active");
 });
@@ -185,3 +180,9 @@ var channelID = "UC0SO-iZgpZRVS38qt6xgh7Q";
        var id = link.substr(link.indexOf("=")+1);
     $("#youtube_video").attr("src","https://youtube.com/embed/"+ id + "?controls=1&showinfo=0&rel=0");
     });
+
+var main = document.getElementById("main");
+main.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    cross.classList.remove("active");
+});
