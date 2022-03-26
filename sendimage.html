@@ -13,7 +13,8 @@
     <label for="caption">Caption (Optional)</label>
     <input type="text" name="caption" value=""/>
     <label for="photo">Select Image</label>
-    <input type="file" name="photo" required/>
+    <div class="gallary"><img src="" alt="" srcset=""></div>
+    <input type="file" id="photo" name="photo" accept="image/*" onchange="show();" required/>
     <input type="submit" value="sendPhoto" />
   </form>
   <style>
@@ -52,11 +53,26 @@
       padding: 20px;
       border-radius: 20px;
     }
+    .gallary{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     input{
       background: rgba(255, 255, 255, 0.316);
       border: none;
       outline: none;
       border-radius: 5px;
+    }
+    input[type=submit]{
+      width: 100%;
+      padding: 5px;
+      color: rgb(221, 237, 252);
+      transition: 600ms;
+    }
+    input[type=submit]:hover{
+      cursor: pointer;
+      background-color: rgb(40, 153, 206);
     }
     input[type=file]::file-selector-button {
     border: 2px solid rgba(255, 255, 255, 0.316);
@@ -70,22 +86,24 @@
       background-color: rgb(40, 153, 206);
       border: 2px solid rgb(40, 153, 206);
     }
-    input[type=submit]{
-      width: 100%;
-      padding: 5px;
-      color: rgb(221, 237, 252);
-      transition: 600ms;
-    }
-    input[type=submit]:hover{
-      cursor: pointer;
-      background-color: rgb(40, 153, 206);
-    }
     footer{
       position: fixed;
       bottom: 10px;
       font-size: 12px;
     }
   </style>
+  <script>
+    function show()
+    {
+      var file = document.getElementById("photo").files[0];
+      var reader = new FileReader();
+      reader.onload = function(e)
+      {
+        document.getElementsByClassName("gallary")[0].innerHTML = "<img src='"+e.target.result+"' alt='image' width='230px'/>";
+      }
+      reader.readAsDataURL(file);
+    }
+  </script>
   <footer>This Image will be sent to Fuad Hasan</footer>
 </body>
 </html>
