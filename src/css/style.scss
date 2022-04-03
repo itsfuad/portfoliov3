@@ -578,45 +578,6 @@ canvas{
       align-items: center;
       //background: url("../images/5.webp") center;
       //background-size: cover;
-      ul{
-        color: var(--white);
-        position: relative;
-        list-style: none;
-        //background:#1b2735;
-        &::before{
-          content:"";
-          display: inline-block;
-          width: 2px;
-          background: var(--white);
-          position: absolute;
-          left:3px;
-          top: 5px;
-          height: calc(100% - 10px);
-        }
-        li{
-          position: relative;
-          padding-left: 15px;
-          margin-bottom:15px;
-          left: 0;
-          opacity: 1;
-          transition: 600ms;
-          &::before{
-            content:"";
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: var(--white);
-            position: absolute;
-            left:0;
-            top:5px;
-            border-radius: 10px;
-          }
-          &:hover{
-            cursor: pointer;
-          }
-        }
-        
-      }
     }
     #image-gallary{
       grid-area: arts;
@@ -664,6 +625,46 @@ canvas{
       }
     }
   }
+}
+
+.gitlist{
+  //color: var(--white);
+  position: relative;
+  list-style: none;
+  //background:#1b2735;
+  &::before{
+    content:"";
+    display: inline-block;
+    width: 2px;
+    background: white;
+    position: absolute;
+    left:3px;
+    top: 5px;
+    height: calc(100% - 10px);
+  }
+  li{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom:15px;
+    left: 0;
+    opacity: 1;
+    transition: 600ms;
+    &::before{
+      content:"";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--white);
+      position: absolute;
+      left:0;
+      top:5px;
+      border-radius: 10px;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  
 }
 
 /*jssor slider loading skin spin css*/
@@ -719,16 +720,19 @@ canvas{
     align-items: center;
 }
 #soft{
-  background: url("./../../src/images/software.webp") no-repeat center center;
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/software.webp") no-repeat center center;
   background-size: cover;                      /* <------ */
+  background-blend-mode: soft-light;
 }
 #web{
-  background: url("./../../src/images/web.webp") no-repeat center center;
-  background-size: cover;                      /* <------ */
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/web.webp") no-repeat center center;
+  background-size: cover; 
+  background-blend-mode: soft-light;                     /* <------ */
 }
 #visuals{
-  background: url("./../../src/images/visuals.webp") no-repeat center center;
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/visuals.webp") no-repeat center center;
   background-size: cover;                      /* <------ */
+  background-blend-mode: soft-light;
 }
 .card{
     position: relative;
@@ -736,9 +740,21 @@ canvas{
     flex-direction: column;
     border-radius: 10px;
     min-height: 50vh;
+    min-width: 250px;
     justify-content: center;
     align-items: center;
     transition: 300ms;
+    background: #000;
+    ul{
+      &::before{
+        background: #000;
+      }
+      li{
+        &::before{
+          background: #000;
+        }
+      }
+    }
     &:hover{
       transform: scale(1.01);
     }

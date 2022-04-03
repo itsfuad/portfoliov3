@@ -750,49 +750,6 @@ canvas {
           align-items: center;
 }
 
-.works .container #github-projects ul {
-  color: var(--white);
-  position: relative;
-  list-style: none;
-}
-
-.works .container #github-projects ul::before {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  background: var(--white);
-  position: absolute;
-  left: 3px;
-  top: 5px;
-  height: calc(100% - 10px);
-}
-
-.works .container #github-projects ul li {
-  position: relative;
-  padding-left: 15px;
-  margin-bottom: 15px;
-  left: 0;
-  opacity: 1;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.works .container #github-projects ul li::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: var(--white);
-  position: absolute;
-  left: 0;
-  top: 5px;
-  border-radius: 10px;
-}
-
-.works .container #github-projects ul li:hover {
-  cursor: pointer;
-}
-
 .works .container #image-gallary {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -875,6 +832,48 @@ canvas {
           justify-content: center;
   gap: 20px;
   justify-items: center;
+}
+
+.gitlist {
+  position: relative;
+  list-style: none;
+}
+
+.gitlist::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  background: white;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  height: calc(100% - 10px);
+}
+
+.gitlist li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+.gitlist li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.gitlist li:hover {
+  cursor: pointer;
 }
 
 /*jssor slider loading skin spin css*/
@@ -1009,21 +1008,24 @@ canvas {
 }
 
 .services #soft {
-  background: url("./../../src/images/software.webp") no-repeat center center;
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/software.webp") no-repeat center center;
   background-size: cover;
   /* <------ */
+  background-blend-mode: soft-light;
 }
 
 .services #web {
-  background: url("./../../src/images/web.webp") no-repeat center center;
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/web.webp") no-repeat center center;
   background-size: cover;
+  background-blend-mode: soft-light;
   /* <------ */
 }
 
 .services #visuals {
-  background: url("./../../src/images/visuals.webp") no-repeat center center;
+  background: rgba(255, 255, 255, 0.52) url("./../../src/images/visuals.webp") no-repeat center center;
   background-size: cover;
   /* <------ */
+  background-blend-mode: soft-light;
 }
 
 .services .card {
@@ -1037,6 +1039,7 @@ canvas {
           flex-direction: column;
   border-radius: 10px;
   min-height: 50vh;
+  min-width: 250px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1045,6 +1048,15 @@ canvas {
           align-items: center;
   -webkit-transition: 300ms;
   transition: 300ms;
+  background: #000;
+}
+
+.services .card ul::before {
+  background: #000;
+}
+
+.services .card ul li::before {
+  background: #000;
 }
 
 .services .card:hover {
