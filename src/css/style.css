@@ -1,12 +1,11 @@
 @font-face {
   font-family: Now;
-  src: url("./../fonts/Now-Regular.otf");
+  src: url("./../fonts/Now-web.woff2");
 }
 
 @font-face {
   font-family: Comforter;
-  src: url("./../fonts/Comforter-Regular.ttf");
-}
+  src: url("./../fonts/Comforter-web.woff2");
 
 :root {
   --bookmark: white;
@@ -726,7 +725,9 @@ canvas {
           align-items: center;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: "github" "games" "arts";
+      grid-template-areas: "github"
+ "games"
+ "arts";
 }
 
 .works .container #github-projects {
@@ -1360,7 +1361,10 @@ canvas {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "slinkcap slinkcap" "slink slink" "address address" "videos videos";
+      grid-template-areas: "slinkcap slinkcap"
+ "slink slink"
+ "address address"
+ "videos videos";
   gap: 10px;
 }
 
@@ -1633,7 +1637,8 @@ footer .copyright a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-        grid-template-areas: "github games" "arts arts";
+        grid-template-areas: "github games"
+ "arts arts";
   }
   .works .container #image-gallary {
     width: unset;
@@ -1661,7 +1666,9 @@ footer .copyright a:hover {
         -ms-flex-pack: stretch;
             justify-content: stretch;
     gap: 10px;
-        grid-template-areas: "socials contact" "socials contact" "footer footer";
+        grid-template-areas: "socials contact"
+ "socials contact"
+ "footer footer";
   }
   footer ul {
     list-style: none;
@@ -1691,7 +1698,9 @@ footer .copyright a:hover {
     grid-auto-flow: column;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "name message message" "email message message" ". send .";
+        grid-template-areas: "name message message"
+ "email message message"
+ ". send .";
     overflow: hidden;
   }
   .contact_me #myname, .contact_me #email {
@@ -1719,7 +1728,10 @@ footer .copyright a:hover {
     grid-area: footer;
   }
   .contact-info {
-        grid-template-areas: "videos videos" "slinkcap slinkcap" "slink slink" "address address";
+        grid-template-areas: "videos videos"
+ "slinkcap slinkcap"
+ "slink slink"
+ "address address";
     gap: 10px;
     -ms-flex-item-align: end;
         align-self: flex-end;
