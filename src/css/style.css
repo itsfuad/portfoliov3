@@ -1648,6 +1648,9 @@ footer .copyright a:hover {
     grid-auto-flow: column;
     gap: 30px;
     padding: 20px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   footer {
     overflow: hidden;
